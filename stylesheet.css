@@ -5,15 +5,20 @@
     --typeBodySizeSmall: 16pt;  /* scale your type sizes relative to eachother—like multiples... CHANGE TITLE SCALES? MAKE ALL* TYPE SCALES DERIVATIVE*/ 
     --typeBodySizeRegular: 20.8pt; 
     --typeBodySizeBig: 25.6pt; 
+    --typeBodyContrastLight: lighter; /* may have to get rid of this; not widely applicable  */
+    --typeBodyContrastRegular: normal;
+    --typeBodyContrastBold: bold; 
+    
+    --borderRadius: 10px; 
+    
     --typeTitleSizeSmall: 50pt; 
     --typeTitleSizeNormal: 65pt; 
     --typeTitleSizeBig: 80pt;
-    --borderRadius: 10px; 
 
 /* COLORS */ 
-    --temp_contrastMed: #f9f4ed; 
-    --color_dark:#1e1c19;
-    --color_temp: white; 
+    --temp_contrastMed: #oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */ 
+    --color_dark:#oklch(0.2276 0.1 78.19);
+    --color_temp: oklch(1 0 0); 
         /* COLORS... PER TYPE HIERARCHY */ 
         --colorType_title; var(--color_dark); /* ??????????*/ 
         --colorType_body: var(--color_dark);
@@ -22,8 +27,9 @@
     /* */
 
 /*FACES*/ 
-    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
     --typefaceSerif: "Times New Roman", "Baskerville", serif; 
+    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
+    --typefaceFriendly: "Comic Sans MS", "Comic Sans", cursive; 
 /* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
 Google Fonts' "Get Embed Code" */ 
 /* may need to change later on to account for global, user-driven changes */ 
@@ -32,6 +38,7 @@ Google Fonts' "Get Embed Code" */
     --typeBodyFace: var(--typefaceSansSerif);
     --typeBodySize: var(--typeBodySizeSmall);
     --typeBodyColor: var(--color_dark);
+    --typeBodyContrast: var(--typeBodyContrastRegular);
     --typeTitleFace: var(--typefaceSansSerif);
     --typeTitleSize: var(--typeTitleSizeSmall);
     --typeTitleColor: var(--color_dark);
@@ -200,7 +207,9 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySize);
     background-color: var(--color_temp);
-    color: var(--typeBodyColor)
+    color: var(--typeBodyColor);
+    font-weight: var(--typeBodyContrast);
+    transition: 0.2s; 
 }
 
 .linkExternal {

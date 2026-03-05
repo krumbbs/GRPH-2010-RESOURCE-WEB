@@ -75,20 +75,23 @@
                 </div>
                 <div class="contrast">
                     <p>Contrast</p>
-                    <button class="a_button" id="a_bodyContrast_light">Light</button>
-                    <button class="a_button" id="a_bodyContrast_regular">Regular</button>
-                    <button class="a_button" id="a_bodyContrast_large">Bold</button>
+                    <button class="a_button" id="a_bodyContrast_light" onclick ="f_typeBodyContrast_light()">Light</button> <!-- does nothing sans serif --> 
+                    <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
+                    <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
                 </div>
                 <div class="face">
                     <p>Face</p>
-                    <button class="a_button" id="a_bodyFace_serif">Serif</button>
-                    <button class="a_button" id="a_bodyFace_sansSerif">Sans-serif</button>
-                    <button class="a_button" id="a_bodyFace_friendly">Friendly</button>
+                    <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
+                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>
+                    <button class="a_button" id="a_bodyFace_friendly" onclick ="f_typeBodyFace_friendly() ">Friendly</button>
                 </div>
                 <div class="color">
                     <p>Color</p>
                     <button class="a_button" id="a_bodyColor_dark">Dark</button>
                     <button class="a_button" id="a_bodyColor_light">Light</button>
+                    <div class ="a_slider" id="a_bodyColor_slider">
+                        <input type="range" value ="0" min ="0" max="360" step="1"/>
+                    </div>
                     <button class="a_button" id="a_bodyFace_other">Other</button>
                 </div>
                 <div class="highlightColor">

@@ -150,30 +150,64 @@ bodyRegular.addEventListener("click", f_typeSizeBody_regular())
 const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular');
 const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig');
-const typeTitleSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeSmall');
+const typeTitleSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeSmall'); //title = not working
 const typeTitleSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeRegular');
 const typeTitleSize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeTtileSizeBig');
 
-//DO FOR TITLE TYPE TOO
 function f_typeSizeBody_small () {
     root.style.setProperty('--typeBodySize', typeBodySize_small);
-    alert("small");
+    //alert("small");
 }
 function f_typeSizeTitle_small () {
     root.style.setProperty('--typeTitleSize', typeTitleSize_small);
 }
-
 function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodySize', typeBodySize_regular);
-    alert("reg");
+    //alert("reg");
 }
 function f_typeSizeTitle_regular () { //this function isn't activating—FIX LATER? 
     root.style.setProperty('--typeTitleSize', typeTitleSize_regular);
-    alert("typeTitleSize_regular")
+    //alert("typeTitleSize_regular")
 }
-
 function f_typeSizeBody_big () {
     root.style.setProperty('--typeBodySize', typeBodySize_big);
     root.style.setProperty('--typeTitleSize', typeTitleSize_big);
-    alert("big");
+    //alert("big");
 }
+
+const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');
+const typeBodyContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastRegular');
+const typeBodyContrast_bold = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastBold');
+
+function f_typeBodyContrast_light () {
+    root.style.setProperty ('--typeBodyContrast', typeBodyContrast_light);
+}
+function f_typeBodyContrast_regular () {
+    root.style.setProperty ('--typeBodyContrast', typeBodyContrast_regular);
+}
+function f_typeBodyContrast_bold () {
+    root.style.setProperty ('--typeBodyContrast', typeBodyContrast_bold);
+}
+
+const typeBodyFace_serif = getComputedStyle(document.documentElement).getPropertyValue('--typefaceSerif');
+const typeBodyFace_sansSerif = getComputedStyle(document.documentElement).getPropertyValue('--typefaceSansSerif');
+const typeBodyFace_friendly = getComputedStyle(document.documentElement).getPropertyValue('--typefaceFriendly');
+
+function f_typeBodyFace_serif () {
+    root.style.setProperty ('--typeBodyFace', typeBodyFace_serif);
+}
+function f_typeBodyFace_sansSerif () {
+    root.style.setProperty ('--typeBodyFace', typeBodyFace_sansSerif);
+}
+function f_typeBodyFace_friendly () {
+    root.style.setProperty ('--typeBodyFace', typeBodyFace_friendly);
+}
+
+//COLOR RANGE SELECTING—video tutorial https://www.youtube.com/watch?v=EQuT-CdJ2sE
+const slider = document.querySelector(document.getElementById('a_bodyColor_slider') input) //picking slider html
+const sliderRoot = document.querySelector(':root') //picking css variable 
+
+sliderRoot.addEventListener("input", function () {
+    const hue = slider.value; 
+    sliderRoot.style.setProperty('--color_dark', 'red')
+} )
