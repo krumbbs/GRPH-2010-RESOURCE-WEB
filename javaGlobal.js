@@ -117,4 +117,50 @@ function f_accessibilityFull_closed () {
     root.style.setProperty('--accessibilityFull', '--accessibilityFull_close')
 }
 
+/* ACCESSIBILITY BUTTON type size changing */
+
+/* OLD test... its the variable to variable swap that isn't working
+function f_typeSizeBody_regular () {
+    root.style.setProperty('--typeBodySize', '5000px');
+    alert("HELLO");
+}
+*/ 
+
+
+
 /*insert switch to run checks on whether or full accessibility menu is open/not (use to close pop-up)  */
+
+//EVENT LISTENERS: tracking/updating BASED on clicks
+// document.getElementById("a_bodyScale_small").addEventListener("click", function() {alert("CLICKED"); });
+
+//TESTING EVENT LISTENERS:
+//var a = document.getElementById("a_bodyScale_small")
+//a.addEventListener("click", function() {alert("CLICKED"); } ) //gives an alert error but still works? 
+
+//IMPLEMENTING EVENT LISTENERS: 
+/*
+let bodySmall = document.getElementById("a_bodyScale_small"); 
+bodySmall.addEventListener("click", f_typeSizeBody_small())
+let bodyRegular = document.getElementById("a_bodyScale_regular"); 
+bodyRegular.addEventListener("click", f_typeSizeBody_regular())
+*/
+
+
+/* CONST—getting css variable values; operating JS SEPERATELY from CSS definitions. */ 
+const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall') //document.documentElement refers to root of HTML (for some reason)
+const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular')
+const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig')
+
+//DO FOR TITLE TYPE TOO
+function f_typeSizeBody_small () {
+    root.style.setProperty('--typeBodySize', typeBodySize_small);
+    alert("small");
+}
+function f_typeSizeBody_regular () {
+    root.style.setProperty('--typeBodySize', typeBodySize_regular);
+    alert("reg");
+}
+function f_typeSizeBody_big () {
+    root.style.setProperty('--typeBodySize', typeBodySize_big);
+    alert("big");
+}

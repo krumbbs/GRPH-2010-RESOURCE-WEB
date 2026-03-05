@@ -12,7 +12,6 @@
 <!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
 <!--you can link other HTML files with 'a href' while mentionning; use a '/' to refer to subfolders; put two periods before '/' to link to parent--> 
     <body style="background-color:#f9f4ed">
-       
         <!--GLOBAL NAV BUTTONS-->
         <div class="global">
 
@@ -65,9 +64,14 @@
             <div class="a_bodyText">
                 <div class="scale">
                     <p>Scale</p>
-                    <button class="a_button" id="a_bodyScale_small">Small</button>
-                    <button class="a_button" id="a_bodyScale_regular">Regular</button>
-                    <button class="a_button" id="a_bodyScale_large">Large</button>
+                    <!-- old: 
+                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
+                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
+                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_large()">Large</button> 
+                    -->
+                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
+                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
+                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_big()">Large</button>
                 </div>
                 <div class="contrast">
                     <p>Contrast</p>

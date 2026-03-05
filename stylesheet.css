@@ -2,8 +2,8 @@
 
 /*TYPOGRAPHY*/
 /*SCALES*/ 
-    --typeBodySizeSmall: 16pt; 
-    --typeBodySizeNormal: 20.8pt; 
+    --typeBodySizeSmall: 16pt;  /* scale your type sizes relative to eachother—like multiples... CHANGE TITLE SCALES? MAKE ALL* TYPE SCALES DERIVATIVE*/ 
+    --typeBodySizeRegular: 20.8pt; 
     --typeBodySizeBig: 25.6pt; 
     --typeTitleSizeSmall: 50pt; 
     --typeTitleSizeNormal: 65pt; 
@@ -14,6 +14,9 @@
     --temp_contrastMed: #f9f4ed; 
     --color_dark:#1e1c19;
     --color_temp: white; 
+        /* COLORS... PER TYPE HIERARCHY */ 
+        --colorType_title; var(--color_dark); /* ??????????*/ 
+        --colorType_body: var(--color_dark);
 
 /* HIGHLIGHTS */
     /* */
@@ -137,6 +140,7 @@ Google Fonts' "Get Embed Code" */
     overflow: hidden; 
     position:fixed; 
     margin-left: 15%; 
+    margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
 }
 
 .a_bodyText {
@@ -144,6 +148,7 @@ Google Fonts' "Get Embed Code" */
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 30% 30%; 
     row-gap: 20%;
+    padding: 2%; /* not working */ 
 }
 
 .a_website {
@@ -151,6 +156,7 @@ Google Fonts' "Get Embed Code" */
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 30%; 
     row-gap: 20%;
+    padding: 2%; /* not working */ 
 }
 
 .optn_sourceList {
@@ -184,13 +190,14 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeTitleSizeSmall); 
     background-color: var(--color_temp);
+    color: var(--color_dark)
 }
 
 .body{
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySize);
     background-color: var(--color_temp);
-    color: var(--typeBodyColor)
+    color: var(--colorType_body)
 }
 
 .linkExternal {
