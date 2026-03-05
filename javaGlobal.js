@@ -147,20 +147,33 @@ bodyRegular.addEventListener("click", f_typeSizeBody_regular())
 
 
 /* CONST—getting css variable values; operating JS SEPERATELY from CSS definitions. */ 
-const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall') //document.documentElement refers to root of HTML (for some reason)
-const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular')
-const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig')
+const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall'); //document.documentElement refers to root of HTML (for some reason)
+const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular');
+const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig');
+const typeTitleSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeSmall');
+const typeTitleSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeRegular');
+const typeTitleSize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeTtileSizeBig');
 
 //DO FOR TITLE TYPE TOO
 function f_typeSizeBody_small () {
     root.style.setProperty('--typeBodySize', typeBodySize_small);
     alert("small");
 }
+function f_typeSizeTitle_small () {
+    root.style.setProperty('--typeTitleSize', typeTitleSize_small);
+}
+
 function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodySize', typeBodySize_regular);
     alert("reg");
 }
+function f_typeSizeTitle_regular () { //this function isn't activating—FIX LATER? 
+    root.style.setProperty('--typeTitleSize', typeTitleSize_regular);
+    alert("typeTitleSize_regular")
+}
+
 function f_typeSizeBody_big () {
     root.style.setProperty('--typeBodySize', typeBodySize_big);
+    root.style.setProperty('--typeTitleSize', typeTitleSize_big);
     alert("big");
 }
