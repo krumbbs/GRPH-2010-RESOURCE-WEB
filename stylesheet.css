@@ -16,8 +16,8 @@
     --typeTitleSizeBig: 80pt;
 
 /* COLORS */ 
-    --temp_contrastMed: #oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */ 
-    --color_dark:#oklch(0.2276 0.1 78.19);
+    --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */ 
+    --color_dark: oklch(0.2276 0.1 78.19);
     --color_temp: oklch(1 0 0); 
         /* COLORS... PER TYPE HIERARCHY */ 
         --colorType_title; var(--color_dark); /* ??????????*/ 

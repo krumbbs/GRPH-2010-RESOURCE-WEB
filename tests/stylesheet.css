@@ -1,0 +1,9 @@
+:root {
+    --typeBodyColor: var(--color_dark);
+    --color_dark: oklch(0.2276 0.1 78.19);
+    
+}
+
+.body {
+    background-color: var(--typeBodyColor); 
+}

@@ -204,10 +204,72 @@ function f_typeBodyFace_friendly () {
 }
 
 //COLOR RANGE SELECTING—video tutorial https://www.youtube.com/watch?v=EQuT-CdJ2sE
-const slider = document.querySelector(document.getElementById('a_bodyColor_slider') input) //picking slider html
-const sliderRoot = document.querySelector(':root') //picking css variable 
+
+// for some reason, this is breaking the other code
+/*
+const slider = document.querySelector(document.getElementById('a_bodyColor_slider') input); //picking slider html
+const sliderRoot = document.querySelector(':root'); //picking css variable 
 
 sliderRoot.addEventListener("input", function () {
     const hue = slider.value; 
-    sliderRoot.style.setProperty('--color_dark', 'red')
+    sliderRoot.style.setProperty('--color_dark', 'red');
 } )
+*/
+
+//'querySelector' returns FIRST element that matches first css value—that's why its not detecting from html... 
+
+/*
+let slider = document.getElementById('a_bodyColor_slider');
+let sliderValue = slider.value; 
+
+alert(sliderValue); //slider itself is null... because it's an element, not a value... so how to you call a value?
+
+*/
+
+/*
+let slider = document.getElementById("a_bodyColor_slider_range"); //this code is running properly
+
+slider.oninput = function() { ////breaks here 
+    alert(slider); 
+    root.style.setProperty('--typeBodyColor', 'red');
+}
+*/ 
+
+/*
+slider.addEventListener("input", function () {
+    const hue = slider.value; 
+    root.style.setProperty('color_dark', 'red')
+})
+*/ 
+
+//CRITIQUE FROM DREW: add an 'eventListener'—oninput breaks as document loads as it isn't told to keep watching
+    //out for change-in-value; thats what 'eventListener' is for
+
+/*
+
+let slider = document.getElementById("a_bodyColor_slider_range");
+
+slider.addEventListener("input", function() {
+    const hue = this.value; 
+    alert(value);
+    root.style.setProperty('--typeBodyColor', 'green');
+})
+
+*/
+
+//COPIED FROM W3:
+/*
+var slider = document.getElementById("a_bodyColor_slider_range");
+var output = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyColor');
+
+slider.addEventListener("input", function() {
+  output.innerHTML = this.value;
+})
+*/ 
+//Copied agian + edited w/ video:
+const slider = document.querySelector('.test1 input');
+
+slider.addEventListener ('input', function () {
+    const hue = slider.value 
+    root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.1 ${hue})`)
+})  
