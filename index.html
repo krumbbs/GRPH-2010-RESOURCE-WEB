@@ -87,18 +87,16 @@
                 </div>
                 <div class="color">
                     <p>Color</p>
-                    <button class="a_button" id="a_bodyColor_dark">Dark</button>
-                    <button class="a_button" id="a_bodyColor_light">Light</button>
+                    <button class="a_button" id="a_bodyColor_dark" onclick ="f_typeColor_dark()">Dark</button>
+                    <button class="a_button" id="a_bodyColor_light" onclick ="f_typeColor_light()">Light</button>
                     <div class ="a_slider" id="a_bodyColor_slider">
-                        <input type="range" id="myRange" value ="0" min ="0" max="360"></input> <!--"a_bodyColor_slider_range"-->
-                        <!-- the 'id' is the thing htat isn't detecting -->
+                        <input type="range" id="myRange" value ="0" min ="0" max="360"></input> 
                     </div>
-                    <button class="a_button" id="a_bodyFace_other">Other</button>
                 </div>
                 <div class="highlightColor">
                     <p>Highlight Color</p>
-                    <button class="a_button" id="a_bodyHLColor_on">On</button>
-                    <button class="a_button" id="a_bodyHLColor_off">Off</button>
+                    <button class="a_button" id="a_bodyHLColor_on" onclick="f_highlight_on">On</button>
+                    <button class="a_button" id="a_bodyHLColor_off" onclick="f_highlight_off">Off</button>
                     <button class="a_button" id="a_bodyHLColor_choose">Choose</button>
                 </div>
             </div>
@@ -128,8 +126,8 @@
             <div class ="title">
                 <h3>title (landing page)</h3>
             </div>
-            <div class="body">
-                <p>body text</p>
+            <div>
+                <!-- <mark class="hightlight"> --> <p class ="body">body text</p> <!-- </mark> -->
             </div>
             <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> <!--horizontal break-->
             <div class="twoImages">
@@ -157,8 +155,6 @@
     document.getElementById("demo_ID").innerText = "hello workd"; 
 </script>
 -->
-
-<p>Value: <span id="demo"></span></p>
             
 <script src="javaGlobal.js"></script> <!--javascript linking; script HAS to be loaded after defining HTML elements--> 
 

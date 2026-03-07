@@ -195,12 +195,16 @@ const typeBodyFace_friendly = getComputedStyle(document.documentElement).getProp
 
 function f_typeBodyFace_serif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_serif);
+    root.style.setProperty ('--typeTitleFace', typeBodyFace_serif);
+
 }
 function f_typeBodyFace_sansSerif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_sansSerif);
+    root.style.setProperty ('--typeTitleFace', typeBodyFace_sansSerif);
 }
 function f_typeBodyFace_friendly () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_friendly);
+    root.style.setProperty ('--typeTitleFace', typeBodyFace_friendly);
 }
 
 //COLOR RANGE SELECTING—video tutorial https://www.youtube.com/watch?v=EQuT-CdJ2sE
@@ -275,6 +279,20 @@ slider.addEventListener ('input', function () {
     root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.1 ${hue})`)
 })  
 */ 
+
+const typeColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
+const typeColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
+
+function f_typeColor_dark () {
+    root.style.setProperty ('--typeBodyColor', typeColor_dark);
+    root.style.setProperty ('--typeTitleColor', typeColor_dark);
+}
+
+function f_typeColor_light () {
+    root.style.setProperty ('--typeBodyColor', typeColor_light);
+    root.style.setProperty ('--typeTitleColor', typeColor_light);
+}
+
 const slider = document.querySelector('.a_slider input');
  
 slider.addEventListener ('input', () => {
@@ -282,3 +300,13 @@ slider.addEventListener ('input', () => {
     root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.4 ${hue})`); //IT (doesnt) WORK?? 
     root.style.setProperty ('--typeTitleColor', `oklch(0.2276 0.4 ${hue})`);
 })  
+
+const highlight_on = getComputedStyle(document.documentElement).getPropertyValue('--highlight_on');
+const highlight_off = getComputedStyle(document.documentElement).getPropertyValue('--highlight_off');
+
+function f_highlight_on () {
+    root.style.setProperty ('--highlight', highlight_on);
+}
+function f_highlight_off () {
+    root.style.setProperty ('--highlight', highlight_off);
+}
