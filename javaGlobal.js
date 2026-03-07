@@ -267,9 +267,18 @@ slider.addEventListener("input", function() {
 })
 */ 
 //Copied agian + edited w/ video:
+/*
 const slider = document.querySelector('.test1 input');
 
 slider.addEventListener ('input', function () {
     const hue = slider.value 
     root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.1 ${hue})`)
+})  
+*/ 
+const slider = document.querySelector('.a_slider input');
+ 
+slider.addEventListener ('input', () => {
+    const hue = slider.value;
+    root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.4 ${hue})`); //IT (doesnt) WORK?? 
+    root.style.setProperty ('--typeTitleColor', `oklch(0.2276 0.4 ${hue})`);
 })  

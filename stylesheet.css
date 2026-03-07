@@ -206,7 +206,7 @@ Google Fonts' "Get Embed Code" */
 .body{
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySize);
-    background-color: var(--color_temp);
+    background-color: var(--color_temp); /* COLOR IS DISSAPEARING WHEN SLIDER IS TOUCHED; VALUE IS NOT CARRYING OVER? */
     color: var(--typeBodyColor);
     font-weight: var(--typeBodyContrast);
     transition: 0.2s; 
