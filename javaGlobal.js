@@ -89,7 +89,7 @@ myFunction_set()
 waffle_subMenu_open()
 
 */ 
-
+                            // MENU CODE
 //VIDEO TUT:
 //refering to CSS variables (the root) 
 var root = document.querySelector(':root'); 
@@ -116,6 +116,16 @@ function f_accessibilityFull_open () {
 function f_accessibilityFull_closed () {
     root.style.setProperty('--accessibilityFull', '--accessibilityFull_close')
 }
+
+function f_navMenu_open () {
+    root.style.setProperty('--navFull', '--navFull_open')
+}
+
+function f_navMenu_closed () {
+    root.style.setProperty('--navFull', '--navFull_close')
+}
+
+
 
 /* ACCESSIBILITY BUTTON type size changing */
 
@@ -145,6 +155,7 @@ let bodyRegular = document.getElementById("a_bodyScale_regular");
 bodyRegular.addEventListener("click", f_typeSizeBody_regular())
 */
 
+                                // BODY CODE
 
 /* CONST—getting css variable values; operating JS SEPERATELY from CSS definitions. */ 
 const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall'); //document.documentElement refers to root of HTML (for some reason)
@@ -287,7 +298,6 @@ function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
 }
-
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
     root.style.setProperty ('--typeTitleColor', typeColor_light);
@@ -301,6 +311,8 @@ slider.addEventListener ('input', () => {
     root.style.setProperty ('--typeTitleColor', `oklch(0.2276 0.4 ${hue})`);
 })  
 
+//NOT FUNCTIONAL—highlight code
+
 const highlight_on = getComputedStyle(document.documentElement).getPropertyValue('--highlight_on');
 const highlight_off = getComputedStyle(document.documentElement).getPropertyValue('--highlight_off');
 
@@ -310,3 +322,28 @@ function f_highlight_on () {
 function f_highlight_off () {
     root.style.setProperty ('--highlight', highlight_off);
 }
+
+                        //WEBSITE CODE
+
+        // LEAVE CONTRAST UNTIL YOU'RE DONE PRINT ASSETS. 
+
+const websiteBackgroundColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
+const websiteBackgroundColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
+
+function f_websiteBackgroundColor_dark () {
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
+}
+function f_websiteBackgroundColor_light () {
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
+}
+
+const slider_bg = document.querySelector('.bg_slider input');
+ 
+slider_bg.addEventListener ('input', () => {
+    const hue = slider_bg.value;
+    root.style.setProperty ('--websiteBackgroundColor', `oklch(0.6 0.1 ${hue})`);
+})  
+
+
+
+        //TTS LATER.

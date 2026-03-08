@@ -21,8 +21,8 @@
     --color_light: oklch(0.9691 0.0107 76.6);
     --color_temp: oklch(1 0 0); 
         /* COLORS... PER TYPE HIERARCHY */ 
-        --colorType_title; var(--color_dark); /* ??????????*/ 
-        --colorType_body: var(--color_dark);
+    --colorType_title; var(--color_dark); /* ??????????*/ 
+    --colorType_body: var(--color_dark);
 
 /* HIGHLIGHTS */ 
     /*literally does nothing */ 
@@ -46,19 +46,25 @@ Google Fonts' "Get Embed Code" */
     --typeTitleFace: var(--typefaceSansSerif);
     --typeTitleSize: var(--typeTitleSizeSmall);
     --typeTitleColor: var(--color_dark);
+
+/*webiste bg*/
+    --websiteBackgroundColor: var(--color_light);
         
 /* GLOBAL VARIABLES */
     --waffleSide: 0px;
     --accessibilityFull: 0px; 
+    --navFull: 0px;
 
 /*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
     --accessibilityFull_close: 0px; 
     --accessibilityFull_open: 5fr; 
+    --navFull_close: 0px; 
+    --navFull_open: 45%; 
     
 /*accessibility menu*/
-    /*colors*/
+/*colors*/
     --bgColorB: #1e1c19;
     --bgColorW: #f9f4ed; 
     
@@ -80,6 +86,12 @@ Google Fonts' "Get Embed Code" */
 }
 
 /* GLOBAL ELEMENTS */
+
+.bodyGlobal  {
+    background-color: var(--websiteBackgroundColor); 
+    transition: 0.2s; 
+}
+
 .global {
     position: fixed; 
     right: 125px; 
@@ -178,6 +190,39 @@ Google Fonts' "Get Embed Code" */
     padding: 10px; 
 }
 
+.navMenu {
+    background-color: red; 
+    font-family: var(--typeBodyFace);
+    display: grid;
+    width: var(--navFull); 
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    position: fixed; 
+    margin-left: 36%;
+    
+}
+
+.navHead {
+    background-color: blue; 
+    width: fit-content;
+}
+
+.navSubMenu {
+    display: flex; 
+    flex-direction: column;
+}
+
+.navSub {
+    background-color: green;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.navSubSub {
+    
+}
+
 .optn_achievements {
     background-color: var(--bgColorW);
     padding: 10px; 
@@ -191,6 +236,7 @@ Google Fonts' "Get Embed Code" */
 .static {
     margin-left: 20%;
     margin-right: 20%; 
+    /* background-color: red; /* plus margins */ 
 }
 
 @media screen and (min-width: 360px) and (max-width: 500px) { 
@@ -216,7 +262,7 @@ Google Fonts' "Get Embed Code" */
 .body{
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySize);
-    background-color: var(--color_temp); /* COLOR IS DISSAPEARING WHEN SLIDER IS TOUCHED; VALUE IS NOT CARRYING OVER? */
+    background-color: var(--color_temp);
     color: var(--typeBodyColor);
     font-weight: var(--typeBodyContrast);
     transition: 0.2s; 
