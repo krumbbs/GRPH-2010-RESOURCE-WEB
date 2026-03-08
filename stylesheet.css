@@ -59,6 +59,9 @@ Google Fonts' "Get Embed Code" */
 /*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
+    --waffleSide_transition: (--waffleSide_transition_start)
+    --waffleSide_transition_start: 0%; 
+    --waffleSide_transition_end: 77.5%;
     --accessibilityFull_close: 0; 
     --accessibilityFull_open: 5fr; 
     --navFull_close: 0px; 
@@ -146,10 +149,16 @@ Google Fonts' "Get Embed Code" */
     justify-content: space-evenly; 
     height: 20%;
     position: fixed; 
-    margin-left: 77.5%;
+    margin-left: var(--waffleSide_transition_end);
     background-color: var(--bgColorB);
     width: var(--waffleSide); 
     overflow: hidden; /*prevents overflowing content from appearing*/
+    transition: 1s; 
+}
+
+.waffleSub_close {
+    position: relative;
+    left: 25%; 
 }
 
 .optn_accessibility {
@@ -166,7 +175,7 @@ Google Fonts' "Get Embed Code" */
     width: var(--accessibilityFull); 
     overflow: hidden; 
     position:fixed; 
-    margin-left: 13%; 
+    margin-left: 40%; 
     /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
 }
 
@@ -199,7 +208,7 @@ Google Fonts' "Get Embed Code" */
     grid-template-columns: 45% 45% 5%;
     overflow: hidden;
     position: fixed; 
-    margin-left: 32%;
+    margin-left: 60%;
     
 }
 

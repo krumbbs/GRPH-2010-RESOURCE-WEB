@@ -97,10 +97,11 @@ var root = document.querySelector(':root');
 //moving around CSS variables
 function f_waffleSide_open() {
     root.style.setProperty('--waffleSide', '--waffleSide_open') //do NOT put an equal sign!!!!*******
+    //root.style.setProperty('--waffleSide_transition', '77.5') //trying to transition menus... 
 } 
 
 function f_waffleSide_close() {
-    root.style.setProperty('--waffleSide', '--waffleSide_close') //do NOT put an equal sign!!!!*******
+    root.style.setProperty('--waffleSide', '0px') //do NOT put an equal sign!!!!*******
 } 
 
 /* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
@@ -347,3 +348,5 @@ slider_bg.addEventListener ('input', () => {
 
 
         //TTS LATER.
+
+                        //ACHIEVEMENT SECTION (LATER)
