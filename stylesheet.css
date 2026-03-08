@@ -52,13 +52,14 @@ Google Fonts' "Get Embed Code" */
         
 /* GLOBAL VARIABLES */
     --waffleSide: 0px;
-    --accessibilityFull: 0px; 
+    --accessibilityFull: 0; 
+    --accessibilityToggle: grid; 
     --navFull: 0px;
 
 /*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
-    --accessibilityFull_close: 0px; 
+    --accessibilityFull_close: 0; 
     --accessibilityFull_open: 5fr; 
     --navFull_close: 0px; 
     --navFull_open: 45%; 
@@ -165,8 +166,8 @@ Google Fonts' "Get Embed Code" */
     width: var(--accessibilityFull); 
     overflow: hidden; 
     position:fixed; 
-    margin-left: 15%; 
-    margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
+    margin-left: 13%; 
+    /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
 }
 
 .a_bodyText {
@@ -195,10 +196,10 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     display: grid;
     width: var(--navFull); 
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 45% 5%;
     overflow: hidden;
     position: fixed; 
-    margin-left: 36%;
+    margin-left: 32%;
     
 }
 

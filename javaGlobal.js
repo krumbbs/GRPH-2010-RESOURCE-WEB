@@ -113,16 +113,16 @@ function f_accessibilityFull_open () {
     root.style.setProperty('--accessibilityFull', '--accessibilityFull_open')
 }
 
-function f_accessibilityFull_closed () {
-    root.style.setProperty('--accessibilityFull', '--accessibilityFull_close')
+function f_accessibilityFull_close () {
+    root.style.setProperty('--accessibilityFull', '0px')
 }
 
 function f_navMenu_open () {
     root.style.setProperty('--navFull', '--navFull_open')
 }
 
-function f_navMenu_closed () {
-    root.style.setProperty('--navFull', '--navFull_close')
+function f_navMenu_close () {
+    root.style.setProperty('--navFull', '0px')
 }
 
 
@@ -307,8 +307,8 @@ const slider = document.querySelector('.a_slider input');
  
 slider.addEventListener ('input', () => {
     const hue = slider.value;
-    root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.4 ${hue})`); //IT (doesnt) WORK?? 
-    root.style.setProperty ('--typeTitleColor', `oklch(0.2276 0.4 ${hue})`);
+    root.style.setProperty ('--typeBodyColor', `oklch(0.4 0.4 ${hue})`); //IT (doesnt) WORK?? 
+    root.style.setProperty ('--typeTitleColor', `oklch(0.4 0.4 ${hue})`);
 })  
 
 //NOT FUNCTIONAL—highlight code
