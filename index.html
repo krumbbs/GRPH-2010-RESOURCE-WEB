@@ -15,12 +15,11 @@
         <!--GLOBAL NAV BUTTONS-->
         <div class="global">
 
-            <div class ="waffleGlobal">
+            <div class ="waffleGlobal"> <!-- move above home --> 
                 <div class="waffleDiv" id="waffleDiv_ID">
                     <nav> <!--STYLE NAV to get rid of underline-->
                         <button class ="waffleButton" onclick="f_waffleSide_open()">
-                            Options
-                            
+                            <div>Options</div>
                             <!--SVG code taken from illustrator drawings imported to broswers--> 
                             <svg class ="svgWaffle">
                                 <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
@@ -35,9 +34,9 @@
                 
             <div class="homeGlobal">
                 <div class="homeDiv">   
-                    <nav><a href="index.html">
-                        <button class ="homeButton">
-                            Home
+                    <nav>
+                        <button class ="homeButton" onclick="home()">
+                            <div>Home</div>
                             <svg class ="svgHome">
                               <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
                               <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
@@ -105,9 +104,9 @@
             <div class="a_website">
                 <div class="contrast">
                     <p>Contrast</p>
-                    <button class="a_button" id="a_websiteContrast_high">High</button>
-                    <button class="a_button" id="a_websiteContrast_regular">Regular</button>
-                    <button class="a_button" id="a_websiteContrast_low">Low</button>
+                    <button class="a_button" id="a_websiteContrast_high" onclick="f_websiteContrast_high ()">High</button>
+                    <button class="a_button" id="a_websiteContrast_regular" onclick="f_websiteContrast_regular ()">Regular</button>
+                    <button class="a_button" id="a_websiteContrast_low" onclick="f_websiteContrast_low ()">Low</button>
                 </div>
                 <div class="backgroundColor">
                     <p>Background Color</p>
@@ -128,10 +127,10 @@
                         <!-- NAV MENU --> 
         <div class="navMenu">
             <div class="navHead">
-                <h5>Informational</h5>
+                <h6><nav><a href="">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
                 <div class="navSubMenu">
                     <div class="navSub" id="info_genMindset">
-                        <h6>General Mindset</h6>
+                        <nav><h6>General Mindset</h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
                             <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
@@ -139,13 +138,13 @@
                         </nav>
                     </div>
                     <div class="navSub" id="info_primeTime">
-                        <h6>Prime Time</h6>
+                        <nav><h6>Prime Time</h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.youtube.com/watch?v=PPITG-6fR5s">Video</a>
                         </nav>
                     </div>
                     <div class="navSub" id="info_timeManagement">
-                        <h6>Time Management</h6>
+                        <nav><h6>Time Management</h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
                             <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ">Podcast—better work environments</a>
@@ -154,23 +153,23 @@
                 </div>
             </div>
             <div class="navHead">
-                <h5>Practical</h5>
+                <nav><h5>Practical</h5></nav>
                 <div class="navSubMenu">
                     <div class="navSub" id="practical_apps">
-                        <h6>Applications</h6>
+                        <nav><h6>Applications</h6></nav>
                         <nav class="navSubSub">
                             <a href="https://obsidian.md/">Obsidian</a>
                             <a href="https://www.when2meet.com/">When2Meet</a>
                         </nav>
                     </div>
                     <div class="navSub" id="practical_mediaPref">
-                        <h6>Media Preferences</h6>
+                        <nav><h6>Media Preferences</h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334">Pen-picking</a>
                         </nav>
                     </div>
                     <div class="navSub" id="practical_storefront">
-                        <h6>Storefront</h6>
+                        <nav><h6>Storefront</h6></nav>
                         <nav class="navSubSub">
                             <a href="httpshttps://www.walmart.ca/en/search?q=sticky+notes">Walmart Sticky notes</a>
                         </nav>
@@ -184,21 +183,33 @@
         
         <div class ="static">
             <div class ="title">
-                <h3>title (landing page)</h3>
+                <h3 style="margin-bottom:-10px;">ggg (landing page)</h3>
+                <p style="font-size:12pt;">by Michael</p>
             </div>
-            <div>
-                <!-- <mark class="hightlight"> --> <p class ="body">body text</p> <!-- </mark> -->
+            <div class="bodyContent">
+                <!-- <mark class="hightlight"> -->
+                <img style="width:auto; height:200px; object-fit:cover; margin-bottom: 3%; margin-top: 1%;" src="assets/landing1.JPG" alt="Laptop, sketchbooks, and sticky notes"/>
+                <p class="bodyFirstLine"> Whenever I talk to others, I tend to see that they view time management skills as something inherit to certain modes of thinking, something that is simply out of their reach, or something that they find difficulty in justifying its self-done intentional development. However, from my own (flawed, but passionate) experience, I find that time management, as a general idea, proves to be more accessible than people make it out to be, placing emphasis on the “hows” and “whys” of how one chooses to manage parts of their time. 
+                </p>
+                <!-- divided each with their own tag to preserve variable functionality in css -->
+                <p class ="body"> This website, [website title], is not only meant to be an archive of thoughts and resources I find helpful to consume in thinking about time management, but it is also meant to be a tool for you—the visitor—to both use and take something away from. My website is built around the (self-dubbed) idea of “open navigation”—the idea that you are free to read however much of the website’s content you wish in whatever order you desire, so I implore you to follow your curiosity or modes of thinking to wherever they lead you. It’s difficult to lineally talk and think about time management in a consistently successful way for everybody, so, for your sake and mine, I encourage you to be open about the ways you absorb information. </p>
+                <p class ="body">One of the ways you can explore your processes of learning is by accessing the website’s “Options” tab, from which you will be presented with [three] menus, each serving a different website-wide function.</p>
+                <p class ="body">The first menu item, labelled “Accessibility”, allows you to have control over specific parts of the website’s structure, allowing you to change elements of the text, like its scale, as well as elements of the website, like its background color. I implore you to change parts of the website to better suit your information-gathering needs. </p>
+                <p class ="body">The second menu item, labelled “Navigation”, provides the list of external resources I have included within my writing, sorted as presented by the website. You’ll be prompted to visit these resources within my text so you choose, so feel no pressure to look at the whole menu right away. You may also navigate to any point in my website as you please; I encourage checking the menu if your mind drifts to topics you think are adjacent to the writing you read. </p>
+                <p class ="body">[achievements] </p>
+                <p class ="body">All the content I provide within this website—external or internal—are free-to access or are provided with budgetary considerations in mind. I intend for this website to be of universal access—its resources, lessons, and reflections should be accessible for as many users as possible, and you, dear reader, are one of them. Take advantage of all this website has to offer as it is designed to help you follow your own trains-of-thinking, hopefully teaching you a thing or two about time management along the way. </p>
+                <p class ="body">This website has two “sides” to itself—the “informational”, focusing on the a-physical—theory, practices, and opinions—and the “practical”, focusing on physical media, tool specificity, and purchasing considerations. Please choose what you feel would best suit your need. </p>
+                    <!-- </mark> -->
             </div>
-            <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> <!--horizontal break-->
-            <div class="twoImages">
-                <div class="imageLeft">image on left</div>
-                <div class="imageRight">image on right</div> 
-            </div>
-            <hr style ="height:10px;display:block;background-color:white;">(horizontal space)</hr> <!--horizontal break-->
+            <!-- <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> -->
             <div class="twoButtons">
                 <button class="buttonLeft"><nav><a href="sub_informational/index-sub_informational.html">Informational</a></nav></button>
                 <button class="buttonRight"><nav><a href="sub_practical/index-sub_practical.html">Practical</a></nav></button>
             </div> 
+            <div class="twoImages" style="margin-top: 3%;">
+                <div class="imageLeft">Learning about “biological prime time”, time management techniques, and general mindset </div>
+                <div class="imageRight">Learning about useful useable applications, efficient resource gathering/usage, and the intricacies of the “tactile feel” within physical/digital media. </div> 
+            </div>
         </div>
         
         <!--TEMPORARY FUNCTION TESTING; NOT WORKING
@@ -215,6 +226,13 @@
     document.getElementById("demo_ID").innerText = "hello workd"; 
 </script>
 -->
+<footer class="footer">
+    <div class="footerText">
+        <div class="item"></div>
+        <div class="item">Done for school course GRPH–2010 with the goal of, "Design[ing] and develop[ing] an 'online resource.'" All external sources belong to their respective owners. Textual content and website development was made by website's designer. This website is a product of its content.</div>
+        <div class="item"></div>
+    </div>
+</footer>
             
 <script src="javaGlobal.js"></script> <!--javascript linking; script HAS to be loaded after defining HTML elements--> 
 

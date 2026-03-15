@@ -92,6 +92,12 @@ waffle_subMenu_open()
                             // MENU CODE
 //VIDEO TUT:
 //refering to CSS variables (the root) 
+//going to home
+
+function home() {
+    window.location.href = 'index.html';
+}
+
 var root = document.querySelector(':root'); 
 
 //moving around CSS variables
@@ -342,11 +348,38 @@ const slider_bg = document.querySelector('.bg_slider input');
  
 slider_bg.addEventListener ('input', () => {
     const hue = slider_bg.value;
-    root.style.setProperty ('--websiteBackgroundColor', `oklch(0.6 0.1 ${hue})`);
+    root.style.setProperty ('--websiteBackgroundColor', `oklch(0.45 0.1 ${hue})`);
 })  
+
+const websiteBackgroundContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
+const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage_on');
+
+function f_websiteContrast_high () {
+    root.style.setProperty ('--websiteBackgroundColor', 'white')
+    root.style.setProperty ('--websiteBackgroundImage', 0);
+    root.style.setProperty ('--typeBodyColor', 'black');
+    root.style.setProperty ('--typeTitleColor', 'black');
+    root.style.setProperty ('--backdrop', '0');
+
+}
+
+function f_websiteContrast_regular () {
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundContrast_regular)
+    root.style.setProperty ('--websiteBackgroundImage', 0);
+    root.style.setProperty ('--typeTitleColor', typeColor_dark);
+    root.style.setProperty ('--typeBodyColor', typeColor_dark);
+    root.style.setProperty ('--backdrop', '0');
+}
+
+function f_websiteContrast_low () {
+    root.style.setProperty ('--websiteBackgroundImage', websiteBackgroundColor_low);
+    root.style.setProperty ('--typeTitleColor', typeColor_dark);
+    root.style.setProperty ('--typeBodyColor', typeColor_dark);
+    root.style.setProperty ('--backdrop', '#ffffff');
+}
 
 
 
         //TTS LATER.
 
-                        //ACHIEVEMENT SECTION (LATER)
+                        //ACHIEVEMENT SECTION (LATER)—GLOBAL VARIABLE IMPLEMENTATION 

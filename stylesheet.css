@@ -46,9 +46,16 @@ Google Fonts' "Get Embed Code" */
     --typeTitleFace: var(--typefaceSansSerif);
     --typeTitleSize: var(--typeTitleSizeSmall);
     --typeTitleColor: var(--color_dark);
+    --typeFooterColor: var(--color_light);
+
+    --typeBodyIndent: 50pt; 
+    --typeBodyLeading: 145%; 
 
 /*webiste bg*/
     --websiteBackgroundColor: var(--color_light);
+    --footerBackgroundColor: var(--color_dark);
+    --websiteBackgroundImage_on: url('bgTXT1.png');
+    --websiteBackgroundImage: 0;
         
 /* GLOBAL VARIABLES */
     --waffleSide: 0px;
@@ -66,6 +73,7 @@ Google Fonts' "Get Embed Code" */
     --accessibilityFull_open: 5fr; 
     --navFull_close: 0px; 
     --navFull_open: 45%; 
+    --backdrop: 0; 
     
 /*accessibility menu*/
 /*colors*/
@@ -79,20 +87,21 @@ Google Fonts' "Get Embed Code" */
 
 /* SVGs */
 .cls-1 {
-    fill: #1e1c19;
-    stroke: #1e1c19;
+    fill: var(--typeBodyColor); 
+    stroke: var(--typeBodyColor); 
     stroke-linecap: round; 
     stroke-width: 4.5px; 
 }
 
 .cls-2 {
-    fill: #f9f4ed;
+    fill: var(--websiteBackgroundColor); 
 }
 
 /* GLOBAL ELEMENTS */
 
 .bodyGlobal  {
     background-color: var(--websiteBackgroundColor); 
+    background-image: var(--websiteBackgroundImage);
     transition: 0.2s; 
 }
 
@@ -106,18 +115,16 @@ Google Fonts' "Get Embed Code" */
 .waffleGlobal {
     width: 50px;
     height: 50px; 
-    
 }
  
 .homeGlobal {
     width: 50px;
     height: 50px; 
-    
 }
 
 /* GLOBAL ELEMENTS: buttons*/
 .waffleButton {
-    background-color: var(--temp_contrastMed);
+    background-color: var(--websiteBackgroundColor);
     display:flex;
     align-items: center;  
     justify-content: space-evely; 
@@ -125,10 +132,12 @@ Google Fonts' "Get Embed Code" */
     border-radius: var(--borderRadius);
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
+    color: var(--typeBodyColor); 
+    border: 0px;  /* taking out border on outside of button */
 }
 
 .homeButton {
-    background-color: var(--temp_contrastMed);
+    background-color: var(--websiteBackgroundColor);
     display:flex;
     align-items: center;  
     justify-content: space-evenly; 
@@ -136,10 +145,16 @@ Google Fonts' "Get Embed Code" */
     border-radius: var(--borderRadius);
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySizeSmall);
+    color: var(--typeBodyColor); 
+    border: 0px; 
 }
 
 .svgWaffle {
     margin-bottom: -70px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+}
+
+.svgHome {
+    margin-left: 15px; 
 }
 
 .waffle_subMenu {
@@ -264,20 +279,42 @@ Google Fonts' "Get Embed Code" */
 .title {
     font-family: var(--typeTitleFace);
     font-size: var(--typeTitleSize); 
-    background-color: var(--color_temp);
     color: var(--typeTitleColor);
     transition: 0.2s; 
+    background-color: var(--backdrop);
 }
 
-.body{
+.bodyContent {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    background-color: var(--backdrop);
+}
+
+.bodyFirstLine {
     font-family: var(--typeBodyFace);
     font-size: var(--typeBodySize);
-    background-color: var(--color_temp);
     color: var(--typeBodyColor);
     font-weight: var(--typeBodyContrast);
     transition: 0.2s; 
+    text-indent: 0; 
+    line-height: var(--typeBodyLeading);
+    margin: 0px;
 }
 
+    
+.body {
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize);
+    color: var(--typeBodyColor);
+    font-weight: var(--typeBodyContrast);
+    transition: 0.2s; 
+    text-indent: var(--typeBodyIndent); 
+    line-height: var(--typeBodyLeading);
+    margin:0px; 
+    background-image: 
+}
+ 
 .linkExternal {
     background-color: var(--color_temp);
 }
@@ -291,8 +328,14 @@ Google Fonts' "Get Embed Code" */
 
 .twoImages {
     display: flex; 
-    gap: 50px;
+    gap: 1%;
     justify-content: space-evenly;
+    margin-left: -5%;
+    margin-right: -5%; 
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize);
+    line-height: var(--typeBodyLeading);
+    color: var(--typeBodyColor);
 }
 
 .threeImages {
@@ -304,37 +347,33 @@ Google Fonts' "Get Embed Code" */
 .imageLeft {  
     width: 40%;
     height: 350px; 
-    background-color: var(--color_temp);
 }
 
 .imageRight {
     width: 40%;
     height: 350px; 
-    background-color: var(--color_temp);
 }
 
 .imageThreeLeft {
     width: 30%;
     height: 350px;
-    background-color: var(--color_temp);
 }
 
 .imageThreeMiddle {
     width: 30%;
     height: 350px; 
-    background-color: var(--color_temp);
 }
 
 .imageThreeRight {
     width: 30%;
     height: 350px; 
-    background-color: var(--color_temp);
 }
 
 .twoButtons {
     display: flex;
     gap: 50px;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+    margin-top: 5%; 
 }
 
 .threeButtons {
@@ -387,6 +426,21 @@ Google Fonts' "Get Embed Code" */
     border-radius: var(--borderRadius);
     padding: 20px; 
 }
+
+
+.footer {
+    color: var(--typeFooterColor);
+    background-color: var(--footerBackgroundColor);
+}
+
+.footerText {
+    display: grid; 
+    grid-template-columns: 20% 50% 30%; 
+    padding: 20px;
+    margin-top: 3%;
+    font-family: var(--typeBodyFace)
+}
+    
 
 /* variables are definited by a ":root", then called with a "var()" */ 
 /*
