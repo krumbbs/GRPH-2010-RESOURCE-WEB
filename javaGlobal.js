@@ -1,98 +1,3 @@
-//document.getElementById("demo_ID").innerText = "bla bla lba"; 
-
-//declare variables with "let [a] = [b];"
-//declare constnats with 'const [a] = [b];'
-
-//can make a string of variables with statements; copied from W3's page:
-    //let a, b, c;  // Declare 3 variables
-    //a = 5;        // Assign the value 5 to a
-    //b = 6;        // Assign the value 6 to b
-    //c = a + b;    // Assign the sum of a and b to c
-
-//"scope" refers to the breadth a value is relevant in...
-
-//conditional statements = 
-    //if (condiditon) {} (CAN HAVE MORE NESTED 'IF' STATEMENTS + ELSE + ELSEIF STATEMENTS...)
-        //USE "JS Ternary" TO MAKE FOOLPROOF BACKUPS TO COMMANDS?
-        //makes use of booleans—"if"s can be true or false... cascades into looping
-    //switch (expression) {} (USE IF YOU HAVE MANY ALTERNATIVE CODE BLOCKS IN ONE; POTENTIALLY USEFUL)
-        //based conditions, swtiches select one/more code blocks ot be executed... nest all of menu in switch? 
-        //allows you to share code across mutliple code blocks
-        //allows you to create "default" code—one that runs if no other matches; foolproof js 
-        //FROM W3 SCHOOLS: 
-            //If multiple cases matches a case value, the first case is selected. 
-            //If no matching cases are found, the program continues to the default label.
-            //If no default label is found, the program continues to the statement(s) after the switch.
-
-//look into JS Loops for achievement section; JS function expressions; JS scope
-
-//useful to test function functionality by returning a value to the console: 
-    //function sayHello() {
-      //return "Hello World"; //('RETURN' STATEMENT STOPS REST OF FUNCTION NO MATTER WHAT)
-    //}
-    //console.log(sayHello());
-//function parameters allow you to change values as functions when called (of which are called "arguments");
-    //function hello(a,b)
-    //let message = hello(5,4) //will make 'a' 5, 'b' 4—code might be wrong but gen. idea is still there 
-
-//OBJECTS: variables (use const[and not let for some reason]) that store both values AND functions; key:value and key:function()
-        //you can also create an empty object and add variables later (accessbility funcitonality?)
-        //can access object properties with dot notation; 'objectName.propertyName'
-            //CAN PICK AT/ACCESS INDIVIDUAL PROPERTIES WITHIN OBJECT; YOU DO NOT** HAVE TO CALL THE WHOLE THING!
-        //can nest funcitons within objects as "object methods"
-
-
-
-
-//MAIN GOAL: ALTER CSS VARIABLE USING JAVASCRIPT LOGIC; ACCESSED VIA BUTTON PRESSING 
-
-/*
-var root = document.querySelector(':root'); //refering to 'root's (variables)—for some reason, 'const' or 'let' wont declare...
-//how does one refer to the variable properly in the css? only refers to HTML...
-var JS_waffleSide_open = document.querySelector('--waffleSide_open');
-
-function test () {
-    console.log(root);
-}
-test();
-
-
-
-var root2 = window.getComputedStyle(document.body)
-console.log( root2.getPropertyValue('--bar') ) // #336699
-console.log( root2.getPropertyValue('--baz') ) // calc(2px*2)
-
-function waffle_subMenu_open() {
-    //document.getElementById("waffle_subMenu_ID").style.setProperty = ('width', '--waffleSide_open');
-    root.style.setProperty = ('--waffleSide', JS_waffleSide_open);
-}
-
-//
-//COPIED:
-var r = document.querySelector(':root');
-
-function myFunction_get() {
-  var rs = getComputedStyle(r);
-  alert("The value of --primary-bg-color is: " + rs.getPropertyValue('--primary-bg-color'));
-}
-
-myFunction_get()
-
-function myFunction_set() {
-  r.style.setProperty('--primary-bg-color', 'green');
-}
-
-myFunction_set()
-//
-//
-
-waffle_subMenu_open()
-
-*/ 
-                            // MENU CODE
-//VIDEO TUT:
-//refering to CSS variables (the root) 
-//going to home
 
 function home() {
     window.location.href = 'index.html';
@@ -134,34 +39,6 @@ function f_navMenu_close () {
 
 
 
-/* ACCESSIBILITY BUTTON type size changing */
-
-/* OLD test... its the variable to variable swap that isn't working
-function f_typeSizeBody_regular () {
-    root.style.setProperty('--typeBodySize', '5000px');
-    alert("HELLO");
-}
-*/ 
-
-
-
-/*insert switch to run checks on whether or full accessibility menu is open/not (use to close pop-up)  */
-
-//EVENT LISTENERS: tracking/updating BASED on clicks
-// document.getElementById("a_bodyScale_small").addEventListener("click", function() {alert("CLICKED"); });
-
-//TESTING EVENT LISTENERS:
-//var a = document.getElementById("a_bodyScale_small")
-//a.addEventListener("click", function() {alert("CLICKED"); } ) //gives an alert error but still works? 
-
-//IMPLEMENTING EVENT LISTENERS: 
-/*
-let bodySmall = document.getElementById("a_bodyScale_small"); 
-bodySmall.addEventListener("click", f_typeSizeBody_small())
-let bodyRegular = document.getElementById("a_bodyScale_regular"); 
-bodyRegular.addEventListener("click", f_typeSizeBody_regular())
-*/
-
                                 // BODY CODE
 
 /* CONST—getting css variable values; operating JS SEPERATELY from CSS definitions. */ 
@@ -174,6 +51,7 @@ const typeTitleSize_big = getComputedStyle(document.documentElement).getProperty
 
 function f_typeSizeBody_small () {
     root.style.setProperty('--typeBodySize', typeBodySize_small);
+    localStorage.setItem("body", typeBodySize_small);
     //alert("small");
 }
 function f_typeSizeTitle_small () {
@@ -181,6 +59,7 @@ function f_typeSizeTitle_small () {
 }
 function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodySize', typeBodySize_regular);
+    localStorage.setItem("body", typeBodySize_regular); //GLOBAL NAV: SETTING PARAMETER TO SET VALUE. USE SAME STRING FOR OTHER VALUES
     //alert("reg");
 }
 function f_typeSizeTitle_regular () { //this function isn't activating—FIX LATER? 
@@ -190,8 +69,13 @@ function f_typeSizeTitle_regular () { //this function isn't activating—FIX LAT
 function f_typeSizeBody_big () {
     root.style.setProperty('--typeBodySize', typeBodySize_big);
     root.style.setProperty('--typeTitleSize', typeTitleSize_big);
+    localStorage.setItem("body", typeBodySize_big);
     //alert("big");
 }
+
+let bodyItem = localStorage.getItem("body"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeBodySize', bodyItem); //GLOBAL NAV: CHANGING TO PARAMETER
+
 
 const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');
 const typeBodyContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastRegular');
@@ -199,13 +83,20 @@ const typeBodyContrast_bold = getComputedStyle(document.documentElement).getProp
 
 function f_typeBodyContrast_light () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_light);
+    localStorage.setItem("typeContrast", typeBodyContrast_light);
 }
 function f_typeBodyContrast_regular () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_regular);
+    localStorage.setItem("typeContrast", typeBodyContrast_regular);
+
 }
 function f_typeBodyContrast_bold () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_bold);
+    localStorage.setItem("typeContrast", typeBodyContrast_bold);
 }
+
+let contrastItem = localStorage.getItem("typeContrast"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeBodyContrast', contrastItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
 const typeBodyFace_serif = getComputedStyle(document.documentElement).getPropertyValue('--typefaceSerif');
 const typeBodyFace_sansSerif = getComputedStyle(document.documentElement).getPropertyValue('--typefaceSansSerif');
@@ -214,89 +105,24 @@ const typeBodyFace_friendly = getComputedStyle(document.documentElement).getProp
 function f_typeBodyFace_serif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_serif);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_serif);
-
+    localStorage.setItem("typeContrast", typeBodyFace_serif);
 }
 function f_typeBodyFace_sansSerif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_sansSerif);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_sansSerif);
+    localStorage.setItem("typeContrast", typeBodyFace_sansSerif);
 }
 function f_typeBodyFace_friendly () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_friendly);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_friendly);
+    localStorage.setItem("typeContrast", typeBodyFace_friendly);
 }
 
-//COLOR RANGE SELECTING—video tutorial https://www.youtube.com/watch?v=EQuT-CdJ2sE
+let faceItem = localStorage.getItem("typeFace"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeBodyFace', faceItem); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--typeTitleFace', faceItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
-// for some reason, this is breaking the other code
-/*
-const slider = document.querySelector(document.getElementById('a_bodyColor_slider') input); //picking slider html
-const sliderRoot = document.querySelector(':root'); //picking css variable 
 
-sliderRoot.addEventListener("input", function () {
-    const hue = slider.value; 
-    sliderRoot.style.setProperty('--color_dark', 'red');
-} )
-*/
-
-//'querySelector' returns FIRST element that matches first css value—that's why its not detecting from html... 
-
-/*
-let slider = document.getElementById('a_bodyColor_slider');
-let sliderValue = slider.value; 
-
-alert(sliderValue); //slider itself is null... because it's an element, not a value... so how to you call a value?
-
-*/
-
-/*
-let slider = document.getElementById("a_bodyColor_slider_range"); //this code is running properly
-
-slider.oninput = function() { ////breaks here 
-    alert(slider); 
-    root.style.setProperty('--typeBodyColor', 'red');
-}
-*/ 
-
-/*
-slider.addEventListener("input", function () {
-    const hue = slider.value; 
-    root.style.setProperty('color_dark', 'red')
-})
-*/ 
-
-//CRITIQUE FROM DREW: add an 'eventListener'—oninput breaks as document loads as it isn't told to keep watching
-    //out for change-in-value; thats what 'eventListener' is for
-
-/*
-
-let slider = document.getElementById("a_bodyColor_slider_range");
-
-slider.addEventListener("input", function() {
-    const hue = this.value; 
-    alert(value);
-    root.style.setProperty('--typeBodyColor', 'green');
-})
-
-*/
-
-//COPIED FROM W3:
-/*
-var slider = document.getElementById("a_bodyColor_slider_range");
-var output = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyColor');
-
-slider.addEventListener("input", function() {
-  output.innerHTML = this.value;
-})
-*/ 
-//Copied agian + edited w/ video:
-/*
-const slider = document.querySelector('.test1 input');
-
-slider.addEventListener ('input', function () {
-    const hue = slider.value 
-    root.style.setProperty ('--typeBodyColor', `oklch(0.2276 0.1 ${hue})`)
-})  
-*/ 
 
 const typeColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
 const typeColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
@@ -304,19 +130,25 @@ const typeColor_light = getComputedStyle(document.documentElement).getPropertyVa
 function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
+    localStorage.setItem("typeColor", typeColor_dark);
 }
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
     root.style.setProperty ('--typeTitleColor', typeColor_light);
+    localStorage.setItem("typeColor", typeColor_light);
 }
 
 const slider = document.querySelector('.a_slider input');
- 
-slider.addEventListener ('input', () => {
+slider.addEventListener ('input', () => { //cannot get this to work with a normal function declaration
     const hue = slider.value;
     root.style.setProperty ('--typeBodyColor', `oklch(0.4 0.4 ${hue})`); //IT (doesnt) WORK?? 
     root.style.setProperty ('--typeTitleColor', `oklch(0.4 0.4 ${hue})`);
+    localStorage.setItem("typeColor", typeColor_dark); // can look into specifically-changed values later 
 })  
+
+let colorItem = localStorage.getItem("typeColor"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeBodyColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--typeTitleColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
 //NOT FUNCTIONAL—highlight code
 
@@ -339,28 +171,39 @@ const websiteBackgroundColor_light = getComputedStyle(document.documentElement).
 
 function f_websiteBackgroundColor_dark () {
     root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
+    localStorage.setItem("bgColor", websiteBackgroundColor_dark); 
 }
 function f_websiteBackgroundColor_light () {
     root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
+    localStorage.setItem("bgColor", websiteBackgroundColor_light); 
 }
 
 const slider_bg = document.querySelector('.bg_slider input');
- 
 slider_bg.addEventListener ('input', () => {
     const hue = slider_bg.value;
     root.style.setProperty ('--websiteBackgroundColor', `oklch(0.45 0.1 ${hue})`);
+    localStorage.setItem("bgColor", websiteBackgroundColor_light); // can look into specifically-changed values later 
 })  
+
+let bgColorItem = localStorage.getItem("bgColor"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--websiteBackgroundColor', bgColorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
 const websiteBackgroundContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
 const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage_on');
+const colorWhite = "white";
+const colorBlack = "black"
 
 function f_websiteContrast_high () {
-    root.style.setProperty ('--websiteBackgroundColor', 'white')
+    root.style.setProperty ('--websiteBackgroundColor', colorWhite)
     root.style.setProperty ('--websiteBackgroundImage', 0);
-    root.style.setProperty ('--typeBodyColor', 'black');
-    root.style.setProperty ('--typeTitleColor', 'black');
-    root.style.setProperty ('--backdrop', '0');
-
+    root.style.setProperty ('--typeTitleColor', colorBlack);
+    root.style.setProperty ('--typeBodyColor', colorBlack);
+    root.style.setProperty ('--backdrop', 0);
+    localStorage.setItem("bgContrast1", colorWhite); 
+    localStorage.setItem("bgContrast2", 0);
+    localStorage.setItem("bgContrast3", colorBlack);
+    localStorage.setItem("bgContrast4", colorBlack);
+    localStorage.setItem("bgContrast5", 0);
 }
 
 function f_websiteContrast_regular () {
@@ -368,16 +211,36 @@ function f_websiteContrast_regular () {
     root.style.setProperty ('--websiteBackgroundImage', 0);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
-    root.style.setProperty ('--backdrop', '0');
+    root.style.setProperty ('--backdrop', 0);
+    localStorage.setItem("bgContrast1", websiteBackgroundContrast_regular); 
+    localStorage.setItem("bgContrast2", 0);
+    localStorage.setItem("bgContrast3", typeColor_dark);
+    localStorage.setItem("bgContrast4", typeColor_dark);
+    localStorage.setItem("bgContrast5", 0);
 }
 
 function f_websiteContrast_low () {
     root.style.setProperty ('--websiteBackgroundImage', websiteBackgroundColor_low);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
-    root.style.setProperty ('--backdrop', '#ffffff');
+    root.style.setProperty ('--backdrop', colorWhite);
+    localStorage.setItem("bgContrast1", colorWhite);
+    localStorage.setItem("bgContrast2", websiteBackgroundColor_low); 
+    localStorage.setItem("bgContrast3", typeColor_dark);
+    localStorage.setItem("bgContrast4", typeColor_dark);
+    localStorage.setItem("bgContrast5", colorWhite);
 }
 
+let bgContrast1Item = localStorage.getItem("bgContrast1"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+let bgContrast2Item = localStorage.getItem("bgContrast2"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+let bgContrast3Item = localStorage.getItem("bgContrast3"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+let bgContrast4Item = localStorage.getItem("bgContrast4"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+let bgContrast5Item = localStorage.getItem("bgContrast5"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--websiteBackgroundColor', bgContrast1Item); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--websiteBackgroundImage', bgContrast2Item); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--typeTitleColor', bgContrast3Item); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--typeBodyColor', bgContrast4Item); //GLOBAL NAV: CHANGING TO PARAMETER
+root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO PARAMETER
 
 
         //TTS LATER.
