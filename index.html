@@ -51,16 +51,16 @@
         </div>
 
         <div class="waffle_subMenu" id="waffle_subMenu_ID">
-            <button class="optn_accessibility" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
-            <button class="optn_sourceList" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
-            <button class="optn_achievements" id="optn_achievements_ID">Achievements</button>
+            <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
+            <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
+            <button class="optn" id="optn_achievements_ID">Achievements</button>
             <div class="waffleSub_close"><button class="close" onclick="f_waffleSide_close()">Close</button></div>
         </div>
             <!-- 'a' refers to 'accessibility' -->
                             <!-- ACCESSIBILITY MENU -->
         <div class="accessibilityMenu">
-            <p>Body</p>
-            <p>Website</p>
+            <p class="menuMain">Body</p>
+            <p class="menuMain">Website</p>
             <div><button class="close" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
             <div class="a_bodyText">
                 <div class="scale">
@@ -91,7 +91,7 @@
                     <button class="a_button" id="a_bodyColor_dark" onclick ="f_typeColor_dark()">Dark</button>
                     <button class="a_button" id="a_bodyColor_light" onclick ="f_typeColor_light()">Light</button>
                     <div class ="a_slider" id="a_bodyColor_slider">
-                        <input type="range" id="myRange" value ="0" min ="0" max="360"></input> 
+                        <input type="range" class="ranges" id="myRange" value ="0" min ="0" max="360"></input> 
                     </div>
                 </div>
                 <div class="highlightColor">
@@ -127,10 +127,10 @@
                         <!-- NAV MENU --> 
         <div class="navMenu">
             <div class="navHead">
-                <h6><nav><a href="">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
+                <h6 class="menuHead"><nav><a href="sub_informational/index-sub_informational.html">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
                 <div class="navSubMenu">
                     <div class="navSub" id="info_genMindset">
-                        <nav><h6>General Mindset</h6></nav>
+                        <nav><a href="sub_informational/subsub_genMindset/index-subsub_genMindset.html"><h6 class="menuHead">General Mindset</h6></a></nav>
                         <nav class="navSubSub">
                             <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
                             <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
@@ -138,13 +138,13 @@
                         </nav>
                     </div>
                     <div class="navSub" id="info_primeTime">
-                        <nav><h6>Prime Time</h6></nav>
+                        <h6 class="menuHead"><nav><a href="sub_informational/subsub_primeTime/index-subsub_primeTime.html">Prime Time</a></nav></h6>
                         <nav class="navSubSub">
                             <a href="https://www.youtube.com/watch?v=PPITG-6fR5s">Video</a>
                         </nav>
                     </div>
                     <div class="navSub" id="info_timeManagement">
-                        <nav><h6>Time Management</h6></nav>
+                        <nav><h6 class="menuHead"><a href="sub_informational/subsub_timeManagement/index-subsub_timeManagement.html">Time Management</a></h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
                             <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ">Podcast—better work environments</a>
@@ -153,23 +153,23 @@
                 </div>
             </div>
             <div class="navHead">
-                <nav><h5>Practical</h5></nav>
+                <nav><h6 class="menuHead"><a href="sub_practical/index-sub_practical.html">Practical</a></h6></nav>
                 <div class="navSubMenu">
                     <div class="navSub" id="practical_apps">
-                        <nav><h6>Applications</h6></nav>
+                        <nav><h6 class="menuHead"><a href="sub_practical/subsub_apps/index-subsub_apps.html">Applications</a></h6></nav>
                         <nav class="navSubSub">
                             <a href="https://obsidian.md/">Obsidian</a>
                             <a href="https://www.when2meet.com/">When2Meet</a>
                         </nav>
                     </div>
                     <div class="navSub" id="practical_mediaPref">
-                        <nav><h6>Media Preferences</h6></nav>
+                        <nav><h6 class="menuHead"><a href="sub_practical/subsub_mediaPref/index-subsub_mediaPref.html">Media Preferences</a></h6></nav>
                         <nav class="navSubSub">
                             <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334">Pen-picking</a>
                         </nav>
                     </div>
                     <div class="navSub" id="practical_storefront">
-                        <nav><h6>Storefront</h6></nav>
+                        <nav><h6 class="menuHead"><a href="sub_practical/subsub_storefront/index-subsub_storefront.html">Storefront</a></h6></nav>
                         <nav class="navSubSub">
                             <a href="httpshttps://www.walmart.ca/en/search?q=sticky+notes">Walmart Sticky notes</a>
                         </nav>
@@ -183,7 +183,7 @@
         
         <div class ="static">
             <div class ="title">
-                <h3 style="margin-bottom:-10px;">ggg (landing page)</h3>
+                <h3 style="margin-bottom:-8px;">[website title]</h3>
                 <p style="font-size:12pt;">by Michael</p>
             </div>
             <div class="bodyContent">
@@ -203,8 +203,8 @@
             </div>
             <!-- <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> -->
             <div class="twoButtons">
-                <button class="buttonLeft"><nav><a href="sub_informational/index-sub_informational.html">Informational</a></nav></button>
-                <button class="buttonRight"><nav><a href="sub_practical/index-sub_practical.html">Practical</a></nav></button>
+                <button class="buttonLeft" onclick="informational()">Informational</button>
+                <button class="buttonRight" onclick="practical()">Practical</button>
             </div> 
             <div class="twoImages" style="margin-top: 3%;">
                 <div class="imageLeft">Learning about “biological prime time”, time management techniques, and general mindset </div>

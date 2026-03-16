@@ -1,18 +1,26 @@
-
 function home() {
     window.location.href = 'index.html';
 }
+function informational() {
+    window.location.href = 'sub_informational/index-sub_informational.html';
+}
+function practical() {
+    window.location.href = 'sub_practical/index-sub_practical.html';
+}
+
 
 var root = document.querySelector(':root'); 
 
 //moving around CSS variables
 function f_waffleSide_open() {
-    root.style.setProperty('--waffleSide', '--waffleSide_open') //do NOT put an equal sign!!!!*******
+    root.style.setProperty('--waffleSide', '--waffleSide_open'); //do NOT put an equal sign!!!!*******
+    root.style.setProperty('--menuDisplay', 'flex');
     //root.style.setProperty('--waffleSide_transition', '77.5') //trying to transition menus... 
 } 
 
 function f_waffleSide_close() {
-    root.style.setProperty('--waffleSide', '0px') //do NOT put an equal sign!!!!*******
+    root.style.setProperty('--waffleSide', '0px'); //do NOT put an equal sign!!!!*******
+    root.style.setProperty('--menuDisplay', 'none');
 } 
 
 /* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
@@ -22,19 +30,21 @@ while (root.style('--waffleSide') = root.style('--waffleSide_open')) {
 */
 
 function f_accessibilityFull_open () {
-    root.style.setProperty('--accessibilityFull', '--accessibilityFull_open')
+    root.style.setProperty('--accessibilityFull', '--accessibilityFull_open');
+    root.style.setProperty('--menuDisplay', 'grid');
 }
 
 function f_accessibilityFull_close () {
-    root.style.setProperty('--accessibilityFull', '0px')
+    root.style.setProperty('--accessibilityFull', '0px');
+    root.style.setProperty('--menuDisplay', 'none');
 }
 
 function f_navMenu_open () {
-    root.style.setProperty('--navFull', '--navFull_open')
+    root.style.setProperty('--navFull', '--navFull_open');
 }
 
 function f_navMenu_close () {
-    root.style.setProperty('--navFull', '0px')
+    root.style.setProperty('--navFull', '0px');
 }
 
 
