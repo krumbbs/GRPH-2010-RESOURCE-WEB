@@ -13,6 +13,13 @@ const achievementComplete = getComputedStyle(document.documentElement).getProper
 function home() {
     window.location.href = 'index.html';
 }
+function homemin1() {
+    window.location.href = '../index.html';
+}
+function homemin2() {
+    window.location.href = '../../index.html';
+}
+
 function informational() {
     window.location.href = 'sub_informational/index-sub_informational.html';
 }
@@ -133,6 +140,7 @@ function f_typeBodyContrast_bold () {
                     localStorage.setItem("achievement1_complete", "true");
                 }
             a_1_check = true; 
+            //push a_1_check to localStorage 
         }
     }
 }
