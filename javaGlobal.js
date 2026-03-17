@@ -124,11 +124,11 @@ function f_typeBodyContrast_bold () {
         alert("Achievement: Changed face to bold!"); 
     }
     if ((achievementItem1)==="false") { 
-        alert ("1");
+        //alert ("1");
         if ((a_1_check)===false) {
-            alert ("2");
+            //alert ("2");
             if ((a_1)===true) {
-                alert ("3");
+                //alert ("3");
                     ach_1 ();
                     localStorage.setItem("achievement1_complete", "true");
                 }

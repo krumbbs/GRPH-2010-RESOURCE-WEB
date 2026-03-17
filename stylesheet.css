@@ -467,7 +467,7 @@ Google Fonts' "Get Embed Code" */
     justify-content: space-evenly; 
     height: 25%;
     position: fixed; 
-    margin-left: 400px;
+    margin-left: 350px;
     background-color: var(--color_dark);
     width: var(--waffleSide); 
     overflow: hidden; /*prevents overflowing content from appearing*/
