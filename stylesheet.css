@@ -422,6 +422,60 @@ Google Fonts' "Get Embed Code" */
         margin-left: -25px; 
         transform: scale(0.8)
     }
+    .accessibilityMenu {
+        background-color: var(--color_dark);
+        font-family: var(--typeBodyFace);
+        color: var(--bgColorW);
+        display: var(--menuDisplay); 
+        grid-template-columns: 55% 35% auto; 
+        width: var(--accessibilityFull); 
+        overflow: hidden; 
+        position: fixed; 
+        margin-left: 0%; 
+        border-radius: var(--borderRadius_menu);
+        padding: 0; 
+        /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
+    }
+    .navMenu {
+        background-color: var(--color_dark);
+        font-family: var(--typeBodyFace);
+        color: var(--color_light);
+        display: var(--menuDisplay_grid);
+        width: var(--navFull); 
+        grid-template-columns: 45% 45% 5%;
+        overflow: hidden;
+        position: fixed; 
+        margin-left: 10%;
+        padding: 2%;
+        border-radius: var(--borderRadius_menu);
+    }
+    .achievementMenu {
+        display: var(--achievementMenu_display);
+        background-color: var(--color_dark);
+        width: 45%;
+        height: 30%; 
+        position: fixed; 
+        margin-left: 50%; 
+        padding: 2%; 
+        border-radius: var(--borderRadius);
+        flex-direction: column; 
+    }
+    .waffle_subMenu {
+    /* review (and add) padding for menu items */ 
+    display: var(--menuDisplay); 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    height: 25%;
+    position: fixed; 
+    margin-left: 400px;
+    background-color: var(--color_dark);
+    width: var(--waffleSide); 
+    overflow: hidden; /*prevents overflowing content from appearing*/
+    transition: 1s; 
+    border-radius: var(--borderRadius_menu);
+    padding: 20px;
+    transform: scale(0.8);
+}
 }
     
 @media screen and (max-width: 800px) and (min-width: 631px) {
@@ -438,12 +492,38 @@ Google Fonts' "Get Embed Code" */
         margin-left: -28px; 
         transform: scale(0.8)
     }
-        
     .svgHome {
         position: relative; 
         margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
         margin-left: -15px; 
         transform: scale(0.8)
+    }
+    .accessibilityMenu {
+        background-color: var(--color_dark);
+        font-family: var(--typeBodyFace);
+        color: var(--bgColorW);
+        display: var(--menuDisplay); 
+        grid-template-columns: 55% 35% auto; 
+        width: var(--accessibilityFull); 
+        overflow: hidden; 
+        position: fixed; 
+        margin-left: 20%; 
+        border-radius: var(--borderRadius_menu);
+        padding: 0; 
+        /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
+    }
+    .navMenu {
+        background-color: var(--color_dark);
+        font-family: var(--typeBodyFace);
+        color: var(--color_light);
+        display: var(--menuDisplay_grid);
+        width: var(--navFull); 
+        grid-template-columns: 45% 45% 5%;
+        overflow: hidden;
+        position: fixed; 
+        margin-left: 20%;
+        padding: 2%;
+        border-radius: var(--borderRadius_menu);
     }
 }
 
@@ -453,15 +533,25 @@ Google Fonts' "Get Embed Code" */
         right: 8%; 
         display: flex; 
         flex-direction: column; 
-        margin-right: 25px; 
+        margin-right: 25px;
+    }
+    .navMenu {
+        background-color: var(--color_dark);
+        font-family: var(--typeBodyFace);
+        color: var(--color_light);
+        display: var(--menuDisplay_grid);
+        width: var(--navFull); 
+        grid-template-columns: 45% 45% 5%;
+        overflow: hidden;
+        position: fixed; 
+        margin-left: 40%;
+        padding: 2%;
+        border-radius: var(--borderRadius_menu);
     }
 }
-
 .highlight {
     background-color: var(--highlight); /*not showing up in the first place*/ 
 }
-    
-
 .title {
     font-family: var(--typeTitleFace);
     font-size: var(--typeTitleSize); 
