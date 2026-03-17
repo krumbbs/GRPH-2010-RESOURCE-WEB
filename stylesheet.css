@@ -33,7 +33,7 @@
         /* COLORS... PER TYPE HIERARCHY */ 
     --colorType_title: var(--color_dark); /* ??????????*/ 
     --colorType_body: var(--color_dark);
-    --achievementType: var(--color_dark);
+    --achievementType: var(--color_light);
     --achievement_complete_typeColor: #AAFFAA; 
 
 /* HIGHLIGHTS */ 
@@ -185,10 +185,12 @@ Google Fonts' "Get Embed Code" */
 }
 
 .svgWaffle {
+    position: relative; 
     margin-bottom: -70px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
 }
 
 .svgHome {
+    position: relative; 
     margin-left: 15px; 
 }
 
@@ -267,6 +269,7 @@ Google Fonts' "Get Embed Code" */
     grid-template-rows: 30% 30%; 
     row-gap: 20%;
     padding: 10%; /* not working */ 
+    margin-top: -7.5%; 
 }
     
 .a_website {
@@ -274,7 +277,8 @@ Google Fonts' "Get Embed Code" */
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 30%; 
     row-gap: 20%;
-    padding: 10%; /* not working */ 
+    padding: 10%; /* not working */
+    margin-top: -7.5%;
 }
 
 /* #myRange { */
@@ -354,8 +358,8 @@ Google Fonts' "Get Embed Code" */
 
 .achievementMenu {
     display: var(--achievementMenu_display);
-    background-color: blue;
-    width: 10%;
+    background-color: var(--color_dark);
+    width: 20%;
     height: 30%; 
     position: fixed; 
     margin-left: 75%; 
@@ -367,12 +371,18 @@ Google Fonts' "Get Embed Code" */
 .achievement {
     display: flex; 
     flex-direction: row; 
-    background-color: green;
+    background-color: 0;
     color: var(--achievementType);
 }
 
 .achievementComplete {
     color: var(--achievementType);
+    margin-right: 10%; 
+    margin-left: 10%;
+}
+
+#accessibilityClose {
+    margin-top: 15px; 
 }
 
 
@@ -387,6 +397,63 @@ Google Fonts' "Get Embed Code" */
         .static {
         margin-left: 5%;
         margin-right: 15%; /* accomadated for Samsung Galaxy S8 */ 
+    }
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 630px) { 
+.global {
+        position: fixed; 
+        right: 8%; 
+        display: flex; 
+        flex-direction: column; 
+        margin-right: 30px; 
+    }
+    .svgWaffle {
+        position: relative; 
+        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+        margin-left: -40px; 
+        transform: scale(0.8)
+    }
+        
+    .svgHome {
+        position: relative; 
+        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+        margin-left: -25px; 
+        transform: scale(0.8)
+    }
+}
+    
+@media screen and (max-width: 800px) and (min-width: 631px) {
+    .global {
+        position: fixed; 
+        right: 8%; 
+        display: flex; 
+        flex-direction: column; 
+        margin-right: 30px; 
+    }
+    .svgWaffle {
+        position: relative; 
+        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+        margin-left: -28px; 
+        transform: scale(0.8)
+    }
+        
+    .svgHome {
+        position: relative; 
+        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
+        margin-left: -15px; 
+        transform: scale(0.8)
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 801px) {
+    .global {
+        position: fixed; 
+        right: 8%; 
+        display: flex; 
+        flex-direction: column; 
+        margin-right: 25px; 
     }
 }
 

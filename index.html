@@ -61,7 +61,7 @@
         <div class="accessibilityMenu">
             <p class="menuMain">Body</p>
             <p class="menuMain">Website</p>
-            <div><button class="close" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
+            <div><button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
             <div class="a_bodyText">
                 <div class="scale">
                     <p>Scale</p>
@@ -76,7 +76,6 @@
                 </div>
                 <div class="contrast">
                     <p>Contrast</p>
-                    <button class="a_button" id="a_bodyContrast_light" onclick ="f_typeBodyContrast_light()">Light</button> <!-- does nothing sans serif --> 
                     <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
                     <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
                 </div>
@@ -94,12 +93,14 @@
                         <input type="range" class="ranges" id="myRange" value ="0" min ="0" max="360"></input> 
                     </div>
                 </div>
+                <!--
                 <div class="highlightColor">
                     <p>Highlight Color</p>
                     <button class="a_button" id="a_bodyHLColor_on" onclick="f_highlight_on()">On</button>
                     <button class="a_button" id="a_bodyHLColor_off" onclick="f_highlight_off()">Off</button>
                     <button class="a_button" id="a_bodyHLColor_choose">Choose</button>
                 </div>
+                -->
             </div>
             <div class="a_website">
                 <div class="contrast">
@@ -116,12 +117,12 @@
                         <input type="range" id="myRange_web" value ="0" min ="0" max="360"></input> 
                     </div>
                 </div>
+                <!--
                 <div class="text-to-speech">
                     <p>Text-to-speech</p>
                     <button class="a_button" id="a_websiteTextToSpeech_on">On</button>
-                    <button class="a_button" id="a_websiteTextToSpeech_off">Off</button>
-                    <!-- <button class="a_websiteBackgroundColor_choose">Choose</button> -->
-                </div>
+                    <button class="a_button" id="a_websiteTextToSpeech_off">Off</button> <!-- <button class="a_websiteBackgroundColor_choose">Choose</button> -->
+               <!-- </div> --> 
             </div>
         </div>
                         <!-- NAV MENU --> 
@@ -185,8 +186,7 @@
                     <!-- ACHIEVEMENT MENU -->
 
         <div class="achievementMenu">
-            hello
-            <button style="width: 60px; height: 30px; "class="close"onclick="f_achievementClose()">Close</button>
+            <button style="width: 60px; height: 30px; "class="close" id="achievementClose" onclick="f_achievementClose()">Close</button>
             <div class="achievement">
                 <p class="achievementComplete"> completed </p>
                 <p>Achievement 1: Set body type contrast to bold</p>

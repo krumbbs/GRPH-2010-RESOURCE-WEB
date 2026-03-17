@@ -3,7 +3,7 @@ let a_1 = false;
 let a_1_check = false; 
 let achievementItem1 = localStorage.getItem("achievement1_complete"); //GLOBAL ACHIEVEMENTS
 //ENSURING changed true value doesn't get overwritten by establishing default value at start
-if (achievementItem1==="false") {
+if (achievementItem1!="true") {
     localStorage.setItem("achievement1_complete", "false");
 }
 let a_2 = false;
