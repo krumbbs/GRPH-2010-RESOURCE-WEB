@@ -12,6 +12,11 @@
     --borderRadius: 40px; 
     --borderRadius_menu: 40px; 
     --menuDisplay: none; 
+    --menuDisplay_grid: none;
+    --achievementMenu_display: none;
+    --achievementMenu_display_open: flex;
+
+    
 
     
     --typeTitleSizeSmall: 50pt; 
@@ -26,8 +31,10 @@
     --color_light_hover: oklch(0.95 0.1 90);
     --color_temp: oklch(1 0 0); 
         /* COLORS... PER TYPE HIERARCHY */ 
-    --colorType_title; var(--color_dark); /* ??????????*/ 
+    --colorType_title: var(--color_dark); /* ??????????*/ 
     --colorType_body: var(--color_dark);
+    --achievementType: var(--color_dark);
+    --achievement_complete_typeColor: #AAFFAA; 
 
 /* HIGHLIGHTS */ 
     /*literally does nothing */ 
@@ -190,10 +197,10 @@ Google Fonts' "Get Embed Code" */
     display: var(--menuDisplay); 
     flex-direction: column; 
     justify-content: space-evenly; 
-    height: 20%;
+    height: 25%;
     position: fixed; 
     margin-left: var(--waffleSide_transition_end);
-    background-color: var(--bgColorB);
+    background-color: var(--color_dark);
     width: var(--waffleSide); 
     overflow: hidden; /*prevents overflowing content from appearing*/
     transition: 1s; 
@@ -221,7 +228,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .accessibilityMenu {
-    background-color: var(--bgColorB);
+    background-color: var(--color_dark);
     font-family: var(--typeBodyFace);
     color: var(--bgColorW);
     display: var(--menuDisplay); 
@@ -237,7 +244,7 @@ Google Fonts' "Get Embed Code" */
 
 .a_button {
     font-size: 10pt;
-    background-color: var(--websiteBackgroundColor);
+    background-color: var(--color_light);
     border-radius: 7.5px;
     font-family: var(--typeBodyFace)
 }
@@ -270,22 +277,23 @@ Google Fonts' "Get Embed Code" */
     padding: 10%; /* not working */ 
 }
 
-#myRange {
+/* #myRange { */
     /* appearance: none; */ /* not working */
     /* width: 100%: */
-}
+/* } */  
 
 .navMenu {
     background-color: var(--color_dark);
     font-family: var(--typeBodyFace);
     color: var(--color_light);
-    display: grid;
+    display: var(--menuDisplay_grid);
     width: var(--navFull); 
     grid-template-columns: 45% 45% 5%;
     overflow: hidden;
     position: fixed; 
     margin-left: 60%;
-    
+    padding: 2%;
+    border-radius: var(--borderRadius_menu);
 }
 
 .navHead {
@@ -300,9 +308,18 @@ Google Fonts' "Get Embed Code" */
     color: var(--color_light)
 }
 
+
 .menuHead {
+    font-size: 16pt;
+    margin-left: -0.5%; 
+    margin-top: -3%; 
+    margin-bottom: -10%;
+}
+
+.menuSubHead {
     font-size: 14pt;
-    margin: 5%;
+    margin-left: -0.5%; 
+    margin-bottom: 5%;
 }
     
 .navSubMenu {
@@ -315,7 +332,12 @@ Google Fonts' "Get Embed Code" */
     padding: 10px;
     display: flex;
     flex-direction: column; 
+    font-size: 14pt;
+}
+
+.navSubSub{
     font-size: 12pt;
+    margin-bottom: -5%; 
 }
 
 .navSubSub a:link {
@@ -329,6 +351,30 @@ Google Fonts' "Get Embed Code" */
 .svgHome {
     margin-bottom: -70px; 
 }
+
+.achievementMenu {
+    display: var(--achievementMenu_display);
+    background-color: blue;
+    width: 10%;
+    height: 30%; 
+    position: fixed; 
+    margin-left: 75%; 
+    padding: 2%; 
+    border-radius: var(--borderRadius);
+    flex-direction: column; 
+}
+
+.achievement {
+    display: flex; 
+    flex-direction: row; 
+    background-color: green;
+    color: var(--achievementType);
+}
+
+.achievementComplete {
+    color: var(--achievementType);
+}
+
 
 /* STATIC ELEMENTS */
 .static {
@@ -385,7 +431,7 @@ Google Fonts' "Get Embed Code" */
     text-indent: var(--typeBodyIndent); 
     line-height: var(--typeBodyLeading);
     margin:0px; 
-    background-image: 
+    background-image: var(--websiteBackgroundImage)
 }
  
 .linkExternal {
@@ -416,6 +462,8 @@ Google Fonts' "Get Embed Code" */
     display: flex; 
     gap: 5%;
     justify-content: space-evenly;
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize);
 }
 
 .imageLeft {  
@@ -464,8 +512,11 @@ Google Fonts' "Get Embed Code" */
 .buttonLeft {
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton);
-    background-color: var(--temp_contrastMed);
+    background-color: var(--websiteBackgroundColor);
     border-radius: var(--borderRadius);
+    border-color: var(--typeBodyColor);
+    color: var(--typeBodyColor);
+    border-style: solid; 
     padding: 30px; 
 }
 
@@ -478,8 +529,11 @@ Google Fonts' "Get Embed Code" */
 .buttonRight {
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton);
-    background-color: var(--temp_contrastMed); 
+    background-color: var(--websiteBackgroundColor); 
     border-radius: var(--borderRadius);
+    border-color: var(--typeBodyColor);
+    color: var(--typeBodyColor);
+    border-style: solid; 
     padding: 30px; 
 }
 

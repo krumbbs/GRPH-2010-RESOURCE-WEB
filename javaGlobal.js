@@ -1,3 +1,15 @@
+//achievements:
+let a_1 = false; 
+let a_1_check = false; 
+let achievementItem1 = localStorage.getItem("achievement1_complete"); //GLOBAL ACHIEVEMENTS
+//ENSURING changed true value doesn't get overwritten by establishing default value at start
+if (achievementItem1==="false") {
+    localStorage.setItem("achievement1_complete", "false");
+}
+let a_2 = false;
+
+const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor')
+
 function home() {
     window.location.href = 'index.html';
 }
@@ -41,10 +53,12 @@ function f_accessibilityFull_close () {
 
 function f_navMenu_open () {
     root.style.setProperty('--navFull', '--navFull_open');
+    root.style.setProperty('--menuDisplay_grid', 'grid');
 }
 
 function f_navMenu_close () {
-    root.style.setProperty('--navFull', '0px');
+    root.style.setProperty('--menuDisplay_grid', 'none');
+    
 }
 
 
@@ -103,6 +117,24 @@ function f_typeBodyContrast_regular () {
 function f_typeBodyContrast_bold () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_bold);
     localStorage.setItem("typeContrast", typeBodyContrast_bold);
+        //achievement functionality—running function with checks to make sure they don't run twice; changes css variable 
+    a_1 = true; 
+    function ach_1 () {
+        root.style.setProperty('--achievementType', achievementComplete);
+        alert("Achievement: Changed face to bold!"); 
+    }
+    if ((achievementItem1)==="false") { 
+        alert ("1");
+        if ((a_1_check)===false) {
+            alert ("2");
+            if ((a_1)===true) {
+                alert ("3");
+                    ach_1 ();
+                    localStorage.setItem("achievement1_complete", "true");
+                }
+            a_1_check = true; 
+        }
+    }
 }
 
 let contrastItem = localStorage.getItem("typeContrast"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -115,17 +147,17 @@ const typeBodyFace_friendly = getComputedStyle(document.documentElement).getProp
 function f_typeBodyFace_serif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_serif);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_serif);
-    localStorage.setItem("typeContrast", typeBodyFace_serif);
+    localStorage.setItem("typeFace", typeBodyFace_serif);
 }
 function f_typeBodyFace_sansSerif () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_sansSerif);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_sansSerif);
-    localStorage.setItem("typeContrast", typeBodyFace_sansSerif);
+    localStorage.setItem("typeFace", typeBodyFace_sansSerif);
 }
 function f_typeBodyFace_friendly () {
     root.style.setProperty ('--typeBodyFace', typeBodyFace_friendly);
     root.style.setProperty ('--typeTitleFace', typeBodyFace_friendly);
-    localStorage.setItem("typeContrast", typeBodyFace_friendly);
+    localStorage.setItem("typeFace", typeBodyFace_friendly);
 }
 
 let faceItem = localStorage.getItem("typeFace"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -141,6 +173,7 @@ function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     localStorage.setItem("typeColor", typeColor_dark);
+    
 }
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
@@ -256,3 +289,24 @@ root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO
         //TTS LATER.
 
                         //ACHIEVEMENT SECTION (LATER)—GLOBAL VARIABLE IMPLEMENTATION 
+// make funciton to toggle achievements on 
+// store variable value from achievements in the while loop 
+// run checks to see if while loop is true 
+
+const achievementOpen = getComputedStyle(document.documentElement).getPropertyValue('--achievementMenu_display_open');
+
+function f_achievementOpen() {
+    root.style.setProperty('--achievementMenu_display', achievementOpen);
+}
+
+function f_achievementClose() {
+    root.style.setProperty('--achievementMenu_display', "none");
+}
+
+//global achievement typesetting (achievement menu)
+if ((achievementItem1)==="true") {
+    function ach_1_check () {
+        root.style.setProperty('--achievementType', achievementComplete);
+    }
+    ach_1_check();
+}

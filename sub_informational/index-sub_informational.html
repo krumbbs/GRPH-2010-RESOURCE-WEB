@@ -4,20 +4,17 @@
   <title></title>
   <link rel="stylesheet" href="../stylesheet.css">
 </head>
-<body style="background-color:#f9f4ed">
-    <!--TEST NAV BUTTONS-->
-  <button class="navTest"><nav><a href="subsub_timeManagement/index-subsub_timeManagement.html">management</a></nav></button>
-  <button class="navTest"><nav><a href="subsub_primeTime/index-subsub_primeTime.html">primeTime</a></nav></button>
-  <button class="navTest"><nav><a href="subsub_genMindset/index-subsub_genMindset.html">genMindset</a></nav></button>
-  <button class="navTest>"><nav><a href="../index.html">home</a></nav></button>
+<!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
+<!--you can link other HTML files with 'a href' while mentionning; use a '/' to refer to subfolders; put two periods before '/' to link to parent--> 
+    <body class="bodyGlobal"> <!-- style="background-color:#f9f4ed" -->
+        <!--GLOBAL NAV BUTTONS-->
+        <div class="global">
 
-  <!--GLOBAL NAV BUTTONS-->
-  <div class="global">
-            <div class ="waffleGlobal">
-                <div class="waffleDiv">
-                    <nav><a href="/temp/">
-                        <button class ="waffleButton">
-                            Options
+            <div class ="waffleGlobal"> <!-- move above home --> 
+                <div class="waffleDiv" id="waffleDiv_ID">
+                    <nav> <!--STYLE NAV to get rid of underline-->
+                        <button class ="waffleButton" onclick="f_waffleSide_open()">
+                            <div>Options</div>
                             <!--SVG code taken from illustrator drawings imported to broswers--> 
                             <svg class ="svgWaffle">
                                 <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
@@ -25,47 +22,203 @@
                                 <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
                                 <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
                             </svg>
+                            
+                        </button>
+                    </nav>
+            </div>
+                
+            <div class="homeGlobal">
+                <div class="homeDiv">   
+                    <nav>
+                        <button class ="homeButton" onclick="home()">
+                            <div>Home</div>
+                            <svg class ="svgHome">
+                              <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                              <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                              <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                              <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                            </svg> 
                         </button>
                     </a></nav>
-                    </div>
-                <div class="homeGlobal">
-                    <div class="homeDiv">   
-                        <nav><a href="index.html">
-                            <button class ="homeButton">
-                                Home
-                                <svg class ="svgHome">
-                                  <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                                  <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                                  <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                                  <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                                </svg> 
-                            </button>
-                        </a></nav>
-                    </div>
                 </div>
+            </div>
             </div>
         </div>
 
+        <div class="waffle_subMenu" id="waffle_subMenu_ID">
+            <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
+            <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
+            <button class="optn" id="optn_achievements_ID">Achievements</button>
+            <div class="waffleSub_close"><button class="close" onclick="f_waffleSide_close()">Close</button></div>
+        </div>
+            <!-- 'a' refers to 'accessibility' -->
+                            <!-- ACCESSIBILITY MENU -->
+        <div class="accessibilityMenu">
+            <p class="menuMain">Body</p>
+            <p class="menuMain">Website</p>
+            <div><button class="close" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
+            <div class="a_bodyText">
+                <div class="scale">
+                    <p>Scale</p>
+                    <!-- old: 
+                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
+                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
+                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_large()">Large</button> 
+                    -->
+                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()" onclick= "f_typeSizeTtile_small()">Small</button>
+                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
+                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_big()">Large</button>
+                </div>
+                <div class="contrast">
+                    <p>Contrast</p>
+                    <button class="a_button" id="a_bodyContrast_light" onclick ="f_typeBodyContrast_light()">Light</button> <!-- does nothing sans serif --> 
+                    <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
+                    <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
+                </div>
+                <div class="face">
+                    <p>Face</p>
+                    <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
+                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>
+                    <button class="a_button" id="a_bodyFace_friendly" onclick ="f_typeBodyFace_friendly() ">Friendly</button>
+                </div>
+                <div class="color">
+                    <p>Color</p>
+                    <button class="a_button" id="a_bodyColor_dark" onclick ="f_typeColor_dark()">Dark</button>
+                    <button class="a_button" id="a_bodyColor_light" onclick ="f_typeColor_light()">Light</button>
+                    <div class ="a_slider" id="a_bodyColor_slider">
+                        <input type="range" class="ranges" id="myRange" value ="0" min ="0" max="360"></input> 
+                    </div>
+                </div>
+                <div class="highlightColor">
+                    <p>Highlight Color</p>
+                    <button class="a_button" id="a_bodyHLColor_on" onclick="f_highlight_on()">On</button>
+                    <button class="a_button" id="a_bodyHLColor_off" onclick="f_highlight_off()">Off</button>
+                    <button class="a_button" id="a_bodyHLColor_choose">Choose</button>
+                </div>
+            </div>
+            <div class="a_website">
+                <div class="contrast">
+                    <p>Contrast</p>
+                    <button class="a_button" id="a_websiteContrast_high" onclick="f_websiteContrast_high ()">High</button>
+                    <button class="a_button" id="a_websiteContrast_regular" onclick="f_websiteContrast_regular ()">Regular</button>
+                    <button class="a_button" id="a_websiteContrast_low" onclick="f_websiteContrast_low ()">Low</button>
+                </div>
+                <div class="backgroundColor">
+                    <p>Background Color</p>
+                    <button class="a_button" id="a_websiteBackgroundColor_dark" onclick="f_websiteBackgroundColor_dark ()">Dark</button>
+                    <button class="a_button" id="a_websiteBackgroundColor_light" onclick="f_websiteBackgroundColor_light ()">Light</button>
+                    <div class ="bg_slider" id="a_websiteColor_slider">
+                        <input type="range" id="myRange_web" value ="0" min ="0" max="360"></input> 
+                    </div>
+                </div>
+                <div class="text-to-speech">
+                    <p>Text-to-speech</p>
+                    <button class="a_button" id="a_websiteTextToSpeech_on">On</button>
+                    <button class="a_button" id="a_websiteTextToSpeech_off">Off</button>
+                    <!-- <button class="a_websiteBackgroundColor_choose">Choose</button> -->
+                </div>
+            </div>
+        </div>
+                        <!-- NAV MENU --> 
+        <div class="navMenu">
+            <div class="navHead">
+                <h6 class="menuHead"><nav><a href="sub_informational/index-sub_informational.html">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
+                <div class="navSubMenu">
+                    <div class="navSub" id="info_genMindset">
+                        <nav><a href="sub_informational/subsub_genMindset/index-subsub_genMindset.html"><h6 class="menuSubHead">General Mindset</h6></a></nav>
+                        <nav class="navSubSub">
+                            <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
+                            <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
+                            <a href="https://www.youtube.com/watch?v=WXBA4eWskrc">TED Talk</a>
+                        </nav>
+                    </div>
+                    <div class="navSub" id="info_primeTime">
+                        <h6 class="menuSubHead"><nav><a href="sub_informational/subsub_primeTime/index-subsub_primeTime.html">Prime Time</a></nav></h6>
+                        <nav class="navSubSub">
+                            <a href="https://www.youtube.com/watch?v=PPITG-6fR5s">Video</a>
+                        </nav>
+                    </div>
+                    <div class="navSub" id="info_timeManagement">
+                        <nav><h6 class="menuSubHead"><a href="sub_informational/subsub_timeManagement/index-subsub_timeManagement.html">Time Management</a></h6></nav>
+                        <nav class="navSubSub">
+                            <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
+                            <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ">Podcast—better work environments</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="navHead">
+                <nav><h6 class="menuHead"><a href="sub_practical/index-sub_practical.html">Practical</a></h6></nav>
+                <div class="navSubMenu">
+                    <div class="navSub" id="practical_apps">
+                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_apps/index-subsub_apps.html">Applications</a></h6></nav>
+                        <nav class="navSubSub">
+                            <a href="https://calendar.google.com/calendar/u/0/r">Google Calendar</a>
+                            <a href="https://obsidian.md/">Obsidian</a>
+                            <a href="https://www.when2meet.com/">When2Meet</a>
+                        </nav>
+                    </div>
+                    <div class="navSub" id="practical_mediaPref">
+                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_mediaPref/index-subsub_mediaPref.html">Media Preferences</a></h6></nav>
+                        <nav class="navSubSub">
+                            <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334">Pen-picking</a>
+                        </nav>
+                    </div>
+                    <div class="navSub" id="practical_storefront">
+                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_storefront/index-subsub_storefront.html">Storefront</a></h6></nav>
+                        <nav class="navSubSub">
+                            <a href="httpshttps://www.walmart.ca/en/search?q=sticky+notes">Walmart Sticky notes</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="close" onclick="f_navMenu_close()">Close</button>
+            </div>
+        </div>
+
+
+                    <!-- BODY CONTENT... -->
+
   <div class="static">
       <div class ="title">
-          <h4>informational</h4>
+          <h4>Informational</h4>
       </div>
       <div class="body">
-          <p>body text</p>
+          <p class="bodyFirstLine">Under “informational” you can expect to touch on primarily theory—topics like “biological prime time”, time management techniques such as time blocking, or even a partial book analysis meant to help you reflect on your own mindset—as well as how to apply what you learn into practice. You’ll find that a lot the topics in this section are very low-agency; it’ll be up to you to use the information and reflective thoughts I give you to apply what you learn into your own life. This website is built to help you, not scare you—any examples of my own habits is my attempt at giving you ideas on what you might want to look into or apply to yourself. </p>
       </div>
-      <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> <!--horizontal break-->
-      <div class="threeImages">
-          <div class="imageThreeLeft">image on left<br>text</div>
-          <div class="imageThreeMiddle">image on middle<br>text</div>
-          <div class="imageThreeRight">image on right<br>text</div> 
+      <div class="threeImages" style="margin-top: 5%;">
+          <div class="imageThreeLeft">BIOLOGICAL PRIME TIME
+            <br>-	Understanding strengths and weaknesses in yourself 
+            <br>-	How your environment may influence your function
+            <br>-	Setting yourself up for success</div>
+          <div class="imageThreeMiddle">TIME MANAGEMENT TECHINQUES
+            <br>-	How I, the author, manage my time 
+            <br>-	Techniques: time blocking
+            <br>-	Techniques: considering mental resistance 
+          </div>
+          <div class="imageThreeRight">MINDSET REFLECTING
+            <br>-	Partial book analysis
+            <br>-	Making peace with your humanity
+            <br>-	“Meaningfully” spending your time 
+          </div> 
       </div>
-      <hr style ="height:10px;display:block;background-color:white;">(horizontal space)</hr> <!--horizontal break-->
       <div class="threeButtons">
           <div class ="grid_3s"><button class="buttonLeft_3s"><nav><a href="subsub_genMindset/index-subsub_genMindset.html">General mindset (replace later)</a></nav></button></div>
           <div class ="grid_3s"><button class="buttonMiddle_3s"><nav><a href="subsub_primeTime/index-subsub_primeTime.html">Prime Time</a></nav></button></div>
           <div class ="grid_3s"><button class="buttonRight_3s"><nav><a href="subsub_timeManagement/index-subsub_timeManagement.html">Practicing Time Management</a></nav></button></div>
       </div> 
   </div>
-  
+
+<footer class="footer" style="margin-left: -5%; margin-right: -5%; margin-bottom: -5%; height: 125px;">
+    <div class="footerText">
+        <div class="item"></div>
+        <div class="item">Done for school course GRPH–2010 with the goal of, "Design[ing] and develop[ing] an 'online resource.'" All external sources belong to their respective owners. Textual content and website development was made by website's designer. This website is a product of its content.</div>
+        <div class="item"></div>
+    </div>
+</footer>
+
+<script src="../javaGlobal.js"></script>
+    
 </body>
 </html>
