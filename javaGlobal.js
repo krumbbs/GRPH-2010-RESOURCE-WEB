@@ -1,12 +1,20 @@
 //achievements:
 let a_1 = false; 
-let a_1_check = false; 
+let a_1_check = localStorage.getItem("a_1_check_stored"); 
 let achievementItem1 = localStorage.getItem("achievement1_complete"); //GLOBAL ACHIEVEMENTS
 //ENSURING changed true value doesn't get overwritten by establishing default value at start
+if (a_1_check!="true") {
+    localStorage.setItem("a_1_check_stored", "false");
+}
 if (achievementItem1!="true") {
     localStorage.setItem("achievement1_complete", "false");
 }
-let a_2 = false;
+// let a_2 = false;
+
+// TESTING
+    alert (a_1);
+    alert (a_1_check);
+    alert (achievementItem1);
 
 const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor')
 
@@ -130,19 +138,24 @@ function f_typeBodyContrast_bold () {
         root.style.setProperty('--achievementType', achievementComplete);
         alert("Achievement: Changed face to bold!"); 
     }
-    if ((achievementItem1)==="false") { 
-        //alert ("1");
-        if ((a_1_check)===false) {
-            //alert ("2");
+    if ((achievementItem1)=="false") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
+        alert ("1");
+        if ((a_1_check)=="false") { //=== is ONLY for boolean.....
+            alert ("2");
             if ((a_1)===true) {
-                //alert ("3");
+                alert ("3");
                     ach_1 ();
-                    localStorage.setItem("achievement1_complete", "true");
+                    localStorage.setItem("achievement1_complete", "true"); //do a network test** for website...
                 }
-            a_1_check = true; 
-            //push a_1_check to localStorage 
+            localStorage.setItem("a_1_check_stored", "true");
         }
     }
+    else {
+        alert ("achievement already claimed");
+    }
+    alert (a_1);
+    alert (a_1_check);
+    alert (achievementItem1);
 }
 
 let contrastItem = localStorage.getItem("typeContrast"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -318,3 +331,8 @@ if ((achievementItem1)==="true") {
     }
     ach_1_check();
 }
+
+    alert ("END OF CODE:");
+    alert (a_1);
+    alert (a_1_check);
+    alert (achievementItem1);
