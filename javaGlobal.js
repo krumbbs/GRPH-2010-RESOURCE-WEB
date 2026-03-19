@@ -1,20 +1,50 @@
+let localcheck_a1 = true; 
+
 //achievements:
 let a_1 = false; 
-let a_1_check = localStorage.getItem("a_1_check_stored"); 
-let achievementItem1 = localStorage.getItem("achievement1_complete"); //GLOBAL ACHIEVEMENTS
-//ENSURING changed true value doesn't get overwritten by establishing default value at start
-if (a_1_check!="true") {
-    localStorage.setItem("a_1_check_stored", "false");
-}
-if (achievementItem1!="true") {
+
+//let a_1_check = "false";
+
+//localStorage.setItem("achievement1_complete") = achievementItem1; 
+
+//alert (a_1_check); 
+
+//let a_1_check_initial = localStorage.getItem("a_1_check_stored");
+let achievementItem1_initial = localStorage.getItem("achievement1_complete");
+
+if (achievementItem1_initial === null) {
     localStorage.setItem("achievement1_complete", "false");
 }
+
+let achievementItem1 = achievementItem1_initial;
+
+//if (/*typeof */ a_1_check_initial!="true" /* || a_1_check===null */ ) {
+  //  //a_1_check =="false"
+  //  localStorage.setItem("a_1_check_stored", "false");
+    //a_1 = true;
+    //alert (a_1);
+//} else if (a_1_check_initial=="true") {
+    //alert ("got done true"); 
+ // }
+if (/*typeof */  achievementItem1_initial=="true" /* || achievementItem1===null*/ ) {
+    alert ("got done true too"); 
+}
+
+
+//a_1_check = /*JSON.parse(*/localStorage.getItem("a_1_check_stored")/*)*/; 
+
+//alert (a_1_check); 
+alert (achievementItem1); 
+
 // let a_2 = false;
 
+
 // TESTING
+/*
     alert (a_1);
     alert (a_1_check);
     alert (achievementItem1);
+*/
 
 const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor')
 
@@ -138,24 +168,38 @@ function f_typeBodyContrast_bold () {
         root.style.setProperty('--achievementType', achievementComplete);
         alert("Achievement: Changed face to bold!"); 
     }
-    if ((achievementItem1)=="false") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
-        alert ("1");
-        if ((a_1_check)=="false") { //=== is ONLY for boolean.....
-            alert ("2");
-            if ((a_1)===true) {
-                alert ("3");
-                    ach_1 ();
-                    localStorage.setItem("achievement1_complete", "true"); //do a network test** for website...
-                }
-            localStorage.setItem("a_1_check_stored", "true");
+    if (a_1 = true) {
+        window.location.reload();
+        alert("VALUE OF localcheck_a1:");
+        alert (a_1);
+        if ((achievementItem1)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
+          //  alert ("1");
+        //if ((a_1_check)!="true") { //=== is ONLY for boolean.....
+            alert ("1");
+            ach_1 ();
+            localStorage.setItem("achievement1_complete", "true"); //do a network test** for website...
+            //achievementItem1 = achievementItem1_initial;
+            alert (achievementItem1);
+            achievementItem1_initial = achievementItem1
+            
+            //localcheck_a1 = false; 
+            //alert ("in function");
+            //alert (localcheck_a1);
+            //localStorage.setItem("a_1_check_stored", "true");
+            //a_1_check = a_1_check_initial;
         }
-    }
+        //}  
+        //alert ("out of function")
+        //alert (localcheck_a1);
+    }        
     else {
         alert ("achievement already claimed");
     }
+    /*
     alert (a_1);
     alert (a_1_check);
     alert (achievementItem1);
+    */
 }
 
 let contrastItem = localStorage.getItem("typeContrast"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -332,7 +376,11 @@ if ((achievementItem1)==="true") {
     ach_1_check();
 }
 
+/*
+
     alert ("END OF CODE:");
     alert (a_1);
     alert (a_1_check);
     alert (achievementItem1);
+
+    */
