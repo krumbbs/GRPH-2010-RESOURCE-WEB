@@ -26,15 +26,15 @@ let achievementItem1 = achievementItem1_initial;
 //} else if (a_1_check_initial=="true") {
     //alert ("got done true"); 
  // }
-if (/*typeof */  achievementItem1_initial=="true" /* || achievementItem1===null*/ ) {
-    alert ("got done true too"); 
-}
+//if (/*typeof */  achievementItem1_initial=="true" /* || achievementItem1===null*/ ) {
+ //   alert ("got done true too"); 
+// }
 
 
 //a_1_check = /*JSON.parse(*/localStorage.getItem("a_1_check_stored")/*)*/; 
 
 //alert (a_1_check); 
-alert (achievementItem1); 
+// alert (achievementItem1); 
 
 // let a_2 = false;
 
@@ -64,6 +64,18 @@ function informational() {
 function practical() {
     window.location.href = 'sub_practical/index-sub_practical.html';
 }
+
+function applications_button() {
+    window.location.href ='subsub_apps/index-subsub_apps.html'    
+}
+function mediaPrefs_button() {
+    window.location.href ='subsub_mediaPref/index-subsub_mediaPref.html'    
+}
+function storefront_button() {
+    window.location.href ='subsub_storefront/index-subsub_storefront.html'    
+}
+
+
 
 
 var root = document.querySelector(':root'); 
@@ -170,16 +182,16 @@ function f_typeBodyContrast_bold () {
     }
     if (a_1 = true) {
         window.location.reload();
-        alert("VALUE OF localcheck_a1:");
-        alert (a_1);
+        //alert("VALUE OF localcheck_a1:");
+        //alert (a_1);
         if ((achievementItem1)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
           //  alert ("1");
         //if ((a_1_check)!="true") { //=== is ONLY for boolean.....
-            alert ("1");
+           // alert ("1");
             ach_1 ();
             localStorage.setItem("achievement1_complete", "true"); //do a network test** for website...
             //achievementItem1 = achievementItem1_initial;
-            alert (achievementItem1);
+           // alert (achievementItem1);
             achievementItem1_initial = achievementItem1
             
             //localcheck_a1 = false; 
@@ -193,7 +205,7 @@ function f_typeBodyContrast_bold () {
         //alert (localcheck_a1);
     }        
     else {
-        alert ("achievement already claimed");
+        //alert ("achievement already claimed");
     }
     /*
     alert (a_1);
