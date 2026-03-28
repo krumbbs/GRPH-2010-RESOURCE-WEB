@@ -1,7 +1,16 @@
+var root = document.querySelector(':root'); 
+
+
+/*
 let localcheck_a1 = true; 
+let localcheck_a2 = true; 
+let localcheck_a3 = true; 
+*/
 
 //achievements:
-let a_1 = false; 
+let a_1 = false;
+let a_2 = false; 
+let a_3 = false; 
 
 //let a_1_check = "false";
 
@@ -11,42 +20,30 @@ let a_1 = false;
 
 //let a_1_check_initial = localStorage.getItem("a_1_check_stored");
 let achievementItem1_initial = localStorage.getItem("achievement1_complete");
+let achievementItem2_initial = localStorage.getItem("achievement2_complete");
+let achievementItem3_initial = localStorage.getItem("achievement3_complete");
 
 if (achievementItem1_initial === null) {
     localStorage.setItem("achievement1_complete", "false");
 }
+if (achievementItem2_initial === null) {
+    localStorage.setItem("achievement2_complete", "false");
+}
+if (achievementItem3_initial === null) {
+    localStorage.setItem("achievement3_complete", "false");
+}
 
 let achievementItem1 = achievementItem1_initial;
+let achievementItem2 = achievementItem2_initial;
+let achievementItem3 = achievementItem3_initial;
 
-//if (/*typeof */ a_1_check_initial!="true" /* || a_1_check===null */ ) {
-  //  //a_1_check =="false"
-  //  localStorage.setItem("a_1_check_stored", "false");
-    //a_1 = true;
-    //alert (a_1);
-//} else if (a_1_check_initial=="true") {
-    //alert ("got done true"); 
- // }
-//if (/*typeof */  achievementItem1_initial=="true" /* || achievementItem1===null*/ ) {
- //   alert ("got done true too"); 
-// }
-
-
-//a_1_check = /*JSON.parse(*/localStorage.getItem("a_1_check_stored")/*)*/; 
-
-//alert (a_1_check); 
-// alert (achievementItem1); 
-
-// let a_2 = false;
-
-
-// TESTING
+const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor');
 /*
-    alert (a_1);
-    alert (a_1_check);
-    alert (achievementItem1);
+function a() {
+        root.style.setProperty('--achievementType2', achievementComplete);
+}
+a();
 */
-
-const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor')
 
 function home() {
     window.location.href = 'index.html';
@@ -76,9 +73,6 @@ function storefront_button() {
 }
 
 
-
-
-var root = document.querySelector(':root'); 
 
 //moving around CSS variables
 function f_waffleSide_open() {
@@ -174,44 +168,22 @@ function f_typeBodyContrast_regular () {
 function f_typeBodyContrast_bold () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_bold);
     localStorage.setItem("typeContrast", typeBodyContrast_bold);
-        //achievement functionality—running function with checks to make sure they don't run twice; changes css variable 
-    a_1 = true; 
+//    a_1 = true; 
     function ach_1 () {
-        root.style.setProperty('--achievementType', achievementComplete);
+        root.style.setProperty('--achievementType1', achievementComplete);
         alert("Achievement: Changed face to bold!"); 
     }
-    if (a_1 = true) {
+//    if (a_1 = true) {
+    if ((achievementItem1)!="true") { 
+        ach_1();
+        localStorage.setItem("achievement1_complete", "true"); 
+        achievementItem1_initial = achievementItem1;
         window.location.reload();
-        //alert("VALUE OF localcheck_a1:");
-        //alert (a_1);
-        if ((achievementItem1)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
-          //  alert ("1");
-        //if ((a_1_check)!="true") { //=== is ONLY for boolean.....
-           // alert ("1");
-            ach_1 ();
-            localStorage.setItem("achievement1_complete", "true"); //do a network test** for website...
-            //achievementItem1 = achievementItem1_initial;
-           // alert (achievementItem1);
-            achievementItem1_initial = achievementItem1
-            
-            //localcheck_a1 = false; 
-            //alert ("in function");
-            //alert (localcheck_a1);
-            //localStorage.setItem("a_1_check_stored", "true");
-            //a_1_check = a_1_check_initial;
-        }
-        //}  
-        //alert ("out of function")
-        //alert (localcheck_a1);
-    }        
-    else {
-        //alert ("achievement already claimed");
     }
-    /*
-    alert (a_1);
-    alert (a_1_check);
-    alert (achievementItem1);
-    */
+//    }        
+    else {
+        alert ("achievement already claimed");
+    }
 }
 
 let contrastItem = localStorage.getItem("typeContrast"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -250,12 +222,27 @@ function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     localStorage.setItem("typeColor", typeColor_dark);
-    
 }
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
     root.style.setProperty ('--typeTitleColor', typeColor_light);
     localStorage.setItem("typeColor", typeColor_light);
+//    a_3 = true; 
+    function ach_3 () {
+        root.style.setProperty('--achievementType3', achievementComplete);
+        alert("Achievement: Changed type color to light!"); 
+    }
+//    if (a_3 = true) {
+        if ((achievementItem3)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
+            ach_3 ();
+            localStorage.setItem("achievement3_complete", "true"); //do a network test** for website...
+            achievementItem3_initial = achievementItem3;
+            window.location.reload();
+        }
+//    }        
+    else {
+        alert ("achievement already claimed");
+    }
 }
 
 const slider = document.querySelector('.a_slider input');
@@ -349,6 +336,26 @@ function f_websiteContrast_low () {
     localStorage.setItem("bgContrast3", typeColor_dark);
     localStorage.setItem("bgContrast4", typeColor_dark);
     localStorage.setItem("bgContrast5", colorWhite);
+// a_2 = true; 
+    function ach_2 () {
+        root.style.setProperty('--achievementType2', achievementComplete);
+//        let aaa = getComputedStyle(document.documentElement).getPropertyValue('--achievementType2')
+//        alert (aaa);
+        alert("Achievement: Set website contrast to low!"); 
+    }
+    // if (a_2 = true) {
+        if ((achievementItem2)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
+            ach_2 ();
+            localStorage.setItem("achievement2_complete", "true"); //do a network test** for website...
+            achievementItem2_initial = achievementItem2;
+            window.location.reload();
+        }
+//    }        
+    else {
+        alert ("achievement already claimed");
+    }
+
+    
 }
 
 let bgContrast1Item = localStorage.getItem("bgContrast1"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -383,16 +390,28 @@ function f_achievementClose() {
 //global achievement typesetting (achievement menu)
 if ((achievementItem1)==="true") {
     function ach_1_check () {
-        root.style.setProperty('--achievementType', achievementComplete);
+        root.style.setProperty('--achievementType1', achievementComplete);
     }
     ach_1_check();
 }
 
-/*
+if ((achievementItem2)==="true") {
+    function ach_2_check () {
+        root.style.setProperty('--achievementType2', achievementComplete);
+    }
+    ach_2_check();
+}
 
+if ((achievementItem3)==="true") {
+    function ach_3_check () {
+        root.style.setProperty('--achievementType3', achievementComplete);
+    }
+    ach_3_check();
+}
+
+/*
     alert ("END OF CODE:");
     alert (a_1);
     alert (a_1_check);
     alert (achievementItem1);
-
     */
