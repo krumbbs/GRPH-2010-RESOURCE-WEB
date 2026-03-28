@@ -123,33 +123,47 @@ const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyV
 const typeTitleSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeSmall'); //title = not working
 const typeTitleSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeRegular');
 const typeTitleSize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeTtileSizeBig');
+// mobile:
+const typeBodySize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall_min'); //document.documentElement refers to root of HTML (for some reason)
+const typeBodySize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular_min');
+const typeBodySize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig_min');
+
 
 function f_typeSizeBody_small () {
     root.style.setProperty('--typeBodySize', typeBodySize_small);
     localStorage.setItem("body", typeBodySize_small);
-    //alert("small");
+    root.style.setProperty('--typeBodySize_min', typeBodySize_small_min);
+    localStorage.setItem("body_min", typeBodySize_small_min);
 }
+/*
 function f_typeSizeTitle_small () {
     root.style.setProperty('--typeTitleSize', typeTitleSize_small);
 }
+*/
 function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodySize', typeBodySize_regular);
-    localStorage.setItem("body", typeBodySize_regular); //GLOBAL NAV: SETTING PARAMETER TO SET VALUE. USE SAME STRING FOR OTHER VALUES
-    //alert("reg");
+    localStorage.setItem("body", typeBodySize_regular);
+    root.style.setProperty('--typeBodySize_min', typeBodySize_regular_min);
+    localStorage.setItem("body_min", typeBodySize_regular_min);
 }
-function f_typeSizeTitle_regular () { //this function isn't activating—FIX LATER? 
+/*
+function f_typeSizeTitle_regular () { 
     root.style.setProperty('--typeTitleSize', typeTitleSize_regular);
     //alert("typeTitleSize_regular")
 }
+*/
 function f_typeSizeBody_big () {
     root.style.setProperty('--typeBodySize', typeBodySize_big);
-    root.style.setProperty('--typeTitleSize', typeTitleSize_big);
+    //root.style.setProperty('--typeTitleSize', typeTitleSize_big);
     localStorage.setItem("body", typeBodySize_big);
-    //alert("big");
+    root.style.setProperty('--typeBodySize_min', typeBodySize_big_min);
+    localStorage.setItem("body_min", typeBodySize_big_min);
 }
 
 let bodyItem = localStorage.getItem("body"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
 root.style.setProperty('--typeBodySize', bodyItem); //GLOBAL NAV: CHANGING TO PARAMETER
+let bodyItem_min = localStorage.getItem("body_min"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeBodySize_min', bodyItem_min); //GLOBAL NAV: CHANGING TO PARAMETER
 
 
 const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');
@@ -408,10 +422,3 @@ if ((achievementItem3)==="true") {
     }
     ach_3_check();
 }
-
-/*
-    alert ("END OF CODE:");
-    alert (a_1);
-    alert (a_1_check);
-    alert (achievementItem1);
-    */

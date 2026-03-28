@@ -2,9 +2,13 @@
 
 /*TYPOGRAPHY*/
 /*SCALES*/ 
-    --typeBodySizeSmall: 16pt;  /* scale your type sizes relative to eachother—like multiples... CHANGE TITLE SCALES? MAKE ALL* TYPE SCALES DERIVATIVE*/ 
-    --typeBodySizeRegular: 20.8pt; 
-    --typeBodySizeBig: 25.6pt; 
+    --typeBodySizeSmall: 13.312pt;  
+    --typeBodySizeRegular: 16.64pt; 
+    --typeBodySizeBig: 20.8pt; 
+    --typeBodySizeSmall_min: 8.512pt;   /* min sizes operate on slightly different calculations */
+    --typeBodySizeRegular_min: 10.64pt; 
+    --typeBodySizeBig_min: 13.3pt; 
+    
     --typeBodyContrastLight: lighter; /* may have to get rid of this; not widely applicable  */
     --typeBodyContrastRegular: normal;
     --typeBodyContrastBold: bold; 
@@ -20,9 +24,6 @@
     
 
     
-    --typeTitleSizeSmall: 50pt; /*50pt*/
-    --typeTitleSizeNormal: 65pt; /*65pt*/
-    --typeTitleSizeBig: 80pt; /*80pt*/
 
 /* COLORS */ 
     --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */ 
@@ -56,16 +57,27 @@ Google Fonts' "Get Embed Code" */
 
 /*typeset DEFAULT*/
     --typeBodyFace: var(--typefaceSansSerif);
-    --typeBodySize: var(--typeBodySizeSmall);
+    --typeBodySize: var(--typeBodySizeRegular);
+    --typeBodySize_min: var(--typeBodySizeRegular_min);
     --typeBodyColor: var(--color_dark);
     --typeBodyContrast: var(--typeBodyContrastRegular);
+
     --typeTitleFace: var(--typefaceSansSerif);
-    --typeTitleSize: var(--typeTitleSizeSmall);
+    --typeTitleSize: 40.625pt;
+    --typeTitleSize_min: 20.78125pt;
+    --typeSubTitleSize: 32.5pt;
+    --typeSubTitleSize_min: 16.625pt; 
+    --typeSize_tagline: 13.312pt; 
+    --typeSize_tagline_min: 6.8096pt; 
+    
     --typeTitleColor: var(--color_dark);
     --typeFooterColor: var(--color_light);
     --typeButton: 13pt; 
     --typeButton_hover: 16pt; 
     --typeButton_hover_smaller: 14pt; 
+
+    --typeButton_global: 13.312pt; 
+    --typeButton_hover_global: 14.312pt;
 
 
     --typeBodyIndent: 50pt; 
@@ -158,14 +170,14 @@ Google Fonts' "Get Embed Code" */
     padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typeBodyFace);
-    font-size: var(--typeButton);
+    font-size: var(--typeButton_global);
     color: var(--typeBodyColor); 
     border: 0px;  /* taking out border on outside of button */
 }
 
 .waffleButton:hover {
     background-color: var(--websiteBackgroundColor_hover);
-    font-size: var(--typeButton_hover); 
+    font-size: var(--typeButton_hover_global); 
     transition: 0.2s;
 }
 
@@ -177,14 +189,14 @@ Google Fonts' "Get Embed Code" */
     padding: 15px; 
     border-radius: var(--borderRadius);
     font-family: var(--typeBodyFace);
-    font-size: var(--typeButton);
+    font-size: var(--typeButton_global);
     color: var(--typeBodyColor); 
     border: 0px; 
 }
 
 .homeButton:hover {
     background-color: var(--websiteBackgroundColor_hover);
-    font-size: var(--typeButton_hover); 
+    font-size: var(--typeButton_hover_global); 
     transition: 0.2s;
 }
 
@@ -228,7 +240,7 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--bgColorW);
     padding: 15px; 
     border-radius: var(--borderRadius);
-    font-size: var(--typeButton);
+    font-size: var(--typeButton_global);
     font-family: var(--typeBodyFace);
 }
 
@@ -250,7 +262,7 @@ Google Fonts' "Get Embed Code" */
 
 .optn:hover {
     background-color: var(--websiteBackgroundColor_hover);
-    font-size: var(--typeButton_hover_smaller); 
+    font-size: var(--typeButton_hover_global); 
     transition: 0.2s;
 }
 
@@ -449,6 +461,10 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--backdrop);
 }
 
+.tagline {
+    font-size: var(--typeSize_tagline);
+}
+    
 .subHead {
     font-family: var(--typeTitleFace);
     font-size: var(--typeTitleSize); 
@@ -575,7 +591,7 @@ Google Fonts' "Get Embed Code" */
 
 .buttonLeft {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeButton);
+    font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
@@ -588,13 +604,13 @@ Google Fonts' "Get Embed Code" */
 
 .buttonLeft:hover {
     background-color: var(--websiteBackgroundColor_hover);
-    font-size: var(--typeButton_hover); 
+    font-size: var(--typeButton_hover_global); 
     transition: 0.2s;
 }
     
 .buttonRight {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeButton);
+    font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor); 
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
@@ -607,13 +623,13 @@ Google Fonts' "Get Embed Code" */
 
 .buttonRight:hover {
     background-color: var(--websiteBackgroundColor_hover);
-    font-size: var(--typeButton_hover); 
+    font-size: var(--typeButton_hover_global); 
     transition: 0.2s;
 }
     
 .buttonLeft_3s {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeBodySizeSmall);
+    font-size: var(--typeButton_global);
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
     padding: 20px; 
@@ -623,7 +639,7 @@ Google Fonts' "Get Embed Code" */
 
 .buttonMiddle_3s {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeBodySizeSmall);
+    font-size: var(--typeButton_global);
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
     padding: 20px; 
@@ -633,7 +649,7 @@ Google Fonts' "Get Embed Code" */
 
 .buttonRight_3s {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeBodySizeSmall);
+    font-size: var(--typeButton_global);
     background-color: var(--temp_contrastMed); 
     border-radius: var(--borderRadius);
     padding: 20px; 
@@ -662,6 +678,7 @@ Google Fonts' "Get Embed Code" */
 /* MEDIA QUERIED STATIC ELEMENTS */
 
 @media (max-width: 768px) and (min-width: 0px) and (max-height: 648px) and (min-height: 0px) {
+    
     .global {
     position: fixed; 
     right: 60%; 
@@ -671,8 +688,8 @@ Google Fonts' "Get Embed Code" */
     scale: 0.6;
     }
     .static {
-    margin-left: 0%;
-    margin-right: 0%; 
+    margin-left: 2.5%;
+    margin-right: 2.5%; 
     }
     .headerBlock {
     background-color: var(--websiteBackgroundColor); 
@@ -735,13 +752,41 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--footerBackgroundColor);
     margin-bottom:
     -5%; 
-   margin-top: 10%;
     height: auto;
+    }
     .footerText {
     display: grid; 
     grid-template-columns: 10% auto 10%; 
     padding: 20px;
     font-family: var(--typeBodyFace)
+    }
+
+.head {
+    font-size: var(--typeTitleSize_min);
 }
+.tagline {
+    font-size: var(--typeSize_tagline_min);
 }
+    
+.bodyFirstLine {
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize_min);
+    color: var(--typeBodyColor);
+    font-weight: var(--typeBodyContrast);
+    transition: 0.2s; 
+    text-indent: 0; 
+    line-height: var(--typeBodyLeading);
+    margin: 0px;
+    }
+.body {
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize_min);
+    color: var(--typeBodyColor);
+    font-weight: var(--typeBodyContrast);
+    transition: 0.2s; 
+    text-indent: var(--typeBodyIndent); 
+    line-height: var(--typeBodyLeading);
+    margin:0px; 
+    background-image: var(--websiteBackgroundImage)
+    }
 }
