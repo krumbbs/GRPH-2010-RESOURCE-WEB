@@ -1,191 +1,188 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-              <meta name="viewport" content="width=device-width" />
-
-    <title></title>
-  <link rel="stylesheet" href="../../stylesheet.css"> 
-    
-</head>
-<body class="bodyGlobal">
-  
+    <head>
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="../../stylesheet.css">
+    </head>
+    <body class="bodyGlobal">
         <!--GLOBAL NAV BUTTONS-->
         <div class="global">
-
-            <div class ="waffleGlobal"> <!-- move above home --> 
+            <div class="waffleGlobal">
+                <!-- move above home -->
                 <div class="waffleDiv" id="waffleDiv_ID">
-                    <nav> <!--STYLE NAV to get rid of underline-->
-                        <button class ="waffleButton" onclick="f_waffleSide_open()">
+                    <nav>
+                        <!--STYLE NAV to get rid of underline-->
+                        <button class="waffleButton" onclick="f_waffleSide_open()">
                             <div>Options</div>
-                            <!--SVG code taken from illustrator drawings imported to broswers--> 
-                            <svg class ="svgWaffle">
+                            <!--SVG code taken from illustrator drawings imported to broswers-->
+                            <svg class="svgWaffle">
                                 <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
                                 <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
                                 <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
                                 <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
                             </svg>
-                            
                         </button>
                     </nav>
-            </div>
-                
-            <div class="homeGlobal">
-                <div class="homeDiv">   
-                    <nav>
-                        <button class ="homeButton" onclick="homemin2()">
-                            <div>Home</div>
-                            <svg class ="svgHome">
-                              <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                              <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                              <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                              <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                            </svg> 
-                        </button>
-                    </a></nav>
                 </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="waffle_subMenu" id="waffle_subMenu_ID">
-            <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
-            <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
-            <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-            <div class="waffleSub_close"><button class="close" onclick="f_waffleSide_close()">Close</button></div>
-        </div>
-            <!-- 'a' refers to 'accessibility' -->
-                            <!-- ACCESSIBILITY MENU -->
-        <div class="accessibilityMenu">
-            <p class="menuMain">Body</p>
-            <p class="menuMain">Website</p>
-            <div><button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
-            <div class="a_bodyText">
-                <div class="scale">
-                    <p>Scale</p>
-                    <!-- old: 
+                <div class="homeGlobal">
+                    <div class="homeDiv">
+                        <nav>
+                            <button class="homeButton" onclick="homemin2()">
+                                <div>Home</div>
+                                <svg class="svgHome">
+                                    <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                                    <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                                    <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                                    <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                                </svg>
+                            </button>
+</a></nav></div></div></div></div>
+<div class="waffle_subMenu" id="waffle_subMenu_ID">
+    <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button>
+    <!-- make this close other button -->
+    <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
+    <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
+    <div class="waffleSub_close">
+        <button class="close" onclick="f_waffleSide_close()">Close</button>
+    </div>
+</div>
+<!-- 'a' refers to 'accessibility' -->
+<!-- ACCESSIBILITY MENU -->
+<div class="accessibilityMenu">
+    <p class="menuMain">Body</p>
+    <p class="menuMain">Website</p>
+    <div>
+        <button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button>
+    </div>
+    <!-- blank space (is &nbsp) -->
+    <div class="a_bodyText">
+        <div class="scale">
+            <p>Scale</p>
+            <!-- old: 
                     <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
                     <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
                     <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_large()">Large</button> 
                     -->
-                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()" onclick= "f_typeSizeTtile_small()">Small</button>
-                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
-                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_big()">Large</button>
+            <button class="a_button" id="a_bodyScale_small" onclick="f_typeSizeBody_small()" onclick="f_typeSizeTtile_small()">Small</button>
+            <button class="a_button" id="a_bodyScale_regular" onclick="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
+            <button class="a_button" id="a_bodyScale_large" onclick="f_typeSizeBody_big()">Large</button>
+        </div>
+        <div class="contrast">
+            <p>Contrast</p>
+            <button class="a_button" id="a_bodyContrast_regular" onclick="f_typeBodyContrast_regular()"">Regular</button>
+                    <button class=" a_button " id=" a_bodyContrast_large " onclick =" f_typeBodyContrast_bold()">Bold</button>
                 </div>
-                <div class="contrast">
-                    <p>Contrast</p>
-                    <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
-                    <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
-                </div>
-                <div class="face">
+                <div class=" face ">
                     <p>Face</p>
-                    <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
-                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>
-                    <button class="a_button" id="a_bodyFace_friendly" onclick ="f_typeBodyFace_friendly() ">Friendly</button>
+                    <button class=" a_button " id=" a_bodyFace_serif " onclick = " f_typeBodyFace_serif()">Serif</button>
+                    <button class=" a_button " id=" a_bodyFace_sansSerif " onclick =" f_typeBodyFace_sansSerif()">Sans-serif</button>
+                    <button class=" a_button " id=" a_bodyFace_friendly " onclick =" f_typeBodyFace_friendly()">Friendly</button>
                 </div>
-                <div class="color">
+                <div class=" color ">
                     <p>Color</p>
-                    <button class="a_button" id="a_bodyColor_dark" onclick ="f_typeColor_dark()">Dark</button>
-                    <button class="a_button" id="a_bodyColor_light" onclick ="f_typeColor_light()">Light</button>
-                    <div class ="a_slider" id="a_bodyColor_slider">
-                        <input type="range" class="ranges" id="myRange" value ="0" min ="0" max="360"></input> 
+                    <button class=" a_button " id=" a_bodyColor_dark " onclick =" f_typeColor_dark()">Dark</button>
+                    <button class=" a_button " id=" a_bodyColor_light " onclick =" f_typeColor_light()">Light</button>
+                    <div class =" a_slider " id=" a_bodyColor_slider ">
+                        <input type=" range " class=" ranges " id=" myRange " value =" 0 " min =" 0 " max=" 360 "></input> 
                     </div>
                 </div>
                 <!--
-                <div class="highlightColor">
+                <div class=" highlightColor ">
                     <p>Highlight Color</p>
-                    <button class="a_button" id="a_bodyHLColor_on" onclick="f_highlight_on()">On</button>
-                    <button class="a_button" id="a_bodyHLColor_off" onclick="f_highlight_off()">Off</button>
-                    <button class="a_button" id="a_bodyHLColor_choose">Choose</button>
+                    <button class=" a_button " id=" a_bodyHLColor_on " onclick=" f_highlight_on()">On</button>
+                    <button class=" a_button " id=" a_bodyHLColor_off " onclick=" f_highlight_off()">Off</button>
+                    <button class=" a_button " id=" a_bodyHLColor_choose ">Choose</button>
                 </div>
                 -->
             </div>
-            <div class="a_website">
-                <div class="contrast">
+            <div class=" a_website ">
+                <div class=" contrast ">
                     <p>Contrast</p>
-                    <button class="a_button" id="a_websiteContrast_high" onclick="f_websiteContrast_high ()">High</button>
-                    <button class="a_button" id="a_websiteContrast_regular" onclick="f_websiteContrast_regular ()">Regular</button>
-                    <button class="a_button" id="a_websiteContrast_low" onclick="f_websiteContrast_low ()">Low</button>
+                    <button class=" a_button " id=" a_websiteContrast_high " onclick=" f_websiteContrast_high ()">High</button>
+                    <button class=" a_button " id=" a_websiteContrast_regular " onclick=" f_websiteContrast_regular ()">Regular</button>
+                    <button class=" a_button " id=" a_websiteContrast_low " onclick=" f_websiteContrast_low ()">Low</button>
                 </div>
-                <div class="backgroundColor">
+                <div class=" backgroundColor ">
                     <p>Background Color</p>
-                    <button class="a_button" id="a_websiteBackgroundColor_dark" onclick="f_websiteBackgroundColor_dark ()">Dark</button>
-                    <button class="a_button" id="a_websiteBackgroundColor_light" onclick="f_websiteBackgroundColor_light ()">Light</button>
-                    <div class ="bg_slider" id="a_websiteColor_slider">
-                        <input type="range" id="myRange_web" value ="0" min ="0" max="360"></input> 
+                    <button class=" a_button " id=" a_websiteBackgroundColor_dark " onclick=" f_websiteBackgroundColor_dark ()">Dark</button>
+                    <button class=" a_button " id=" a_websiteBackgroundColor_light " onclick=" f_websiteBackgroundColor_light ()">Light</button>
+                    <div class =" bg_slider " id=" a_websiteColor_slider ">
+                        <input type=" range " id=" myRange_web " value =" 0 " min =" 0 " max=" 360 "></input> 
                     </div>
                 </div>
                 <!--
-                <div class="text-to-speech">
+                <div class=" text-to-speech ">
                     <p>Text-to-speech</p>
-                    <button class="a_button" id="a_websiteTextToSpeech_on">On</button>
-                    <button class="a_button" id="a_websiteTextToSpeech_off">Off</button> <!-- <button class="a_websiteBackgroundColor_choose">Choose</button> -->
+                    <button class=" a_button " id=" a_websiteTextToSpeech_on ">On</button>
+                    <button class=" a_button " id=" a_websiteTextToSpeech_off ">Off</button> <!-- <button class=" a_websiteBackgroundColor_choose ">Choose</button> -->
                <!-- </div> --> 
             </div>
         </div>
                         <!-- NAV MENU --> 
-        <div class="navMenu">
-            <div class="navHead">
-                <h6 class="menuHead"><nav><a href="sub_informational/index-sub_informational.html">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
-                <div class="navSubMenu">
-                    <div class="navSub" id="info_genMindset">
-                        <nav><a href="sub_informational/subsub_genMindset/index-subsub_genMindset.html"><h6 class="menuSubHead">General Mindset</h6></a></nav>
-                        <nav class="navSubSub">
-                            <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
-                            <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
-                            <a href="https://www.youtube.com/watch?v=WXBA4eWskrc">TED Talk</a>
+        <div class=" navMenu ">
+            <div class=" navHead ">
+                <h6 class=" menuHead "><nav><a href=" sub_informational/index-sub_informational.html ">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
+                <div class=" navSubMenu ">
+                    <div class=" navSub " id=" info_genMindset ">
+                        <nav><a href=" sub_informational/subsub_genMindset/index-subsub_genMindset.html "><h6 class=" menuSubHead ">General Mindset</h6></a></nav>
+                        <nav class=" navSubSub ">
+                            <a href=" https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
+                            <a href=" https://www.instagram.com/reels/C6MIumiODex /">Instagram Video</a>
+                            <a href=" https://www.youtube.com/watch?v=WXBA4eWskrc ">TED Talk</a>
                         </nav>
                     </div>
-                    <div class="navSub" id="info_primeTime">
-                        <h6 class="menuSubHead"><nav><a href="sub_informational/subsub_primeTime/index-subsub_primeTime.html">Prime Time</a></nav></h6>
-                        <nav class="navSubSub">
-                            <a href="https://www.youtube.com/watch?v=PPITG-6fR5s">Video</a>
+                    <div class=" navSub " id=" info_primeTime ">
+                        <h6 class=" menuSubHead "><nav><a href=" sub_informational/subsub_primeTime/index-subsub_primeTime.html ">Prime Time</a></nav></h6>
+                        <nav class=" navSubSub ">
+                            <a href=" https://www.youtube.com/watch?v=PPITG-6fR5s ">Video</a>
                         </nav>
                     </div>
-                    <div class="navSub" id="info_timeManagement">
-                        <nav><h6 class="menuSubHead"><a href="sub_informational/subsub_timeManagement/index-subsub_timeManagement.html">Time Management</a></h6></nav>
-                        <nav class="navSubSub">
-                            <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
-                            <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ">Podcast—better work environments</a>
+                    <div class=" navSub " id=" info_timeManagement ">
+                        <nav><h6 class=" menuSubHead "><a href=" sub_informational/subsub_timeManagement/index-subsub_timeManagement.html ">Time Management</a></h6></nav>
+                        <nav class=" navSubSub ">
+                            <a href=" https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain /">Time Blocking</a>
+                            <a href=" https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ ">Podcast—better work environments</a>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div class="navHead">
-                <nav><h6 class="menuHead"><a href="sub_practical/index-sub_practical.html">Practical</a></h6></nav>
-                <div class="navSubMenu">
-                    <div class="navSub" id="practical_apps">
-                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_apps/index-subsub_apps.html">Applications</a></h6></nav>
-                        <nav class="navSubSub">
-                            <a href="https://calendar.google.com/calendar/u/0/r">Google Calendar</a>
-                            <a href="https://obsidian.md/">Obsidian</a>
-                            <a href="https://www.when2meet.com/">When2Meet</a>
+            <div class=" navHead ">
+                <nav><h6 class=" menuHead "><a href=" sub_practical/index-sub_practical.html ">Practical</a></h6></nav>
+                <div class=" navSubMenu ">
+                    <div class=" navSub " id=" practical_apps ">
+                        <nav><h6 class=" menuSubHead "><a href=" sub_practical/subsub_apps/index-subsub_apps.html ">Applications</a></h6></nav>
+                        <nav class=" navSubSub ">
+                            <a href=" https://calendar.google.com/calendar/u/0/r ">Google Calendar</a>
+                            <a href=" https://obsidian.md /">Obsidian</a>
+                            <a href=" https://www.when2meet.com /">When2Meet</a>
                         </nav>
                     </div>
-                    <div class="navSub" id="practical_mediaPref">
-                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_mediaPref/index-subsub_mediaPref.html">Media Preferences</a></h6></nav>
-                        <nav class="navSubSub">
-                            <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334">Pen-picking</a>
+                    <div class=" navSub " id=" practical_mediaPref ">
+                        <nav><h6 class=" menuSubHead "><a href=" sub_practical/subsub_mediaPref/index-subsub_mediaPref.html ">Media Preferences</a></h6></nav>
+                        <nav class=" navSubSub ">
+                            <a href=" https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334 ">Pen-picking</a>
                         </nav>
                     </div>
-                    <div class="navSub" id="practical_storefront">
-                        <nav><h6 class="menuSubHead"><a href="sub_practical/subsub_storefront/index-subsub_storefront.html">Storefront</a></h6></nav>
-                        <nav class="navSubSub">
-                            <a href="httpshttps://www.walmart.ca/en/search?q=sticky+notes">Walmart Sticky notes</a>
+                    <div class=" navSub " id=" practical_storefront ">
+                        <nav><h6 class=" menuSubHead "><a href=" sub_practical/subsub_storefront/index-subsub_storefront.html ">Storefront</a></h6></nav>
+                        <nav class=" navSubSub ">
+                            <a href=" httpshttps://www.walmart.ca/en/search?q=sticky+notes ">Walmart Sticky notes</a>
                         </nav>
                     </div>
                 </div>
             </div>
             <div>
-                <button class="close" onclick="f_navMenu_close()">Close</button>
+                <button class=" close " onclick=" f_navMenu_close()">Close</button>
             </div>
         </div>
 
                     <!-- ACHIEVEMENT MENU -->
 
-        <div class="achievementMenu">
-            <button style="width: 50px;" class="close" id="achievementClose" onclick="f_achievementClose()">Close</button>
-            <div class="achievement">
-                <p class="achievementComplete"> completed </p>
+        <div class=" achievementMenu ">
+            <button style=" width: 50px;" class=" close " id=" achievementClose " onclick=" f_achievementClose()">Close</button>
+            <div class=" achievement ">
+                <p class=" achievementComplete "> completed </p>
                 <p>Achievement 1: Set body type contrast to bold</p>
             </div>
         </div>
@@ -193,21 +190,21 @@
 </div>
 </div>
         
-        <div class ="static">
-            <div class ="title">
-                <h3 style="margin-bottom:-8px;">General Mindset</h3>
+        <div class =" static ">
+            <div class =" title ">
+                <h3 style=" margin-bottom:-8px;">General Mindset</h3>
             </div>
-            <div class="bodyContent">
-                <p class="bodyFirstLine">This chapter will primarily be focused on specific parts of Arnold Bennett’s “How To Live on 24 Hours a Day” as published on the internet and thus may place some of their words out of their original context, or absent of some of the author’s intended trains-of-thought. However, like the rest of this website, I intend to re-contextualize his information to be in-line with the points I want to talk about. I’d advise you, if you are interested, to go read his book:</p>
-                <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1">“How To Live on 24 Hours a Day” by Arnold Bennett</a>
-                <p class="body">I want to focus on chapters two and three—“THE DESIRE TO EXCEED ONE’S PROGRAMME” and “PRECAUTIONS BEFORE BEGINNING”—as, though they are simply meant to be introductory to the content they precede, I feel like they provide generalized nuggets of thought mainly concerning how to begin to healthily view your own time management practices. </p>
-                <p class="body">Chapter two talks about aspirations (and, subsequently, regrets) through the way many of us tend to feel about what we have (or haven’t) done in the past; I implore you to try to understand the passage below:</p>
-                <blockquote style ="margin-top: 5%; "class="bodyFirstLine" cite="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-2">“A man may desire to go to Mecca. His conscience tells him that he ought to go to Mecca. He fares forth, either by the aid of Cook's, or unassisted; he may probably never reach Mecca; he may drown before he gets to Port Said; he may perish ingloriously on the coast of the Red Sea; his desire may remain eternally frustrate. […]But he will not be tormented in the same way as the man who, desiring to reach Mecca, and harried by the desire to reach Mecca, never leaves Brixton. […]Most of us have not left Brixton. […]And our excuse to ourselves is that there are only twenty-four hours in the day.”<br>—Arnold Bennett</blockquote>
-                <p class="body">Through using one’s pilgrimage to Mecca, Bennett talks about a sense of lingering regret, arguing for an action, motivation, or goal to be better off done than not—something I whole heartedly agree with, though I think has its nuances (especially in this writing, partly due to taking passages of the book out-of-context), especially with the mental and physical inconsistencies that come from being human. Clipped from the Kelly Clarkson Show, Kelly Clarkson and Zendaya talk about tardiness, time management, and how they employ strategies to combat those parts of themselves to the benefit of their work. 
-                <p class="body">Kelly acknowledges that she’s bad at time management so she deliberately tells her manager to lie to her about when she needs to show up for her work, resulting in her, more often than not, showing up earlier than she needs to be. Kelly prevents herself from feeling a sense of regret through putting herself in a situation that sets herself up for success, that being arriving to work earlier rather than later. The more you learn about your own habits, the more you may find time management to be about finding ways to work around your humanistic characteristics, flaws, and inconsistencies. Just because you have the will to do something in a certain way doesn’t mean your body feels the same way about it, but it, on the contrary, also doesn’t mean you can’t try to set your body up to feel that way, either—be kind to yourself, but know that you’re oftentimes in more control than life might let you believe. 
-                <a href="https://www.instagram.com/reels/C6MIumiODex/">The Kelley Clarkson Show</a>
-                <p class="body">Chapter three talks about the “issue of time”—the fact that, no matter what we do, time is a resource that we constantly consume—and how an important step to remedying that dissatisfaction is to simply begin doing what we wanted to do. However, passion and consistency are two entirely different things, and it can be difficult to differentiate between them sometimes. Bennett writes, 
-                <blockquote class="bodyFirstLine" cite="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-3">Ardour in well-doing is a misleading and a treacherous thing. It cries out loudly for employment; you can't satisfy it at first; it wants more and more[…] It isn't content till it perspires. And then, too often, when it feels the perspiration on its brow, it wearies all of a sudden and dies, without even putting itself to the trouble of saying, "I've had enough of this." […]Allow for accidents. Allow for human nature, especially your own. [...]Most people who are ruined are ruined by attempting too much."<br>—Arnold Bennett</blockquote>
+            <div class=" bodyContent ">
+                <p class=" bodyFirstLine ">This chapter will primarily be focused on specific parts of Arnold Bennett’s “How To Live on 24 Hours a Day” as published on the internet and thus may place some of their words out of their original context, or absent of some of the author’s intended trains-of-thought. However, like the rest of this website, I intend to re-contextualize his information to be in-line with the points I want to talk about. I’d advise you, if you are interested, to go read his book:</p>
+                <a href=" https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">“How To Live on 24 Hours a Day” by Arnold Bennett</a>
+                <p class=" body ">I want to focus on chapters two and three—“THE DESIRE TO EXCEED ONE’S PROGRAMME” and “PRECAUTIONS BEFORE BEGINNING”—as, though they are simply meant to be introductory to the content they precede, I feel like they provide generalized nuggets of thought mainly concerning how to begin to healthily view your own time management practices. </p>
+                <p class=" body ">Chapter two talks about aspirations (and, subsequently, regrets) through the way many of us tend to feel about what we have (or haven’t) done in the past; I implore you to try to understand the passage below:</p>
+                <blockquote style =" margin-top: 5%;"class=" bodyFirstLine " cite=" https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-2 ">“A man may desire to go to Mecca. His conscience tells him that he ought to go to Mecca. He fares forth, either by the aid of Cook's, or unassisted; he may probably never reach Mecca; he may drown before he gets to Port Said; he may perish ingloriously on the coast of the Red Sea; his desire may remain eternally frustrate. […]But he will not be tormented in the same way as the man who, desiring to reach Mecca, and harried by the desire to reach Mecca, never leaves Brixton. […]Most of us have not left Brixton. […]And our excuse to ourselves is that there are only twenty-four hours in the day.”<br>—Arnold Bennett</blockquote>
+                <p class=" body ">Through using one’s pilgrimage to Mecca, Bennett talks about a sense of lingering regret, arguing for an action, motivation, or goal to be better off done than not—something I whole heartedly agree with, though I think has its nuances (especially in this writing, partly due to taking passages of the book out-of-context), especially with the mental and physical inconsistencies that come from being human. Clipped from the Kelly Clarkson Show, Kelly Clarkson and Zendaya talk about tardiness, time management, and how they employ strategies to combat those parts of themselves to the benefit of their work. 
+                <p class=" body ">Kelly acknowledges that she’s bad at time management so she deliberately tells her manager to lie to her about when she needs to show up for her work, resulting in her, more often than not, showing up earlier than she needs to be. Kelly prevents herself from feeling a sense of regret through putting herself in a situation that sets herself up for success, that being arriving to work earlier rather than later. The more you learn about your own habits, the more you may find time management to be about finding ways to work around your humanistic characteristics, flaws, and inconsistencies. Just because you have the will to do something in a certain way doesn’t mean your body feels the same way about it, but it, on the contrary, also doesn’t mean you can’t try to set your body up to feel that way, either—be kind to yourself, but know that you’re oftentimes in more control than life might let you believe. 
+                <a href=" https://www.instagram.com/reels/C6MIumiODex /">The Kelley Clarkson Show</a>
+                <p class=" body ">Chapter three talks about the “issue of time”—the fact that, no matter what we do, time is a resource that we constantly consume—and how an important step to remedying that dissatisfaction is to simply begin doing what we wanted to do. However, passion and consistency are two entirely different things, and it can be difficult to differentiate between them sometimes. Bennett writes, 
+                <blockquote class=" bodyFirstLine " cite=" https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-3 ">Ardour in well-doing is a misleading and a treacherous thing. It cries out loudly for employment; you can't satisfy it at first; it wants more and more[…] It isn't content till it perspires. And then, too often, when it feels the perspiration on its brow, it wearies all of a sudden and dies, without even putting itself to the trouble of saying, " I 've had enough of this." […]Allow for accidents. Allow for human nature, especially your own. [...]Most people who are ruined are ruined by attempting too much."<br>—Arnold Bennett</blockquote>
                 <p class="body">The sense of ardour Bennett writes about, I’d assume, is something familiar to many of us—the sense that you want your time to be spent doing the things you set out to do, yet, sometimes, you simply cannot bring yourself to doing them.  It’s not really a train of thought that can metaphorically reach the end of its destination, but it can, again, metaphorically, make a tonne of stops along the way—ergo, it is something that can be thought about and explored in your life. I think that the TED talk “The Philosophy of Time Management” by Brad Aeon provides to us a good starting point, as they speak to time management in relation to a broader sense of economics and society—things that are, plainly put, forces in all of our worlds. 
                 <p class="body">Aeon talks about the popular notion, “time is money,” and compares it to what money itself is in our society—if time is money and money is, oftentimes, greed, then would time be greed? Is it greedy to spend time? Aeon brings up a counter argument that time suddenly isn’t about money when you are going to die; suddenly, time becomes more about our life rather than our consumption. When pitting the importance of our time—our lives—up against the “freedom” within many societies to use one’s time as efficiently as can be forces us to make choices when spending our time—the perfect grounds for anxiety to start festering within our minds. On a societal level, how we choose to spend our time can have ripple effects on the consequences we observe, like how people choosing not to vote may contribute to the outcome of their living spaces’ political landscape. 
                 <p class="body">Aeon continues by saying the consequences that arise from the ways we spend our time can me shaped into being positive through asking questions; if time is life, then ask yourself, “Is what I’m doing worth my life?” Don’t go too overboard with that question, but don’t ignore it, either—I believe that it’s good to ask yourself why you try to manage your time every once in a while. Old habits die hard, but that doesn’t mean they can’t change! 
@@ -232,12 +229,10 @@
 <footer class="footer" style="margin-left: -5%; margin-right: -5%; margin-bottom: -5%; height: 125px;">
     <div class="footerText">
         <div class="item"></div>
-        <div class="item">Done for school course GRPH–2010 with the goal of, "Design[ing] and develop[ing] an 'online resource.'" All external sources belong to their respective owners. Textual content and website development was made by website's designer. This website is a product of its content.</div>
-        <div class="item"></div>
+        <div class="item">Done for school course GRPH–2010 with the goal of, "Design[ing] and develop[ing] an ' online resource.'" All external sources belong to their respective owners. Textual content and website development was made by website' s designer. This website is a product of its content.</div>
+        <div class="item">
+        </div>
     </div>
-</footer>
-
-    <script src="../../javaGlobal.js"></script> <!--javascript linking; script HAS to be loaded after defining HTML elements--> 
-
-</body>
-</html>
+</footer><script src="../../javaGlobal.js"></script>
+<!--javascript linking; script HAS to be loaded after defining HTML elements-->
+</body></html>

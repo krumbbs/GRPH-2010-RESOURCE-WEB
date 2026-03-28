@@ -89,7 +89,7 @@ Google Fonts' "Get Embed Code" */
     --waffleSide_open: 20%;
     --waffleSide_transition: (--waffleSide_transition_start)
     --waffleSide_transition_start: 0%; 
-    --waffleSide_transition_end: 77.5%;
+    --waffleSide_transition_end: 75%;
     --accessibilityFull_close: 0; 
     --accessibilityFull_open: 5fr; 
     --navFull_close: 0px; 
@@ -199,24 +199,29 @@ Google Fonts' "Get Embed Code" */
 }
 
 .waffle_subMenu {
-    /* review (and add) padding for menu items */ 
-    display: var(--menuDisplay); 
-    flex-direction: column; 
-    justify-content: space-evenly; 
+    /* review (and add) padding for menu items */
+    display: var(--menuDisplay);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
     height: 25%;
-    position: fixed; 
+    position: fixed;
     margin-left: var(--waffleSide_transition_end);
     background-color: var(--color_dark);
-    width: var(--waffleSide); 
+    width: var(--waffleSide);
     overflow: hidden; /*prevents overflowing content from appearing*/
-    transition: 1s; 
+    transition: 1s;
     border-radius: var(--borderRadius_menu);
-    padding: 20px;
+    padding-left: 70px;
+    padding-right: 45px;
+    padding-top: 50px;
+    padding-bottom: 30px; 
 }
 
 .waffleSub_close {
     position: relative;
-    left: 25%; 
+    margin-left: -50%; 
+    margin-top: 345%; 
 }
 
 .optn {
@@ -225,6 +230,22 @@ Google Fonts' "Get Embed Code" */
     border-radius: var(--borderRadius);
     font-size: var(--typeButton);
     font-family: var(--typeBodyFace);
+}
+
+#optn_accessibility_ID {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: -120%;
+}
+#optn_sourceList_ID {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: -40%;
+}
+#optn_achievements_ID {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: 40%;
 }
 
 .optn:hover {
@@ -269,7 +290,7 @@ Google Fonts' "Get Embed Code" */
     
 .a_bodyText {
     display: grid; 
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% auto;
     grid-template-rows: 30% 30%; 
     row-gap: 20%;
     padding: 10%; /* not working */ 
@@ -416,162 +437,6 @@ Google Fonts' "Get Embed Code" */
     /* background-color: red; /* plus margins */ 
 }
 
-@media screen and (min-width: 360px) and (max-width: 500px) { 
-        .static {
-        margin-left: 5%;
-        margin-right: 15%; /* accomadated for Samsung Galaxy S8 */ 
-    }
-}
-
-
-@media screen and (min-width: 501px) and (max-width: 630px) { 
-.global {
-        position: fixed; 
-        right: 8%; 
-        display: flex; 
-        flex-direction: column; 
-        margin-right: 30px; 
-    }
-    .svgWaffle {
-        position: relative; 
-        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
-        margin-left: -40px; 
-        transform: scale(0.8)
-    }
-        
-    .svgHome {
-        position: relative; 
-        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
-        margin-left: -25px; 
-        transform: scale(0.8)
-    }
-    .accessibilityMenu {
-        background-color: var(--color_dark);
-        font-family: var(--typeBodyFace);
-        color: var(--bgColorW);
-        display: var(--menuDisplay); 
-        grid-template-columns: 55% 35% auto; 
-        width: var(--accessibilityFull); 
-        overflow: hidden; 
-        position: fixed; 
-        margin-left: 0%; 
-        border-radius: var(--borderRadius_menu);
-        padding: 0; 
-        /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
-    }
-    .navMenu {
-        background-color: var(--color_dark);
-        font-family: var(--typeBodyFace);
-        color: var(--color_light);
-        display: var(--menuDisplay_grid);
-        width: var(--navFull); 
-        grid-template-columns: 45% 45% 5%;
-        overflow: hidden;
-        position: fixed; 
-        margin-left: 10%;
-        padding: 2%;
-        border-radius: var(--borderRadius_menu);
-    }
-    .achievementMenu {
-        display: var(--achievementMenu_display);
-        background-color: var(--color_dark);
-        width: 45%;
-        height: 30%; 
-        position: fixed; 
-        margin-left: 50%; 
-        padding: 2%; 
-        border-radius: var(--borderRadius);
-        flex-direction: column; 
-    }
-    .waffle_subMenu {
-    /* review (and add) padding for menu items */ 
-    display: var(--menuDisplay); 
-    flex-direction: column; 
-    justify-content: space-evenly; 
-    height: 25%;
-    position: fixed; 
-    margin-left: 350px;
-    background-color: var(--color_dark);
-    width: var(--waffleSide); 
-    overflow: hidden; /*prevents overflowing content from appearing*/
-    transition: 1s; 
-    border-radius: var(--borderRadius_menu);
-    padding: 20px;
-    transform: scale(0.8);
-}
-}
-    
-@media screen and (max-width: 800px) and (min-width: 631px) {
-    .global {
-        position: fixed; 
-        right: 8%; 
-        display: flex; 
-        flex-direction: column; 
-        margin-right: 30px; 
-    }
-    .svgWaffle {
-        position: relative; 
-        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
-        margin-left: -28px; 
-        transform: scale(0.8)
-    }
-    .svgHome {
-        position: relative; 
-        margin-bottom: -55px; /* changing the bottom margins helps to shrink button/rid of unwanted negative space */
-        margin-left: -15px; 
-        transform: scale(0.8)
-    }
-    .accessibilityMenu {
-        background-color: var(--color_dark);
-        font-family: var(--typeBodyFace);
-        color: var(--bgColorW);
-        display: var(--menuDisplay); 
-        grid-template-columns: 55% 35% auto; 
-        width: var(--accessibilityFull); 
-        overflow: hidden; 
-        position: fixed; 
-        margin-left: 20%; 
-        border-radius: var(--borderRadius_menu);
-        padding: 0; 
-        /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
-    }
-    .navMenu {
-        background-color: var(--color_dark);
-        font-family: var(--typeBodyFace);
-        color: var(--color_light);
-        display: var(--menuDisplay_grid);
-        width: var(--navFull); 
-        grid-template-columns: 45% 45% 5%;
-        overflow: hidden;
-        position: fixed; 
-        margin-left: 20%;
-        padding: 2%;
-        border-radius: var(--borderRadius_menu);
-    }
-}
-
-@media screen and (max-width: 1100px) and (min-width: 801px) {
-    .global {
-        position: fixed; 
-        right: 8%; 
-        display: flex; 
-        flex-direction: column; 
-        margin-right: 25px;
-    }
-    .navMenu {
-        background-color: var(--color_dark);
-        font-family: var(--typeBodyFace);
-        color: var(--color_light);
-        display: var(--menuDisplay_grid);
-        width: var(--navFull); 
-        grid-template-columns: 45% 45% 5%;
-        overflow: hidden;
-        position: fixed; 
-        margin-left: 40%;
-        padding: 2%;
-        border-radius: var(--borderRadius_menu);
-    }
-}
 .highlight {
     background-color: var(--highlight); /*not showing up in the first place*/ 
 }
@@ -717,6 +582,8 @@ Google Fonts' "Get Embed Code" */
     color: var(--typeBodyColor);
     border-style: solid; 
     padding: 30px; 
+    position: absolute;
+    margin-left: -30%;
 }
 
 .buttonLeft:hover {
@@ -734,6 +601,8 @@ Google Fonts' "Get Embed Code" */
     color: var(--typeBodyColor);
     border-style: solid; 
     padding: 30px; 
+    position: absolute;
+    margin-left: 30%;
 }
 
 .buttonRight:hover {
@@ -748,6 +617,8 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
     padding: 20px; 
+    position: absolute;
+    margin-left: -15%;
 }
 
 .buttonMiddle_3s {
@@ -756,6 +627,8 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--temp_contrastMed);
     border-radius: var(--borderRadius);
     padding: 20px; 
+    position: absolute;
+    margin-left: -15%;
 }
 
 .buttonRight_3s {
@@ -764,6 +637,8 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--temp_contrastMed); 
     border-radius: var(--borderRadius);
     padding: 20px; 
+    position: absolute;
+    margin-left: -15%;
 }
 
 
@@ -784,13 +659,89 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace)
 }
     
+/* MEDIA QUERIED STATIC ELEMENTS */
 
-/* variables are definited by a ":root", then called with a "var()" */ 
-/*
+@media (max-width: 768px) and (min-width: 0px) and (max-height: 648px) and (min-height: 0px) {
+    .global {
+    position: fixed; 
+    right: 60%; 
+    bottom: 100%;
+    display: flex; 
+    flex-direction: row-reverse; 
+    scale: 0.6;
+    }
+    .static {
+    margin-left: 0%;
+    margin-right: 0%; 
+    }
+    .headerBlock {
+    background-color: var(--websiteBackgroundColor); 
+        /* width: 500px; */
+        /* height: 500px; */
+    }
 
-:root{
-    --colorBGtest: #1e1c19;
-    --colorBGtest2: #f9f4ed;
+    .waffleButton {
+    margin-top: 100%; 
+    margin-left: 425%; 
+    width: 375%; 
+    }
+    .homeButton {
+    margin-left: 25%; 
+    margin-top: -225%;
+    width: 375%; 
+    }
+
+    .waffle_subMenu {
+    /* review (and add) padding for menu items */
+    display: var(--menuDisplay);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    height: 25%;
+    position: fixed; 
+    right: -7%; 
+    top: 1%; 
+    margin-left: var(--waffleSide_transition_end);
+    background-color: var(--color_dark);
+    width: var(--waffleSide);
+    overflow: hidden; /*prevents overflowing content from appearing*/
+    transition: 1s;
+    border-radius: var(--borderRadius_menu);
+    padding-left: 70px;
+    padding-right: 45px;
+    padding-top: 50px;
+    padding-bottom: 30px; 
+    scale: 0.6; 
+    }
+    .accessibilityMenu {
+    background-color: var(--color_dark);
+    font-family: var(--typeBodyFace);
+    color: var(--bgColorW);
+    display: var(--menuDisplay); 
+    grid-template-columns: 55% 35% auto; 
+    width: var(--accessibilityFull); 
+    overflow: hidden; 
+    position: fixed; 
+    margin-left: 15%;
+    top: 22.5%; 
+    left: -25%; 
+    border-radius: var(--borderRadius_menu);
+    padding: 0; 
+    /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
+    scale: 0.6;
+    }
+    .footer {
+    color: var(--typeFooterColor);
+    background-color: var(--footerBackgroundColor);
+    margin-bottom:
+    -5%; 
+   margin-top: 10%;
+    height: auto;
+    .footerText {
+    display: grid; 
+    grid-template-columns: 10% auto 10%; 
+    padding: 20px;
+    font-family: var(--typeBodyFace)
 }
-
-*/
+}
+}
