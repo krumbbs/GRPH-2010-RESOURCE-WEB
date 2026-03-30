@@ -146,6 +146,10 @@ Google Fonts' "Get Embed Code" */
     flex-direction: column; 
 }
 
+.headBG {
+    display: none;
+}
+
 .waffleGlobal {
     width: 50px;
     height: 50px; 
@@ -686,15 +690,12 @@ Google Fonts' "Get Embed Code" */
     display: flex; 
     flex-direction: row-reverse; 
     scale: 0.6;
+    color: var(--websiteBackgroundColor);
     }
     .static {
+    margin-top: 20%;
     margin-left: 2.5%;
     margin-right: 2.5%; 
-    }
-    .headerBlock {
-    background-color: var(--websiteBackgroundColor); 
-        /* width: 500px; */
-        /* height: 500px; */
     }
 
     .waffleButton {
@@ -704,10 +705,20 @@ Google Fonts' "Get Embed Code" */
     }
     .homeButton {
     margin-left: 25%; 
-    margin-top: -225%;
+    margin-top: -220%;
     width: 375%; 
     }
-
+    .headBG {
+    background-color: var(--websiteBackgroundColor);
+    display: block; 
+    position: fixed; 
+    top:60px;
+    width: 2000px;
+    height: 100px;
+    margin-right: -800px;
+    z-index: -1;
+    }
+    
     .waffle_subMenu {
     /* review (and add) padding for menu items */
     display: var(--menuDisplay);
@@ -787,6 +798,6 @@ Google Fonts' "Get Embed Code" */
     text-indent: var(--typeBodyIndent); 
     line-height: var(--typeBodyLeading);
     margin:0px; 
-    background-image: var(--websiteBackgroundImage)
+    background-image: var(--websiteBackgroundImage);
     }
 }
