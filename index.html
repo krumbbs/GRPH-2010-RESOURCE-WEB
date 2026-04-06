@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="stylesheet.css"> 
         <!-- <script src="javaGlobal.js"></script> --> <!--javascript linking--> 
-        <title>tempTitle</title>
+        <title>Michael's Management</title>
     </head>
 
 <!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
@@ -14,40 +14,41 @@
     <body class="bodyGlobal"> <!-- style="background-color:#f9f4ed" -->
         <!--GLOBAL NAV BUTTONS-->
         <div class="global">
-            <div class="headBG">&nbsp</div>
-            <div class="headerBlock"> </div>
-            <div class ="waffleGlobal"> <!-- move above home --> 
-                <div class="waffleDiv" id="waffleDiv_ID">
-                    <nav> <!--STYLE NAV to get rid of underline-->
-                        <button class ="waffleButton" onclick="f_waffleSide_open()">
-                            <div>Options</div>
-                            <!--SVG code taken from illustrator drawings imported to broswers--> 
-                            <svg class ="svgWaffle">
-                                <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
-                                <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
-                                <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
-                                <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
-                            </svg>
-                            
-                        </button>
-                    </nav>
-            </div>
-                
-            <div class="homeGlobal">
-                <div class="homeDiv">   
-                    <nav>
-                        <button class ="homeButton" onclick="home()">
-                            <div>Home</div>
-                            <svg class ="svgHome">
-                              <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                              <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                              <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                              <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                            </svg> 
-                        </button>
-                    </a></nav>
+            <!-- <div class="headBG">&nbsp</div>
+            <div class="headerBlock"> </div> -->
+            <div class="global_baseNav">
+                <div class ="waffleGlobal"> <!-- move above home --> 
+                    <div class="waffleDiv" id="waffleDiv_ID">
+                        <nav>
+                            <button class ="waffleButton" onclick="f_waffleSide_open()">
+                                <div>Options</div>
+                                <svg class ="svgWaffle">
+                                    <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
+                                    <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
+                                    <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
+                                    <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
+                                </svg>
+                                
+                            </button>
+                        </nav>
                 </div>
-            </div>
+                    
+                <div class="homeGlobal">
+                    <div class="homeDiv">   
+                        <nav>
+                            <button class ="homeButton" onclick="home()">
+                                <div>Home</div>
+                                <svg class ="svgHome">
+                                  <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                                  <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                                  <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                                  <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                                </svg> 
+                            </button>
+                        </a></nav>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
 
@@ -55,10 +56,11 @@
             <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
             <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
             <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-            <div class="waffleSub_close"><button class="close" onclick="f_waffleSide_close()">Close</button></div>
+            <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()">Close</button>
         </div>
-            <!-- 'a' refers to 'accessibility' -->
+
                             <!-- ACCESSIBILITY MENU -->
+        
         <div class="accessibilityMenu">
             <p class="menuMain">Body</p>
             <p class="menuMain">Website</p>
@@ -66,11 +68,6 @@
             <div class="a_bodyText">
                 <div class="scale">
                     <p>Scale</p>
-                    <!-- old: 
-                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
-                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
-                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_large()">Large</button> 
-                    -->
                     <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()" onclick= "f_typeSizeTtile_small()">Small</button>
                     <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
                     <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_big()">Large</button>
@@ -83,8 +80,7 @@
                 <div class="face">
                     <p>Face</p>
                     <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
-                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>
-                    <button class="a_button" id="a_bodyFace_friendly" onclick ="f_typeBodyFace_friendly() ">Friendly</button>
+                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>            
                 </div>
                 <div class="color">
                     <p>Color</p>
@@ -94,14 +90,6 @@
                         <input type="range" class="ranges" id="myRange" value ="0" min ="0" max="360"></input> 
                     </div>
                 </div>
-                <!--
-                <div class="highlightColor">
-                    <p>Highlight Color</p>
-                    <button class="a_button" id="a_bodyHLColor_on" onclick="f_highlight_on()">On</button>
-                    <button class="a_button" id="a_bodyHLColor_off" onclick="f_highlight_off()">Off</button>
-                    <button class="a_button" id="a_bodyHLColor_choose">Choose</button>
-                </div>
-                -->
             </div>
             <div class="a_website">
                 <div class="contrast">
@@ -118,18 +106,13 @@
                         <input type="range" id="myRange_web" value ="0" min ="0" max="360"></input> 
                     </div>
                 </div>
-                <!--
-                <div class="text-to-speech">
-                    <p>Text-to-speech</p>
-                    <button class="a_button" id="a_websiteTextToSpeech_on">On</button>
-                    <button class="a_button" id="a_websiteTextToSpeech_off">Off</button> <!-- <button class="a_websiteBackgroundColor_choose">Choose</button> -->
-               <!-- </div> --> 
             </div>
         </div>
+        
                         <!-- NAV MENU --> 
+        
         <div class="navMenu">
             <div class="navHead">
-                <!-- <div class="navDiv"><nav><a href="sub_informational/index-sub_informational.html"><h6 class="menuHead">Informational</h6></a></nav></div> <!--- make things actually navigate in the site--> 
                  <nav><a href="sub_informational/index-sub_informational.html"><h6 class="menuHead">Informational</h6></a></nav>
                 <div class="navSubMenu">
                     <div class="navSub" id="info_genMindset">
@@ -206,20 +189,29 @@
         
         <div class ="static">
             <div class ="head">
-                <h3 style="margin-bottom:-8px;">[website title]</h3>
-                <p class="tagline">by Michael</p>
+                <h2 style="margin-bottom:-8px;">Michael's Management</h2>
+                <p class="tagline">by Michael M.</p>
             </div>
             <div class="bodyContent">
                 <!-- <mark class="hightlight"> -->
+                <div class="titleNav">
+                    <p class="bodyIndex">
+                        Sections:
+                        <br> Introduction
+                        <br> Options Menu
+                    </p>
+                </div>
                 <img style="width:auto; height:200px; object-fit:cover; margin-bottom: 3%; margin-top: 1%;" src="assets/landing1_1.JPG" alt="Laptop, sketchbooks, and sticky notes"/>
+                <h6 class="body_subHead">Introduction</h6>
                 <p class="bodyFirstLine"> Whenever I talk to others, I tend to see that they view time management skills as something inherit to certain modes of thinking, something that is simply out of their reach, or something that they find difficulty in justifying its self-done intentional development. However, from my own (flawed, but passionate) experience, I find that time management, as a general idea, proves to be more accessible than people make it out to be, placing emphasis on the “hows” and “whys” of how one chooses to manage parts of their time. 
                 </p>
                 <!-- divided each with their own tag to preserve variable functionality in css -->
-                <p class ="body">This website, [website title], is not only meant to be an archive of thoughts and resources I find helpful to consume in thinking about time management, but it is also meant to be a tool for you—the visitor—to both use and take something away from. My website is built around the (self-dubbed) idea of “open navigation”—the idea that you are free to read however much of the website’s content you wish in whatever order you desire, so I implore you to follow your curiosity or modes of thinking to wherever they lead you. It’s difficult to lineally talk and think about time management in a consistently successful way for everybody, so, for your sake and mine, I encourage you to be open about the ways you absorb information. </p>
-                <p class ="body">One of the ways you can explore your processes of learning is by accessing the website’s “Options” tab, from which you will be presented with [three] menus, each serving a different website-wide function.</p>
+                <p class ="body">This website, "Michael's Management", is not only meant to be an archive of thoughts and resources I find helpful to consume in thinking about time management, but it is also meant to be a tool for you—the visitor—to both use and take something away from. My website is built around the (self-dubbed) idea of “open navigation”—the idea that you are free to read however much of the website’s content you wish in whatever order you desire, so I implore you to follow your curiosity or modes of thinking to wherever they lead you. It’s difficult to lineally talk and think about time management in a consistently successful way for everybody, so, for your sake and mine, I encourage you to be open about the ways you absorb information. </p>
+                <h6 class="body_subHead">Options Menu</h6>
+                <p class ="body">One of the ways you can explore your processes of learning is by accessing the website’s “Options” tab, from which you will be presented with three menus, each serving a different website-wide function.</p>
                 <p class ="body">The first menu item, labelled “Accessibility”, allows you to have control over specific parts of the website’s structure, allowing you to change elements of the text, like its scale, as well as elements of the website, like its background color. I implore you to change parts of the website to better suit your information-gathering needs. </p>
                 <p class ="body">The second menu item, labelled “Navigation”, provides the list of external resources I have included within my writing, sorted as presented by the website. You’ll be prompted to visit these resources within my text so you choose, so feel no pressure to look at the whole menu right away. You may also navigate to any point in my website as you please; I encourage checking the menu if your mind drifts to topics you think are adjacent to the writing you read. </p>
-                <p class ="body">[achievements] </p>
+                <p class ="body">The third menu item, labelled "Achievements", directly correlates with the Accessibility menu. If you don't want to use the Accessibility menu to change parts of the website, let this option be a motivator to do so. Who knows, you might even find new visual preferences or learn new terms!</p>
                 <p class ="body">All the content I provide within this website—external or internal—are free-to access or are provided with budgetary considerations in mind. I intend for this website to be of universal access—its resources, lessons, and reflections should be accessible for as many users as possible, and you, dear reader, are one of them. Take advantage of all this website has to offer as it is designed to help you follow your own trains-of-thinking, hopefully teaching you a thing or two about time management along the way. </p>
                 <p class ="body">This website has two “sides” to itself—the “informational”, focusing on the a-physical—theory, practices, and opinions—and the “practical”, focusing on physical media, tool specificity, and purchasing considerations. Please choose what you feel would best suit your need. </p>
                     <!-- </mark> -->

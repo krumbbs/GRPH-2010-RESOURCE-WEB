@@ -120,13 +120,16 @@ function f_navMenu_close () {
 const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular');
 const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig');
-const typeTitleSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeSmall'); //title = not working
-const typeTitleSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeTitleSizeRegular');
-const typeTitleSize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeTtileSizeBig');
+const typeSubHeadSize_small = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeSmall'); //title = not working
+const typeSubHeadSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeRegular');
+const typeSubHeadSize_big = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeBig');
 // mobile:
 const typeBodySize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall_min'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular_min');
 const typeBodySize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig_min');
+const typeSubHeadSize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeSmall_min'); //title = not working
+const typeSubHeadSize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeRegular_min');
+const typeSubHeadSize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeBig_min');
 
 
 function f_typeSizeBody_small () {
@@ -134,36 +137,45 @@ function f_typeSizeBody_small () {
     localStorage.setItem("body", typeBodySize_small);
     root.style.setProperty('--typeBodySize_min', typeBodySize_small_min);
     localStorage.setItem("body_min", typeBodySize_small_min);
+
+    root.style.setProperty('--typeSubHeadSize', typeSubHeadSize_small);
+    localStorage.setItem("bodySubHead", typeSubHeadSize_small);
+    root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_small_min);
+    localStorage.setItem("bodySubHead_min", typeSubHeadSize_small_min);
 }
-/*
-function f_typeSizeTitle_small () {
-    root.style.setProperty('--typeTitleSize', typeTitleSize_small);
-}
-*/
+
 function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodySize', typeBodySize_regular);
     localStorage.setItem("body", typeBodySize_regular);
     root.style.setProperty('--typeBodySize_min', typeBodySize_regular_min);
     localStorage.setItem("body_min", typeBodySize_regular_min);
+
+    root.style.setProperty('--typeSubHeadSize', typeSubHeadSize_regular);
+    localStorage.setItem("bodySubHead", typeSubHeadSize_small);
+    root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_regular_min);
+    localStorage.setItem("bodySubHead_min", typeSubHeadSize_regular_min);
 }
-/*
-function f_typeSizeTitle_regular () { 
-    root.style.setProperty('--typeTitleSize', typeTitleSize_regular);
-    //alert("typeTitleSize_regular")
-}
-*/
+
 function f_typeSizeBody_big () {
     root.style.setProperty('--typeBodySize', typeBodySize_big);
-    //root.style.setProperty('--typeTitleSize', typeTitleSize_big);
     localStorage.setItem("body", typeBodySize_big);
     root.style.setProperty('--typeBodySize_min', typeBodySize_big_min);
     localStorage.setItem("body_min", typeBodySize_big_min);
+
+    root.style.setProperty('--typeSubHeadSize', typeSubHeadSize_big);
+    localStorage.setItem("bodySubHead", typeSubHeadSize_big);
+    root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_big_min);
+    localStorage.setItem("bodySubHead_min", typeSubHeadSize_big_min);
 }
 
 let bodyItem = localStorage.getItem("body"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
 root.style.setProperty('--typeBodySize', bodyItem); //GLOBAL NAV: CHANGING TO PARAMETER
 let bodyItem_min = localStorage.getItem("body_min"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
 root.style.setProperty('--typeBodySize_min', bodyItem_min); //GLOBAL NAV: CHANGING TO PARAMETER
+let subHeadItem = localStorage.getItem("bodySubHead"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeSubHeadSize', subHeadItem); //GLOBAL NAV: CHANGING TO PARAMETER
+let subHeadItem_min = localStorage.getItem("bodySubHead_min"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
+root.style.setProperty('--typeSubHeadSize_min', bodyItem_min); //GLOBAL NAV: CHANGING TO PARAMETER
 
 
 const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');
@@ -196,7 +208,7 @@ function f_typeBodyContrast_bold () {
     }
 //    }        
     else {
-        alert ("achievement already claimed");
+//        alert ("achievement already claimed");
     }
 }
 
@@ -255,7 +267,7 @@ function f_typeColor_light () {
         }
 //    }        
     else {
-        alert ("achievement already claimed");
+//        alert ("achievement already claimed");
     }
 }
 
@@ -366,7 +378,7 @@ function f_websiteContrast_low () {
         }
 //    }        
     else {
-        alert ("achievement already claimed");
+//        alert ("achievement already claimed");
     }
 
     
