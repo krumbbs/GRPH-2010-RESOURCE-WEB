@@ -26,6 +26,7 @@
     --borderRadius: 40px; 
     --borderRadius_menu: 40px; 
     --menuDisplay: none; 
+    --menuDisplay_waffle: none; 
     --menuDisplay_grid: none;
     --achievementMenu_display: none;
     --achievementMenu_display_open: flex;
@@ -115,7 +116,7 @@ Google Fonts' "Get Embed Code" */
     --waffleSide_transition_start: 0%; 
     --waffleSide_transition_end: 75%;
     --accessibilityFull_close: 0; 
-    --accessibilityFull_open: 5fr; 
+    --accessibilityFull_open: 40%; 
     --navFull_close: 0px; 
     --navFull_open: 45%; 
     --backdrop: 0; 
@@ -155,11 +156,27 @@ Google Fonts' "Get Embed Code" */
     transition: 0.2s; 
 }
 
+.stickyTest2 {
+    /* margin-left: 100px; */
+    display: grid; 
+    grid-template-columns: 25% 25% 35% 25%;
+}
+    
+.stickyTest {
+  position: sticky;
+  top: 0;
+    display: grid; 
+    grid-template-columns: 50% 20% 30%;
+}
+    
+.globalSticky {
+    display: grid; 
+    grid-template-columns: 82% 18%;
+    position: sticky;
+    top: 0;
+}
+    
 .global {
-    position: fixed; 
-    right: 8%; 
-    display: flex; 
-    flex-direction: column; 
 }
 
 .headBG {
@@ -194,6 +211,7 @@ Google Fonts' "Get Embed Code" */
     font-size: var(--typeButton_global);
     color: var(--typeBodyColor); 
     border: 0px;  /* taking out border on outside of button */
+    width: 350%;
 }
 
 .waffleButton:hover {
@@ -215,6 +233,7 @@ Google Fonts' "Get Embed Code" */
     font-size: var(--typeButton_global);
     color: var(--typeBodyColor); 
     border: 0px; 
+    width: 350%;
 }
 
 .homeButton:hover {
@@ -236,7 +255,7 @@ Google Fonts' "Get Embed Code" */
 
 .waffle_subMenu {
     /* review (and add) padding for menu items */
-    display: var(--menuDisplay);
+    display: var(--menuDisplay_waffle);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; 
@@ -303,7 +322,7 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     color: var(--bgColorW);
     display: var(--menuDisplay); 
-    grid-template-columns: 55% 35% auto; 
+    grid-template-columns: 55% 35% 10%; 
     width: var(--accessibilityFull); 
     overflow: hidden; 
     position: fixed; 
@@ -327,6 +346,7 @@ Google Fonts' "Get Embed Code" */
 }
 
 .menuMain {
+    margin-top: 10%;
     margin-left: 10%;
     margin-bottom: 2%;
     font-size: 14pt;
@@ -476,7 +496,7 @@ Google Fonts' "Get Embed Code" */
 
 /* STATIC ELEMENTS */
 .static {
-    margin-left: 20%;
+    margin-left: 15%;
     margin-right: 20%; 
     /* background-color: red; /* plus margins */ 
 }
@@ -541,6 +561,7 @@ Google Fonts' "Get Embed Code" */
 .body_subHead {
     display: absolute; 
     font-size: var(--typeSubHeadSize);
+    font-family: var(--typeBodyFace);
     margin-bottom: 3%; 
     transtiion: 0.2s;
     color: var(--typeBodyColor);
@@ -780,7 +801,7 @@ Google Fonts' "Get Embed Code" */
     
     .waffle_subMenu {
     /* review (and add) padding for menu items */
-    display: var(--menuDisplay);
+    display: var(--menuDisplay_waffle);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; 
@@ -810,7 +831,7 @@ Google Fonts' "Get Embed Code" */
     overflow: hidden; 
     position: fixed; 
     margin-left: 15%;
-    top: 22.5%; 
+    top: 55.5%; 
     left: -25%; 
     border-radius: var(--borderRadius_menu);
     padding: 0; 
@@ -921,7 +942,6 @@ Google Fonts' "Get Embed Code" */
     /* column-gap: 5000px; */
     justify-content: space-evenly;
     margin-top: 5%; 
-    z-index: -1;
 }
 
 .threeButtons {
@@ -949,7 +969,6 @@ Google Fonts' "Get Embed Code" */
     width: 45%;
     /* margin-left: -30%; */
     margin-right: 10%;
-        z-index: -1;
 
 }
 
@@ -975,7 +994,6 @@ Google Fonts' "Get Embed Code" */
     /* align-items: baseline;   */
     margin-right: 10%;
     /* margin-left: 30%; */
-        z-index: -1;
 
 }
 

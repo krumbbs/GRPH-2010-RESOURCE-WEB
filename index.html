@@ -11,8 +11,18 @@
 
 <!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
 <!--you can link other HTML files with 'a href' while mentionning; use a '/' to refer to subfolders; put two periods before '/' to link to parent--> 
-    <body class="bodyGlobal"> <!-- style="background-color:#f9f4ed" -->
+    <!-- <div class="stickyTest2">
+        <div style="background-color: green;"> a</div>
+        <div> b</div>
+        <div style="background-color: blue;"> c</div>
+        <div class="stickyTest" style="background-color: red; width: 100px; height: 100px;">THIS IS A TEST </div>
+    </div> -->
+    <body class="bodyGlobal">
+        
         <!--GLOBAL NAV BUTTONS-->
+        
+       <div class="globalSticky">
+           <div>&nbsp</div>
         <div class="global">
             <!-- <div class="headBG">&nbsp</div>
             <div class="headerBlock"> </div> -->
@@ -51,7 +61,8 @@
                 </div>
             </div>
         </div>
-
+       </div>
+           
         <div class="waffle_subMenu" id="waffle_subMenu_ID">
             <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
             <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
@@ -64,8 +75,8 @@
         <div class="accessibilityMenu">
             <p class="menuMain">Body</p>
             <p class="menuMain">Website</p>
-            <div><button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
-            <div class="a_bodyText">
+            <div class="menuMain"><button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
+            <div class="menuMain">
                 <div class="scale">
                     <p>Scale</p>
                     <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()" onclick= "f_typeSizeTtile_small()">Small</button>
@@ -91,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="a_website">
+            <div class="menuMain">
                 <div class="contrast">
                     <p>Contrast</p>
                     <button class="a_button" id="a_websiteContrast_high" onclick="f_websiteContrast_high ()">High</button>

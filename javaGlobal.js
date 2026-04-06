@@ -77,13 +77,13 @@ function storefront_button() {
 //moving around CSS variables
 function f_waffleSide_open() {
     root.style.setProperty('--waffleSide', '--waffleSide_open'); //do NOT put an equal sign!!!!*******
-    root.style.setProperty('--menuDisplay', 'flex');
+    root.style.setProperty('--menuDisplay_waffle', 'flex');
     //root.style.setProperty('--waffleSide_transition', '77.5') //trying to transition menus... 
 } 
 
 function f_waffleSide_close() {
     root.style.setProperty('--waffleSide', '0px'); //do NOT put an equal sign!!!!*******
-    root.style.setProperty('--menuDisplay', 'none');
+    root.style.setProperty('--menuDisplay_waffle', 'none');
 } 
 
 /* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
@@ -93,7 +93,8 @@ while (root.style('--waffleSide') = root.style('--waffleSide_open')) {
 */
 
 function f_accessibilityFull_open () {
-    root.style.setProperty('--accessibilityFull', '--accessibilityFull_open');
+    const accMenuOpen = getComputedStyle(document.documentElement).getPropertyValue('--accessibilityFull_open'); //document.documentElement refers to root of HTML (for some reason)
+    root.style.setProperty('--accessibilityFull', accMenuOpen);
     root.style.setProperty('--menuDisplay', 'grid');
 }
 
