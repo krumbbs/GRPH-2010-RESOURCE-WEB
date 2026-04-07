@@ -9,14 +9,6 @@
         <title>Michael's Management</title>
     </head>
 
-<!--'../' moves 1 directory back; do NOT have to define what directory you go into!-->
-<!--you can link other HTML files with 'a href' while mentionning; use a '/' to refer to subfolders; put two periods before '/' to link to parent--> 
-    <!-- <div class="stickyTest2">
-        <div style="background-color: green;"> a</div>
-        <div> b</div>
-        <div style="background-color: blue;"> c</div>
-        <div class="stickyTest" style="background-color: red; width: 100px; height: 100px;">THIS IS A TEST </div>
-    </div> -->
     <body class="bodyGlobal">
         
         <!--GLOBAL NAV BUTTONS-->
@@ -67,15 +59,16 @@
             <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
             <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
             <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-            <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()">Close</button>
+            <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
         </div>
 
                             <!-- ACCESSIBILITY MENU -->
         
         <div class="accessibilityMenu">
-            <p class="menuMain">Body</p>
-            <p class="menuMain">Website</p>
-            <div class="menuMain"><button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
+            <p class="menuMain_top">Body</p>
+            <div class="menuMain_top">&nbsp</div>
+            <p class="menuMain_top">Website</p>
+            <div class="menuMain_top"><button class="optn" id="optn_close_ID" onclick="f_accessibilityFull_close()">Close</button></div> <!-- blank space (is &nbsp) -->
             <div class="menuMain">
                 <div class="scale">
                     <p>Scale</p>
@@ -88,6 +81,8 @@
                     <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
                     <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
                 </div>
+            </div>
+            <div class="menuMain">
                 <div class="face">
                     <p>Face</p>
                     <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
@@ -174,27 +169,31 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="close" onclick="f_navMenu_close()">Close</button>
+            <div class="navHead">
+                <button class="optn" id ="optn_close_ID" onclick="f_navMenu_close()">Close</button>
             </div>
         </div>
                     <!-- ACHIEVEMENT MENU -->
 
         <div class="achievementMenu">
-            <button style="width: 50px;" class="close" id="achievementClose" onclick="f_achievementClose()">Close</button>
-            <div class="achievement" id="achievement1_id">
-                <p class="achievementComplete_class" class="achievementComplete1" id="achievement1_id"> completed </p>
-                <p id="achievement1_id">Achievement 1: Set body type contrast to bold</p>
-            </div>
-             <div class="achievement" id="achievement2_id">
-                <p class="achievementComplete_class" class="achievementComplete2" id="achievement2_id"> completed </p>
-                <p id="achievement2_id">Achievement 2: Set website contrast to low</p>
-            </div>
-            <div class="achievement" id="achievement3_id">
-                <p class="achievementComplete_class" id="achievement3_id"> completed </p>
-                <p id="achievement3_id">Achievement 3: Set body type color to light</p>
+            <div class="achievements">
+                <button class="optn" id="optn_close_achivement" onclick="f_achievementClose()">Close</button>
+                <div class="achievement" id="achievement1_id_parent">
+                    <p class="achievementComplete_class" class="achievementComplete1" id="achievement1_id"> Incomplete </p>
+                    <p id="achievement1_id_p">Achievement 1: Set body type contrast to bold</p>
+                </div>
+                 <div class="achievement" id="achievement2_id_parent">
+                    <p class="achievementComplete_class" class="achievementComplete2" id="achievement2_id"> Incomplete </p>
+                    <p id="achievement2_id_p">Achievement 2: Set website contrast to low</p>
+                </div>
+                <div class="achievement" id="achievement3_id_parent">
+                    <p class="achievementComplete_class" id="achievement3_id"> Incomplete </p>
+                    <p id="achievement3_id_p">Achievement 3: Set body type color to light</p>
+                </div>
             </div>
         </div>
+
+        
                     <!-- BODY CONTENT... -->
 
         
@@ -219,7 +218,7 @@
                 <!-- divided each with their own tag to preserve variable functionality in css -->
                 <p class ="body">This website, "Michael's Management", is not only meant to be an archive of thoughts and resources I find helpful to consume in thinking about time management, but it is also meant to be a tool for you—the visitor—to both use and take something away from. My website is built around the (self-dubbed) idea of “open navigation”—the idea that you are free to read however much of the website’s content you wish in whatever order you desire, so I implore you to follow your curiosity or modes of thinking to wherever they lead you. It’s difficult to lineally talk and think about time management in a consistently successful way for everybody, so, for your sake and mine, I encourage you to be open about the ways you absorb information. </p>
                 <h6 class="body_subHead">Options Menu</h6>
-                <p class ="body">One of the ways you can explore your processes of learning is by accessing the website’s “Options” tab, from which you will be presented with three menus, each serving a different website-wide function.</p>
+                <p class ="bodyFirstLine">One of the ways you can explore your processes of learning is by accessing the website’s “Options” tab, from which you will be presented with three menus, each serving a different website-wide function.</p>
                 <p class ="body">The first menu item, labelled “Accessibility”, allows you to have control over specific parts of the website’s structure, allowing you to change elements of the text, like its scale, as well as elements of the website, like its background color. I implore you to change parts of the website to better suit your information-gathering needs. </p>
                 <p class ="body">The second menu item, labelled “Navigation”, provides the list of external resources I have included within my writing, sorted as presented by the website. You’ll be prompted to visit these resources within my text so you choose, so feel no pressure to look at the whole menu right away. You may also navigate to any point in my website as you please; I encourage checking the menu if your mind drifts to topics you think are adjacent to the writing you read. </p>
                 <p class ="body">The third menu item, labelled "Achievements", directly correlates with the Accessibility menu. If you don't want to use the Accessibility menu to change parts of the website, let this option be a motivator to do so. Who knows, you might even find new visual preferences or learn new terms!</p>
@@ -238,20 +237,7 @@
             </div>
         </div>
         
-        <!--TEMPORARY FUNCTION TESTING; NOT WORKING
-        <div class="tempTestFunctions">
-            <button class="title_testTypeSmall">title_small</button>
-            <button class="title_testTypeNormal">title_normal</button>
-            <button class="title_testTypeBig">title_big</button>
-            <button class="body_testTypeSmall">body_small</button>
-            <button class="body_testTypeNormal">body_normal</button>
-            <button class="body_testTypeBig">body_big</button>
-        </div>
-
-<script>
-    document.getElementById("demo_ID").innerText = "hello workd"; 
-</script>
--->
+        
 <footer class="footer">
     <div class="footerText">
         <div class="item"></div>
@@ -262,5 +248,5 @@
             
 <script src="javaGlobal.js"></script> <!--javascript linking; script HAS to be loaded after defining HTML elements--> 
 
-    </body>
+</body>
 </html>

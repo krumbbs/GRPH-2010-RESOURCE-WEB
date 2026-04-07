@@ -6,63 +6,60 @@
         <link rel="stylesheet" href="../../stylesheet.css">
     </head>
     <body class="bodyGlobal">
-        <div class="global">
-            <div class="waffleGlobal">
-                <!-- move above home -->
-                <div class="waffleDiv" id="waffleDiv_ID">
-                    <nav>
-                        <!--STYLE NAV to get rid of underline-->
-                        <button class="waffleButton" onclick="f_waffleSide_open()">
-                            <div>Options</div>
-                            <!--SVG code taken from illustrator drawings imported to broswers-->
-                            <svg class="svgWaffle">
-                                <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
-                                <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
-                                <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
-                                <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
-                            </svg>
-                        </button>
-                    </nav>
-                </div>
-                <div class="homeGlobal">
-                    <div class="homeDiv">
-                        <nav>
-                            <button class="homeButton" onclick="homemin2()">
-                                <div>Home</div>
-                                <svg class="svgHome">
-                                    <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                                    <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                                    <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                                    <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                                </svg>
-                            </button>
-</a></nav></div></div></div></div>
+        <!--GLOBAL NAV BUTTONS-->
+        <div class="globalSticky">
+            <div>&nbsp</div>
+            <div class="global">
+                <!-- <div class="headBG">&nbsp</div>
+            <div class="headerBlock"> </div> -->
+                <div class="global_baseNav">
+                    <div class="waffleGlobal">
+                        <!-- move above home -->
+                        <div class="waffleDiv" id="waffleDiv_ID">
+                            <nav>
+                                <button class="waffleButton" onclick="f_waffleSide_open()">
+                                    <div>Options</div>
+                                    <svg class="svgWaffle">
+                                        <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
+                                        <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
+                                        <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
+                                        <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
+                                    </svg>
+                                </button>
+                            </nav>
+                        </div>
+                        <div class="homeGlobal">
+                            <div class="homeDiv">
+                                <nav>
+                                    <button class="homeButton" onclick="homemin2()">
+                                        <div>Home</div>
+                                        <svg class="svgHome">
+                                            <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                                            <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                                            <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                                            <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                                        </svg>
+                                    </button>
+</a></nav></div></div></div></div></div></div>
 <div class="waffle_subMenu" id="waffle_subMenu_ID">
     <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button>
     <!-- make this close other button -->
     <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
     <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-    <div class="waffleSub_close">
-        <button class="close" onclick="f_waffleSide_close()">Close</button>
-    </div>
+    <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
 </div>
-<!-- 'a' refers to 'accessibility' -->
 <!-- ACCESSIBILITY MENU -->
 <div class="accessibilityMenu">
-    <p class="menuMain">Body</p>
-    <p class="menuMain">Website</p>
-    <div>
-        <button class="close" id="accessibilityClose" onclick="f_accessibilityFull_close()">Close</button>
+    <p class="menuMain_top">Body</p>
+    <div class="menuMain_top">&nbsp</div>
+    <p class="menuMain_top">Website</p>
+    <div class="menuMain_top">
+        <button class="optn" id="optn_close_ID" onclick="f_accessibilityFull_close()">Close</button>
     </div>
     <!-- blank space (is &nbsp) -->
-    <div class="a_bodyText">
+    <div class="menuMain">
         <div class="scale">
             <p>Scale</p>
-            <!-- old: 
-                    <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()">Small</button>
-                    <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()">Regular</button>
-                    <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_large()">Large</button> 
-                    -->
             <button class="a_button" id="a_bodyScale_small" onclick="f_typeSizeBody_small()" onclick="f_typeSizeTtile_small()">Small</button>
             <button class="a_button" id="a_bodyScale_regular" onclick="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
             <button class="a_button" id="a_bodyScale_large" onclick="f_typeSizeBody_big()">Large</button>
@@ -72,11 +69,12 @@
             <button class="a_button"id="a_bodyContrast_regular"onclick="f_typeBodyContrast_regular()"">Regular</button>
                     <button class="a_button " id="a_bodyContrast_large " onclick ="f_typeBodyContrast_bold()">Bold</button>
                 </div>
+            </div>
+            <div class="menuMain ">
                 <div class="face ">
                     <p>Face</p>
                     <button class="a_button " id="a_bodyFace_serif " onclick = "f_typeBodyFace_serif()">Serif</button>
-                    <button class="a_button " id="a_bodyFace_sansSerif " onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>
-                    <button class="a_button " id="a_bodyFace_friendly " onclick ="f_typeBodyFace_friendly()">Friendly</button>
+                    <button class="a_button " id="a_bodyFace_sansSerif " onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>            
                 </div>
                 <div class="color ">
                     <p>Color</p>
@@ -86,16 +84,8 @@
                         <input type="range " class="ranges " id="myRange " value ="0 " min ="0 " max="360 "></input> 
                     </div>
                 </div>
-                <!--
-                <div class="highlightColor ">
-                    <p>Highlight Color</p>
-                    <button class="a_button " id="a_bodyHLColor_on " onclick="f_highlight_on()">On</button>
-                    <button class="a_button " id="a_bodyHLColor_off " onclick="f_highlight_off()">Off</button>
-                    <button class="a_button " id="a_bodyHLColor_choose ">Choose</button>
-                </div>
-                -->
             </div>
-            <div class="a_website ">
+            <div class="menuMain ">
                 <div class="contrast ">
                     <p>Contrast</p>
                     <button class="a_button " id="a_websiteContrast_high " onclick="f_websiteContrast_high()">High</button>
@@ -110,21 +100,17 @@
                         <input type="range " id="myRange_web " value ="0 " min ="0 " max="360 "></input> 
                     </div>
                 </div>
-                <!--
-                <div class="text-to-speech ">
-                    <p>Text-to-speech</p>
-                    <button class="a_button " id="a_websiteTextToSpeech_on ">On</button>
-                    <button class="a_button " id="a_websiteTextToSpeech_off ">Off</button> <!-- <button class="a_websiteBackgroundColor_choose ">Choose</button> -->
-               <!-- </div> --> 
             </div>
         </div>
+        
                         <!-- NAV MENU --> 
+        
         <div class="navMenu ">
             <div class="navHead ">
-                <h6 class="menuHead "><nav><a href="sub_informational/index-sub_informational.html ">Informational</a></nav></h6> <!--- make things actually navigate in the site--> 
+                 <nav><a href="../../sub_informational/index-sub_informational.html "><h6 class="menuHead ">Informational</h6></a></nav>
                 <div class="navSubMenu ">
                     <div class="navSub " id="info_genMindset ">
-                        <nav><a href="sub_informational/subsub_genMindset/index-subsub_genMindset.html "><h6 class="menuSubHead ">General Mindset</h6></a></nav>
+                        <nav><a href="../../sub_informational/subsub_genMindset/index-subsub_genMindset.html "><h6 class="menuSubHead ">General Mindset</h6></a></nav>
                         <nav class="navSubSub ">
                             <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
                             <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
@@ -132,13 +118,13 @@
                         </nav>
                     </div>
                     <div class="navSub " id="info_primeTime ">
-                        <h6 class="menuSubHead "><nav><a href="sub_informational/subsub_primeTime/index-subsub_primeTime.html ">Prime Time</a></nav></h6>
+                        <h6 class="menuSubHead "><nav><a href="../../sub_informational/subsub_primeTime/index-subsub_primeTime.html ">Prime Time</a></nav></h6>
                         <nav class="navSubSub ">
                             <a href="https://www.youtube.com/watch?v=PPITG-6fR5s ">Video</a>
                         </nav>
                     </div>
                     <div class="navSub " id="info_timeManagement ">
-                        <nav><h6 class="menuSubHead "><a href="sub_informational/subsub_timeManagement/index-subsub_timeManagement.html ">Time Management</a></h6></nav>
+                        <nav><h6 class="menuSubHead "><a href="../../sub_informational/subsub_timeManagement/index-subsub_timeManagement.html ">Time Management</a></h6></nav>
                         <nav class="navSubSub ">
                             <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
                             <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ ">Podcast—better work environments</a>
@@ -166,60 +152,72 @@
                     <div class="navSub " id="practical_storefront ">
                         <nav><h6 class="menuSubHead "><a href="sub_practical/subsub_storefront/index-subsub_storefront.html ">Storefront</a></h6></nav>
                         <nav class="navSubSub ">
-                            <a href="httpshttps://www.walmart.ca/en/search?q=sticky+notes ">Walmart Sticky notes</a>
+                            <a href="https://www.walmart.ca/en/search?q=sticky+notes ">Walmart Sticky notes</a>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="close " onclick="f_navMenu_close()">Close</button>
+            <div class="navHead ">
+                <button class="optn " id ="optn_close_ID " onclick="f_navMenu_close()">Close</button>
             </div>
         </div>
-
                     <!-- ACHIEVEMENT MENU -->
 
         <div class="achievementMenu ">
-            <button style="width:50px;" class="close " id="achievementClose " onclick="f_achievementClose()">Close</button>
-            <div class="achievement ">
-                <p class="achievementComplete "> completed </p>
-                <p>Achievement 1: Set body type contrast to bold</p>
+            <div class="achievements ">
+                <button class="optn " id="optn_close_achivement " onclick="f_achievementClose()">Close</button>
+                <div class="achievement " id="achievement1_id_parent ">
+                    <p class="achievementComplete_class " class="achievementComplete1 " id="achievement1_id "> Incomplete </p>
+                    <p id="achievement1_id_p ">Achievement 1: Set body type contrast to bold</p>
+                </div>
+                 <div class="achievement " id="achievement2_id_parent ">
+                    <p class="achievementComplete_class " class="achievementComplete2 " id="achievement2_id "> Incomplete </p>
+                    <p id="achievement2_id_p ">Achievement 2: Set website contrast to low</p>
+                </div>
+                <div class="achievement " id="achievement3_id_parent ">
+                    <p class="achievementComplete_class " id="achievement3_id "> Incomplete </p>
+                    <p id="achievement3_id_p ">Achievement 3: Set body type color to light</p>
+                </div>
             </div>
         </div>
 
+
+        <!-- STATIC ON PAGE -->
+
     <div class ="static ">
-        <div class ="subHead">
+        <div class ="subHead ">
             <h3 style="margin-bottom:-8px;">Application Preferences</h3>
         </div>
-        <div class="titleNav">
-            <p class="bodyIndex">
+        <div class="titleNav ">
+            <p class="bodyIndex ">
                 Sections:
                 <br>Digital Applications
-                <br>"Google Calendar"
-                <br>"Obsidian"
-                <br>"When2Meet"
+                <br>"Google Calendar "
+                <br>"Obsidian "
+                <br>"When2Meet "
                 <br>Group Planning
             </p>
         </div>
-        <div class="bodyContent">
-            <h6 class="body_subHead">Digital Applications</h6>    
+        <div class="bodyContent ">
+            <h6 class="body_subHead ">Digital Applications</h6>    
                 <p class="bodyFirstLine ">Over time, I’ve built up a handful of digital applications that I like to use to help me manage my time, either simply in my day-to-day or with my friends. I never like to pay any money for digital time management software, so I do tend to gravitate towards ones with customization features as I prefer being able to change software to match my preferences (even if the barrier for entry can, sometimes, feel like a bit of a hurdle). </p>
-            <h6 class="body_subHead">"Google Calendar"</h6>            
+            <h6 class="body_subHead">"Google Calendar "</h6>            
                 <p class="body ">One of my favorite pieces of software (that has, un-ironically, become pseudo-synonymous with my identity amongst my peers) is Google Calendar—a self-explanatory application with easy cross-Operating System functionality and easy-to-use visualization. I love using Google Calendar to help myself get a good sense of time in my days; sometimes I have way too much on my plate to reasonably remember what I need to get done, so I use the application’s Task and Event features to sort out what I feel I should be doing and what I need to have done respectively. </p>
                 <p class="body ">If you are familiar with “Time Blocking” in any way, then you are (roughly) familiar with the way I handle myself on Google Calendar. I set events to span the amount of time that I wish to commit to whatever I need to get done in the moment, color-coding them to get a rough idea on both what the event is, but also how it relates to everything else on my calendar. For instance, I like to color the blocks of time I want to have greater focus in with a brighter green, blocks of time where I may not necessarily have that much focus but need to make progress with something in particular with a darker green, the time I set aside for sleeping in lavender, et cetera. </p>
                 <p class="body ">I feel like this method of time management makes me extra susceptible to getting overwhelmed by the number of tasks I place on my calendar (and I do, occasionally, feel that way), so I try to treat my calendar as more-so as something that helps me delegate my time, allowing me to look back and assess how I should spend my time based on what I’ve done previously. I really do recommend Google Calendar if you are like me and like fully online software that helps you delegate your time. </p>
                 <img src="../../assets/apps1_1.png " alt="Google Calendar screenshot "/>
                 <a href="https://calendar.google.com/calendar/u/0/r " class="bodyFirstLine ">Google Calendar</a>
-            <h6 class="body_subHead">"Obsidian"</h6>                
+            <h6 class="body_subHead">"Obsidian "</h6>                
                 <p class="body ">Another tool I’ve recently come to enjoy is Obsidian—a community-focused, primarily writing-based application that heavily leans into community-lead customization through community plugins and coding-centric design. I’m not that big on coding myself (ironic, as I coded this website) but Obsidian allows me to apply “coding-like logic” whilst writing my notes to make my writing process faster by being able to visually customize my content without dealing with UI that I find clunky (like in Apple’s dedicated notes software).</p>
                 <p class="body ">I like to use obsidian to display multiple tabs of notes at once to limit the amount of different desktop screens I use while working, as I find that sorting my notes across different folders makes it easier for me to convey and develop my thoughts, especially in writing, so being able to see those different lines of thinking at once simply feels more natural to me. Something else that greatly helps this way-of-thinking is the community made plugin “Excalidraw”, allowing for a flexible, non-linear integration of text and image content alongside one another. Whereas the default Obsidian notes work linearly, being read from top to bottom, Excalidraw takes a feature that already exists in Obsidian—“Canvasses”—and tacks on more flexible features, like automated, drawn arrows, making it really easy to establish flow between your thoughts. </p>
                 <p class="body ">I recommend Obsidian for time management practices as I feel its intuitive for those who, one, like writing out their thoughts, two, benefit from having visuals to coincide said thoughts, and three, like to have freedom in the way they represent their thoughts. Having control over how you represent that which exists in your mind, at least for someone like me, is incredibly helpful for organizing my own time. </p>
                 <a href="https://obsidian.md/" class="bodyFirstLine ">Obsidian</a>
                 <img src="../../assets/apps2_1.png " alt="Application Obsidian "/>
-            <h6 class="body_subHead">"When2Meet"</h6>
+            <h6 class="body_subHead">"When2Meet "</h6>
                 <p class="body ">I’ve also found great comfort in using “When2Meet”, a free-to-access online website whose purpose is to streamline hangout planning processes between multiple people in an easy, streamlined way. The website sees one person—most likely an event/hangout host or something of the sort—setup a range of days and/or times to host their event within, then gives a link to their guests to, then, notate when they would be available. When2Meet uses a “soft” login system, where users can input usernames and (optional) passwords to control what gets displayed next to the time slot they booked. The website is usable across many mobile and desktop operating systems (from what I know, it works on Apple OS and Windows OS) making it a really good choice to efficiently divide time amongst groups of people through online contact. It’s a really good choice when groups of people are very indecisive about plans—it lets people “nonverbally” plan around each other’s times, taking away a lot of anxiety many people tend to feel when making plans with others.  </p>
                 <a href="https://www.when2meet.com/" class="bodyFirstLine ">When2Meet</a>
                 <img src="../../assets/apps3_1.png " alt="When2Meet "/>
-            <h6 class="body_subHead">Group Planning</h6>    
+            <h6 class="body_subHead ">Group Planning</h6>    
                 <p class="body ">Planning with groups tends to be a lot more difficult given the fact that a singular plan tends to rely on multiple peoples’ time management skills and/or schedules—something not everything can control—but, if you, dear reader, are able to be the person who make it easier for everyone, then everyone, including you, will benefit! Planning with other people, especially in online group chats, is difficult when multiple people take charge—if someone’s already taking the blunt of leading the plan, then it is probably a good thing to step down and let them lead. If you find yourself at the front of planning for a group, I have found that there are a couple things to try in case your current method-of-planning isn’t working. </p>
                 <p class="body ">Going back to the idea of “nonverbal communication” brought up with the When2Meet writing, other easy ways to incite nonverbal communication is through calendar invites (in-case your guests use calendar applications as well) or group chat polls (especially through Instagram—those have saved so many plans that I’ve previously made). The more you communicate amongst your friends directly with the plans themselves (so with the dates, not with the smaller intricacies), the less anxiety tends to brew, at least from my experience. </p>
         </div>
@@ -238,6 +236,8 @@
 
 </body>
 </html>
+
+
 
 
 

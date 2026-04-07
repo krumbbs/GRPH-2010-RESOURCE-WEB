@@ -58,18 +58,81 @@ function homemin2() {
 function informational() {
     window.location.href = 'sub_informational/index-sub_informational.html';
 }
+function informationalmin1() {
+    window.location.href = '../sub_informational/index-sub_informational.html';
+}
+function informationalmin2() {
+    window.location.href = '../../sub_informational/index-sub_informational.html';
+}
+
 function practical() {
     window.location.href = 'sub_practical/index-sub_practical.html';
+}
+function practicalmin1() {
+    window.location.href = '../sub_practical/index-sub_practical.html';
+}
+function practicalmin2() {
+    window.location.href = '../../sub_practical/index-sub_practical.html';
 }
 
 function applications_button() {
     window.location.href ='subsub_apps/index-subsub_apps.html'    
 }
+function applications_buttonmin1() {
+    window.location.href ='../subsub_apps/index-subsub_apps.html'    
+}
+function applications_buttonmin2() {
+    window.location.href ='../../subsub_apps/index-subsub_apps.html'    
+}
+
 function mediaPrefs_button() {
     window.location.href ='subsub_mediaPref/index-subsub_mediaPref.html'    
 }
+function mediaPrefs_buttonmin1() {
+    window.location.href ='../subsub_mediaPref/index-subsub_mediaPref.html'    
+}
+function mediaPrefs_buttonmin2() {
+    window.location.href ='../../subsub_mediaPref/index-subsub_mediaPref.html'    
+}
+
 function storefront_button() {
     window.location.href ='subsub_storefront/index-subsub_storefront.html'    
+}
+function storefront_buttonmin1() {
+    window.location.href ='../subsub_storefront/index-subsub_storefront.html'    
+}
+function storefront_buttonmin2() {
+    window.location.href ='../../subsub_storefront/index-subsub_storefront.html'    
+}
+
+function genMindset_button() {
+    window.location.href ='subsub_genMindset/index-subsub_genMindset.html'    
+}
+function genMindset_buttonmin1() {
+    window.location.href ='../subsub_genMindset/index-subsub_genMindset.html'    
+}
+function genMindset_buttonmin2() {
+    window.location.href ='../../subsub_genMindset/index-subsub_genMindset.html'    
+}
+
+function primeTime_button() {
+    window.location.href ='subsub_primeTime/index-subsub_primeTime.html'    
+}
+function primeTime_buttonmin1() {
+    window.location.href ='../subsub_primeTime/index-subsub_primeTime.html'    
+}
+function primeTime_buttonmin2() {
+    window.location.href ='../../subsub_primeTime/index-subsub_primeTime.html'    
+}
+
+function timeManagement_button() {
+    window.location.href ='subsub_timeManagement/index-subsub_timeManagement.html'    
+}
+function timeManagement_buttonmin1() {
+    window.location.href ='../subsub_timeManagement/index-subsub_timeManagement.html'    
+}
+function timeManagement_buttonmin2() {
+    window.location.href ='../../subsub_timeManagement/index-subsub_timeManagement.html'    
 }
 
 
@@ -84,6 +147,9 @@ function f_waffleSide_open() {
 function f_waffleSide_close() {
     root.style.setProperty('--waffleSide', '0px'); //do NOT put an equal sign!!!!*******
     root.style.setProperty('--menuDisplay_waffle', 'none');
+    f_achievementClose();
+    f_accessibilityFull_close();
+    f_navMenu_close();
 } 
 
 /* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
@@ -96,6 +162,8 @@ function f_accessibilityFull_open () {
     const accMenuOpen = getComputedStyle(document.documentElement).getPropertyValue('--accessibilityFull_open'); //document.documentElement refers to root of HTML (for some reason)
     root.style.setProperty('--accessibilityFull', accMenuOpen);
     root.style.setProperty('--menuDisplay', 'grid');
+    f_navMenu_close ();
+    f_achievementClose();
 }
 
 function f_accessibilityFull_close () {
@@ -106,11 +174,12 @@ function f_accessibilityFull_close () {
 function f_navMenu_open () {
     root.style.setProperty('--navFull', '--navFull_open');
     root.style.setProperty('--menuDisplay_grid', 'grid');
+    f_accessibilityFull_close ();
+    f_achievementClose();
 }
 
 function f_navMenu_close () {
     root.style.setProperty('--menuDisplay_grid', 'none');
-    
 }
 
 
@@ -183,6 +252,9 @@ const typeBodyContrast_light = getComputedStyle(document.documentElement).getPro
 const typeBodyContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastRegular');
 const typeBodyContrast_bold = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastBold');
 
+//ACHIEVEMENT TEXT CHANGES...
+const textChange1 = document.getElementById('achievement1_id');
+
 function f_typeBodyContrast_light () {
     root.style.setProperty ('--typeBodyContrast', typeBodyContrast_light);
     localStorage.setItem("typeContrast", typeBodyContrast_light);
@@ -199,6 +271,7 @@ function f_typeBodyContrast_bold () {
     function ach_1 () {
         root.style.setProperty('--achievementType1', achievementComplete);
         alert("Achievement: Changed face to bold!"); 
+        achievement1_id.textContent = 'Completed!';
     }
 //    if (a_1 = true) {
     if ((achievementItem1)!="true") { 
@@ -245,19 +318,26 @@ root.style.setProperty('--typeTitleFace', faceItem); //GLOBAL NAV: CHANGING TO P
 const typeColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
 const typeColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
 
+//ACHIVEMENT...
+// const textChange3 = document.getElementById('achievement3_id');
+
+
 function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     localStorage.setItem("typeColor", typeColor_dark);
+//    f_websiteBackgroundColor_light();
 }
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
     root.style.setProperty ('--typeTitleColor', typeColor_light);
     localStorage.setItem("typeColor", typeColor_light);
+//    f_websiteBackgroundColor_dark();
 //    a_3 = true; 
     function ach_3 () {
         root.style.setProperty('--achievementType3', achievementComplete);
         alert("Achievement: Changed type color to light!"); 
+        achievement3_id.textContent = 'Completed!';
     }
 //    if (a_3 = true) {
         if ((achievementItem3)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
@@ -284,17 +364,17 @@ let colorItem = localStorage.getItem("typeColor"); //GLOBAL NAV: RETRIEVING PREV
 root.style.setProperty('--typeBodyColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 root.style.setProperty('--typeTitleColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
-//NOT FUNCTIONAL—highlight code
+// //NOT FUNCTIONAL—highlight code
 
-const highlight_on = getComputedStyle(document.documentElement).getPropertyValue('--highlight_on');
-const highlight_off = getComputedStyle(document.documentElement).getPropertyValue('--highlight_off');
+// const highlight_on = getComputedStyle(document.documentElement).getPropertyValue('--highlight_on');
+// const highlight_off = getComputedStyle(document.documentElement).getPropertyValue('--highlight_off');
 
-function f_highlight_on () {
-    root.style.setProperty ('--highlight', highlight_on);
-}
-function f_highlight_off () {
-    root.style.setProperty ('--highlight', highlight_off);
-}
+// function f_highlight_on () {
+//     root.style.setProperty ('--highlight', highlight_on);
+// }
+// function f_highlight_off () {
+//     root.style.setProperty ('--highlight', highlight_off);
+// }
 
                         //WEBSITE CODE
 
@@ -306,10 +386,12 @@ const websiteBackgroundColor_light = getComputedStyle(document.documentElement).
 function f_websiteBackgroundColor_dark () {
     root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
     localStorage.setItem("bgColor", websiteBackgroundColor_dark); 
+    f_typeColor_light();
 }
 function f_websiteBackgroundColor_light () {
     root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
     localStorage.setItem("bgColor", websiteBackgroundColor_light); 
+    f_typeColor_dark();
 }
 
 const slider_bg = document.querySelector('.bg_slider input');
@@ -323,7 +405,8 @@ let bgColorItem = localStorage.getItem("bgColor"); //GLOBAL NAV: RETRIEVING PREV
 root.style.setProperty('--websiteBackgroundColor', bgColorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
 const websiteBackgroundContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
-const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage_on');
+// const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage');
+const websiteBackgroundColor_low = "grey"
 const colorWhite = "white";
 const colorBlack = "black"
 
@@ -354,21 +437,21 @@ function f_websiteContrast_regular () {
 }
 
 function f_websiteContrast_low () {
-    root.style.setProperty ('--websiteBackgroundImage', websiteBackgroundColor_low);
-    root.style.setProperty ('--typeTitleColor', typeColor_dark);
-    root.style.setProperty ('--typeBodyColor', typeColor_dark);
-    root.style.setProperty ('--backdrop', colorWhite);
-    localStorage.setItem("bgContrast1", colorWhite);
-    localStorage.setItem("bgContrast2", websiteBackgroundColor_low); 
-    localStorage.setItem("bgContrast3", typeColor_dark);
-    localStorage.setItem("bgContrast4", typeColor_dark);
-    localStorage.setItem("bgContrast5", colorWhite);
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_low);
+    root.style.setProperty ('--websiteBackgroundImage', 0);
+    root.style.setProperty ('--typeTitleColor', typeColor_light);
+    root.style.setProperty ('--typeBodyColor', typeColor_light);
+    root.style.setProperty ('--backdrop', 0);
+    localStorage.setItem("bgContrast1", websiteBackgroundColor_low); 
+    localStorage.setItem("bgContrast2", 0);
+    localStorage.setItem("bgContrast3", typeColor_light);
+    localStorage.setItem("bgContrast4", typeColor_light);
+    localStorage.setItem("bgContrast5", 0);
 // a_2 = true; 
     function ach_2 () {
         root.style.setProperty('--achievementType2', achievementComplete);
-//        let aaa = getComputedStyle(document.documentElement).getPropertyValue('--achievementType2')
-//        alert (aaa);
         alert("Achievement: Set website contrast to low!"); 
+        achievement2_id.textContent = 'Completed!';
     }
     // if (a_2 = true) {
         if ((achievementItem2)!="true") { //three === is for boolean; two == is for 'equality' (not necessarily numberical; can be any value)
@@ -397,17 +480,13 @@ root.style.setProperty('--typeBodyColor', bgContrast4Item); //GLOBAL NAV: CHANGI
 root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO PARAMETER
 
 
-        //TTS LATER.
-
-                        //ACHIEVEMENT SECTION (LATER)—GLOBAL VARIABLE IMPLEMENTATION 
-// make funciton to toggle achievements on 
-// store variable value from achievements in the while loop 
-// run checks to see if while loop is true 
 
 const achievementOpen = getComputedStyle(document.documentElement).getPropertyValue('--achievementMenu_display_open');
 
 function f_achievementOpen() {
     root.style.setProperty('--achievementMenu_display', achievementOpen);
+    f_accessibilityFull_close();
+    f_navMenu_close();
 }
 
 function f_achievementClose() {
@@ -418,6 +497,7 @@ function f_achievementClose() {
 if ((achievementItem1)==="true") {
     function ach_1_check () {
         root.style.setProperty('--achievementType1', achievementComplete);
+        achievement1_id.textContent = 'Completed!';
     }
     ach_1_check();
 }
@@ -425,6 +505,7 @@ if ((achievementItem1)==="true") {
 if ((achievementItem2)==="true") {
     function ach_2_check () {
         root.style.setProperty('--achievementType2', achievementComplete);
+        achievement2_id.textContent = 'Completed!';
     }
     ach_2_check();
 }
@@ -432,6 +513,7 @@ if ((achievementItem2)==="true") {
 if ((achievementItem3)==="true") {
     function ach_3_check () {
         root.style.setProperty('--achievementType3', achievementComplete);
+        achievement3_id.textContent = 'Completed!';
     }
     ach_3_check();
 }

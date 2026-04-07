@@ -3,64 +3,59 @@
 /*TYPOGRAPHY*/
 /*SCALES*/ 
 /* IN POINTS... */
-    --typeBodySizeSmall: 13.312pt;  
-    --typeBodySizeRegular: 16.64pt; 
-    --typeBodySizeBig: 20.8pt; 
+    --typeBodySizeSmall: 13.312pt;
+    --typeBodySizeRegular: 16.64pt;
+    --typeBodySizeBig: 20.8pt;
     --typeBodySizeSmall_min: 6.8096pt;   /* min sizes operate on slightly different calculations */
-    --typeBodySizeRegular_min: 8.512pt; 
-    --typeBodySizeBig_min: 10.64pt; 
-
+    --typeBodySizeRegular_min: 8.512pt;
+    --typeBodySizeBig_min: 10.64pt;
     --type_bodySubHeadSizeSmall: 16.64pt;
     --type_bodySubHeadSizeSmall_min: 8.512pt;
-    --type_bodySubHeadSizeRegular: 20.8pt; 
+    --type_bodySubHeadSizeRegular: 20.8pt;
     --type_bodySubHeadSizeRegular_min: 10.64pt;
-    --type_bodySubHeadSizeBig: 26pt; 
+    --type_bodySubHeadSizeBig: 26pt;
     --type_bodySubHeadSizeBig_min: 13.3pt
     
     
     --typeBodyContrastLight: lighter; /* may have to get rid of this; not widely applicable  */
     --typeBodyContrastRegular: normal;
-    --typeBodyContrastBold: bold; 
-    --quoteIndent: 7.5%; 
-    
-    --borderRadius: 40px; 
-    --borderRadius_menu: 40px; 
-    --menuDisplay: none; 
-    --menuDisplay_waffle: none; 
+    --typeBodyContrastBold: bold;
+    --quoteIndent: 7.5%;
+    --borderRadius: 40px;
+    --borderRadius_menu: 40px;
+    --menuDisplay: none;
+    --menuDisplay_waffle: none;
     --menuDisplay_grid: none;
     --achievementMenu_display: none;
     --achievementMenu_display_open: flex;
 
-    
 
-    
 
-/* COLORS */ 
-    --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */ 
+/* COLORS */
+    --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */
     --color_dark: oklch(0.2276 0.1 78.19);
     --color_dark_hover: oklch(0.4 0.1 78.19);
     --color_light: oklch(0.9691 0.0107 76.6);
     --color_light_hover: oklch(0.95 0.1 90);
     --color_temp: oklch(1 0 0); 
-        /* COLORS... PER TYPE HIERARCHY */ 
-    --colorType_title: var(--color_dark); /* ??????????*/ 
+        /* COLORS... PER TYPE HIERARCHY */
+    --colorType_title: var(--color_dark); /* ??????????*/
     --colorType_body: var(--color_dark);
-
     --achievementType1: var(--color_light);
     --achievementType2: var(--color_light);
     --achievementType3: var(--color_light);
     --achievement_complete_typeColor: #AAFFAA; 
 
 /* HIGHLIGHTS */ 
-    /*literally does nothing */ 
     --highlight_on: oklch(0.8941 0.2023 102.71);
     --highlight_off: oklch(0.9691 0.0107 76.6);
     --highlight: oklch(0.9691 0.0107 76.6);
 
-/*FACES*/ 
-    --typefaceSerif: "Times New Roman", "Baskerville", serif; 
-    --typefaceSansSerif: "Arial", "Helvetica", sans-serif; 
+/*FACES*/
+    --typefaceSerif: "Times New Roman", "Baskerville", serif;
+    --typefaceSansSerif: "Arial", "Helvetica", sans-serif;
     --typefaceFriendly: "Comic Sans MS", "Comic Sans", cursive; 
+    
 /* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
 Google Fonts' "Get Embed Code" */ 
 /* may need to change later on to account for global, user-driven changes */ 
@@ -73,28 +68,23 @@ Google Fonts' "Get Embed Code" */
     --typeSubHeadSize_min: var(--type_bodySubHeadSizeRegular_min);
     --typeBodyColor: var(--color_dark);
     --typeBodyContrast: var(--typeBodyContrastRegular);
-
     --typeTitleFace: var(--typefaceSansSerif);
     --typeTitleSize: 40.625pt;
     --typeTitleSize_min: 20.78125pt;
     --typeSubTitleSize: 32.5pt;
-    --typeSubTitleSize_min: 16.625pt; 
-    --typeSize_tagline: 13.312pt; 
-    --typeSize_tagline_min: 6.8096pt; 
-    
+    --typeSubTitleSize_min: 16.625pt;
+    --typeSize_tagline: 13.312pt;
+    --typeSize_tagline_min: 6.8096pt;
     --typeTitleColor: var(--color_dark);
     --typeFooterColor: var(--color_light);
-    --typeButton: 13pt; 
-    --typeButton_hover: 16pt; 
-    --typeButton_hover_smaller: 14pt; 
-
-    --typeButton_global: 13.312pt; 
+    --typeButton: 13pt;
+    --typeButton_hover: 16pt;
+    --typeButton_hover_smaller: 14pt;
+    --typeButton_global: 13.312pt;
     --typeButton_hover_global: 14.312pt;
-    --typeButton_global_min: var(--typeBodySize_min); 
-
-
-    --typeBodyIndent: 50pt; 
-    --typeBodyLeading: 145%; 
+    --typeButton_global_min: var(--typeBodySize_min);
+    --typeBodyIndent: 50pt;
+    --typeBodyLeading: 150%; 
 
 /*webiste bg*/
     --websiteBackgroundColor: var(--color_light);
@@ -105,20 +95,20 @@ Google Fonts' "Get Embed Code" */
         
 /* GLOBAL VARIABLES */
     --waffleSide: 0px;
-    --accessibilityFull: 0; 
-    --accessibilityToggle: grid; 
+    --accessibilityFull: 0;
+    --accessibilityToggle: grid;
     --navFull: 0px;
 
 /*button openings*/
     --waffleSide_close: 0px;
     --waffleSide_open: 20%;
-    --waffleSide_transition: (--waffleSide_transition_start)
-    --waffleSide_transition_start: 0%; 
-    --waffleSide_transition_end: 75%;
-    --accessibilityFull_close: 0; 
-    --accessibilityFull_open: 40%; 
-    --navFull_close: 0px; 
-    --navFull_open: 45%; 
+    --waffleSide_transition: (--waffleSide_transition_start);
+    --waffleSide_transition_start: 0%;
+    --waffleSide_transition_end: 65%;
+    --accessibilityFull_close: 0;
+    --accessibilityFull_open: 50%;
+    --navFull_close: 0px;
+    --navFull_open: 45%;
     --backdrop: 0; 
     
 /*accessibility menu*/
@@ -127,13 +117,11 @@ Google Fonts' "Get Embed Code" */
     --bgColorW: #f9f4ed; 
 
 /* Button sizes */
-
     --buttonHover_sizeUp: scale(1.05);
     
 /*test*/
     --primary-bg-color: #1e90ff;
-    --primary-color: #ffffff; 
-}
+    --primary-color: #ffffff;}
 
 /* SVGs */
 .cls-1 {
@@ -241,6 +229,7 @@ Google Fonts' "Get Embed Code" */
     /* font-size: var(--typeButton_hover_global);  */
     transform: var(--buttonHover_sizeUp);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .svgWaffle {
@@ -262,6 +251,7 @@ Google Fonts' "Get Embed Code" */
     /* height: 25%; */
     position: fixed;
     margin-left: var(--waffleSide_transition_end);
+    margin-top: -2%;
     background-color: var(--color_dark);
     overflow: hidden; /*prevents overflowing content from appearing*/
     transition: 1s;
@@ -271,6 +261,7 @@ Google Fonts' "Get Embed Code" */
     padding-top: 2%;
     padding-bottom: 2%; 
     gap: 5px;
+    z-index: 1;
 }
 
 .waffleSub_close {
@@ -307,14 +298,15 @@ Google Fonts' "Get Embed Code" */
     margin-left: 0;
     margin-top: 10%;
 } 
-    
 
+    
     
 .optn:hover {
     background-color: var(--websiteBackgroundColor_hover);
     /* font-size: var(--typeButton_hover_global);   */
     transform: var(--buttonHover_sizeUp);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .accessibilityMenu {
@@ -322,14 +314,20 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     color: var(--bgColorW);
     display: var(--menuDisplay); 
-    grid-template-columns: 55% 35% 10%; 
-    width: var(--accessibilityFull); 
+    grid-template-columns: 30% 30% 25% 15%; 
+    grid-template-rows: 20% 80%; 
+    max-width: var(--accessibilityFull); 
+    max-height: 45%; 
     overflow: hidden; 
     position: fixed; 
-    margin-left: 40%; 
+    bottom: 68.75%; 
+    /* margin-left: minmax(10%, auto);  */
+    /* margin-left: 22%; */
+    margin-left: max(32.5%, 10%);
     border-radius: var(--borderRadius_menu);
-    padding: 0; 
-    /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
+    padding: 10px; 
+    padding-right: 22px; 
+    z-index: 1;
 }
 
 .a_button {
@@ -343,13 +341,24 @@ Google Fonts' "Get Embed Code" */
     background-color: var(--websiteBackgroundColor_hover);
     transform: var(--buttonHover_sizeUp);
     transition: 0.1s;
+    cursor: pointer;
 }
 
 .menuMain {
-    margin-top: 10%;
-    margin-left: 10%;
+    /* margin-top: 10%; */ /* percentages are OFF 'cause acutal widths are different */
+    margin-top: 0.5fr;
+    margin-left: 10%; 
     margin-bottom: 2%;
-    font-size: 14pt;
+    font-size: 12pt;
+    height: auto;
+}
+
+.menuMain_top {
+    margin-top: 0.5fr;
+    margin-left: 10%;
+    margin-bottom: 0;
+    font-size: 12pt;
+    /* height: 100px; */
 }
     
 .a_bodyText {
@@ -380,17 +389,22 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     color: var(--color_light);
     display: var(--menuDisplay_grid);
-    width: var(--navFull); 
-    grid-template-columns: 45% 45% 5%;
+    max-width: var(--navFull); 
+    grid-template-columns: 45% 45% 10%;
     overflow: hidden;
     position: fixed; 
-    margin-left: 60%;
-    padding: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 2.5%;
+    padding: 15px;
+    height: 40%;
     border-radius: var(--borderRadius_menu);
+    z-index: 1;
 }
 
 .navHead {
     width: fit-content;
+    margin-top:20px;
 }
 
 .navHead a:link {
@@ -404,7 +418,7 @@ Google Fonts' "Get Embed Code" */
 
 .menuHead {
     font-size: 16pt;
-    margin-left: 5%; 
+    margin-left: 2.5%; 
     margin-top: 0%; 
     /* margin-bottom: -10%; */ 
 }
@@ -412,7 +426,7 @@ Google Fonts' "Get Embed Code" */
 .menuSubHead {
     font-size: 14pt;
     margin-left: -0.5%; 
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
 }
     
 .navSubMenu {
@@ -450,18 +464,33 @@ Google Fonts' "Get Embed Code" */
     display: var(--achievementMenu_display);
     background-color: var(--color_dark);
     width: 20%;
-    height: 30%; 
+    height: auto; 
     position: fixed; 
-    margin-left: 75%; 
+    margin-left: 38.5%;
+    top: 2%;
     padding: 2%; 
     border-radius: var(--borderRadius);
     flex-direction: column; 
+    z-index: 1;
+    font-family: var(--typeBodyFace);
+}
+
+.achivements {
+    display: flex; 
+    flex-direction: column;
+    align-content: center; 
+    margin-top: 1000px;
+}
+
+#optn_close_achivement {
+    position: relative; 
+    left: 72.5%;
 }
 
 .achievement {
     display: flex; 
     flex-direction: row; 
-    background-color: 0;
+    color: var(--color_light)
 }
 
 .achievementComplete_class {
@@ -480,12 +509,21 @@ Google Fonts' "Get Embed Code" */
 #achievement1_id {
     color: var(--achievementType1);
 }
+#achievement1_id_p {
+    color: var(--achievementType1);
+}
 
 #achievement2_id {
     color: var(--achievementType2);
 }
+#achievement2_id_p {
+    color: var(--achievementType2);
+}
 
 #achievement3_id {
+    color: var(--achievementType3);
+}
+#achievement3_id_p {
     color: var(--achievementType3);
 }
 
@@ -526,14 +564,21 @@ Google Fonts' "Get Embed Code" */
     margin-bottom: 5%;
 }
 
+.bodyIndex {
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize);
+    color: var(--typeBodyColor);
+    line-height: var(--typeBodyLeading);
+    transition: 0.2s; 
+    margin-bottom: 5%;
+}
+
 .bodyContent {
     display: flex;
     flex-direction: column; 
     justify-content: flex-start;
     background-color: var(--backdrop);
 }
-
-
 
 .bodyFirstLine {
     font-family: var(--typeBodyFace);
@@ -612,10 +657,11 @@ Google Fonts' "Get Embed Code" */
     gap: 5%;
     justify-content: space-evenly;
     font-family: var(--typeBodyFace);
+    line-height: var(--typeBodyLeading);
     font-size: var(--typeBodySize);
     color: var(--typeBodyColor);
     margin-top: 10%;
-    margin-bottom: -7.5%;
+    margin-bottom: 20%;
 }
 
 .imageLeft {  
@@ -653,9 +699,11 @@ Google Fonts' "Get Embed Code" */
 }
 
 .threeButtons {
-    display: grid; /*defines grid as a whole; child "commands" define alignment of each individual grid item through their divs */
-    grid-template-columns: 33% 33% 33%;  
-    /* border: 2px solid black; */ /*temp, grid testing */
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    margin-top: 5%; 
+    margin-bottom: 10%;
 }
 
 .grid_3s {
@@ -681,6 +729,7 @@ Google Fonts' "Get Embed Code" */
     /* font-size: var(--typeButton_hover_global); */
     transform: var(--buttonHover_sizeUp);
     transition: 0.2s;
+    cursor: pointer;
 }
     
 .buttonRight {
@@ -701,36 +750,70 @@ Google Fonts' "Get Embed Code" */
     /* font-size: var(--typeButton_hover_global);  */
     transform: var(--buttonHover_sizeUp);
     transition: 0.2s;
+    cursor: pointer;
 }
     
 .buttonLeft_3s {
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
-    background-color: var(--temp_contrastMed);
+    background-color: var(--websiteBackgroundColor);
     border-radius: var(--borderRadius);
-    padding: 20px; 
+    border-color: var(--typeBodyColor);
+    color: var(--typeBodyColor);
+    border-style: solid; 
+    padding: 30px; 
     position: absolute;
-    margin-left: -15%;
+    margin-left: -10%;
+    margin-bottom: 10%;
+}
+.buttonLeft_3s:hover {
+    background-color: var(--websiteBackgroundColor_hover);
+    /* font-size: var(--typeButton_hover_global); */
+    transform: var(--buttonHover_sizeUp);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .buttonMiddle_3s {
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
-    background-color: var(--temp_contrastMed);
+    background-color: var(--websiteBackgroundColor);
     border-radius: var(--borderRadius);
-    padding: 20px; 
+    border-color: var(--typeBodyColor);
+    color: var(--typeBodyColor);
+    border-style: solid; 
+    padding: 30px; 
     position: absolute;
-    margin-left: -15%;
+    margin-left: -5%;
+    margin-bottom: 10%;
+}
+.buttonMiddle_3s:hover {
+    background-color: var(--websiteBackgroundColor_hover);
+    /* font-size: var(--typeButton_hover_global); */
+    transform: var(--buttonHover_sizeUp);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .buttonRight_3s {
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
-    background-color: var(--temp_contrastMed); 
+    background-color: var(--websiteBackgroundColor);
     border-radius: var(--borderRadius);
-    padding: 20px; 
+    border-color: var(--typeBodyColor);
+    color: var(--typeBodyColor);
+    border-style: solid; 
+    padding: 30px; 
     position: absolute;
-    margin-left: -15%;
+    margin-left: -4%;
+    margin-bottom: 10%;
+}
+.buttonRight_3s:hover {
+    background-color: var(--websiteBackgroundColor_hover);
+    /* font-size: var(--typeButton_hover_global); */
+    transform: var(--buttonHover_sizeUp);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 
@@ -755,7 +838,7 @@ Google Fonts' "Get Embed Code" */
 
 
 
-/* MEDIA QUERIED STATIC ELEMENTS */
+                    /* MEDIA QUERIED STATIC ELEMENTS ... */
 
 
 
@@ -765,12 +848,13 @@ Google Fonts' "Get Embed Code" */
     
     .global {
     position: fixed; 
-    right: 60%; 
-    bottom: 100%;
+    right: 25%;
+    bottom: 85%;
     display: flex; 
     flex-direction: row-reverse; 
     scale: 0.6;
     color: var(--websiteBackgroundColor);
+    width: 1000px;
     }
     .static {
     margin-top: 20%;
@@ -779,14 +863,19 @@ Google Fonts' "Get Embed Code" */
     }
 
     .waffleButton {
-    margin-top: 100%; 
-    margin-left: 425%; 
-    width: 375%; 
+    /* margin-top: 100%; 
+    margin-left: 425%;  */
+    margin-top: -500%;
+    width: 1000px; 
+    align-content: center; 
     }
     .homeButton {
-    margin-left: 25%; 
+    /* margin-left: 25%; 
+    margin-top: -220%; */
     margin-top: -220%;
-    width: 375%; 
+    width: 615px; 
+    margin-left: -1100%;
+        align-content: flex-start; 
     }
     .headBG {
     background-color: var(--websiteBackgroundColor);
@@ -807,37 +896,98 @@ Google Fonts' "Get Embed Code" */
     align-items: center; 
     height: 25%;
     position: fixed; 
-    right: -7%; 
-    top: 1%; 
+    right: 0%; 
+    top: 8%; 
     margin-left: var(--waffleSide_transition_end);
     background-color: var(--color_dark);
     width: var(--waffleSide);
     overflow: hidden; /*prevents overflowing content from appearing*/
     transition: 1s;
     border-radius: var(--borderRadius_menu);
-    padding-left: 70px;
-    padding-right: 45px;
-    padding-top: 50px;
-    padding-bottom: 30px; 
-    scale: 0.6; 
+    padding: 5%; 
+    scale: 0.8; 
     }
     .accessibilityMenu {
-    background-color: var(--color_dark);
+   background-color: var(--color_dark);
     font-family: var(--typeBodyFace);
     color: var(--bgColorW);
     display: var(--menuDisplay); 
-    grid-template-columns: 55% 35% auto; 
-    width: var(--accessibilityFull); 
+    grid-template-columns: 30% 30% 25% 15%; 
+    grid-template-rows: 20% 80%; 
+    max-width: 75%;
+    max-height: 45%; 
     overflow: hidden; 
     position: fixed; 
-    margin-left: 15%;
-    top: 55.5%; 
-    left: -25%; 
+    bottom: 65%; 
+    /* margin-left: minmax(10%, auto);  */
+    /* margin-left: 22%; */
+    margin-left: -2.5%;
     border-radius: var(--borderRadius_menu);
-    padding: 0; 
-    /*& margin-top: 15%; /* FOR TESTING!!!!!!!!!!!!! ; REMOVE LATER */ 
-    scale: 0.6;
+    padding: 10px; 
+    padding-right: 22px; 
+    z-index: 1;
+    scale: 0.8;
     }
+
+.navMenu {
+    background-color: var(--color_dark);
+    font-family: var(--typeBodyFace);
+    color: var(--color_light);
+    display: var(--menuDisplay_grid);
+    width: 75%;
+    grid-template-columns: 42.5% 42.5% 15%;
+    overflow: hidden;
+    position: fixed; 
+    margin-left: -2.5%;
+    top: 4.5%;
+    padding: 15px;
+    height: 40%;
+    border-radius: var(--borderRadius_menu);
+    z-index: 1;
+    scale: 0.8;
+}
+
+.navHead {
+    width: fit-content;
+    margin-top:20px;
+}
+
+
+.achievementMenu {
+    display: var(--achievementMenu_display);
+    background-color: var(--color_dark);
+    width: 45%;
+    height: auto; 
+    position: fixed; 
+    margin-left: 20%;
+    top: 9%;
+    padding: 2%; 
+    border-radius: var(--borderRadius);
+    flex-direction: column; 
+    z-index: 1;
+    font-family: var(--typeBodyFace);
+}
+
+.achivements {
+    display: flex; 
+    flex-direction: column;
+    align-content: center; 
+    margin-top: 1000px;
+}
+
+#optn_close_achivement {
+    position: relative; 
+    left: 72.5%;
+}
+
+.achievement {
+    display: flex; 
+    flex-direction: row; 
+    color: var(--color_light)
+}
+
+    
+    
     .footer {
     color: var(--typeFooterColor);
     background-color: var(--footerBackgroundColor);
@@ -858,6 +1008,16 @@ Google Fonts' "Get Embed Code" */
 .tagline {
     font-size: var(--typeSize_tagline_min);
 }
+
+.bodyIndex {
+    font-family: var(--typeBodyFace);
+    font-size: var(--typeBodySize_min);
+    color: var(--typeBodyColor);
+    line-height: var(--typeBodyLeading);
+    transition: 0.2s; 
+    margin-bottom: 5%;
+}
+
     
 .bodyFirstLine {
     font-family: var(--typeBodyFace);
@@ -882,7 +1042,7 @@ Google Fonts' "Get Embed Code" */
     }
 
 .body_subHead {
-    font-size: var(--type_bodySubHeadSizeRegular_min)
+    font-size: var(--type_bodySubHeadSizeRegular_min);
 }
     
 .twoImages {
@@ -965,10 +1125,11 @@ Google Fonts' "Get Embed Code" */
     border-style: solid;
     padding: 6%;
     position: absolute;
-    left: 35%;
-    width: 45%;
+    left: 44.5%;
+    width: auto;
+    height: auto;
     /* margin-left: -30%; */
-    margin-right: 10%;
+
 
 }
 
@@ -988,13 +1149,12 @@ Google Fonts' "Get Embed Code" */
     border-style: solid; 
     padding: 6%;
     position: absolute;
-    left: 25%;
-    width: 45%;
+    left: 32.5%;
+    width: auto;
+    height: auto;
     /* height: 7.5%; */
-    /* align-items: baseline;   */
-    margin-right: 10%;
+    /* align-items: baseline; */
     /* margin-left: 30%; */
-
 }
 
 .buttonRight:hover {
@@ -1011,6 +1171,7 @@ Google Fonts' "Get Embed Code" */
     padding: 20px; 
     position: absolute;
     margin-left: -15%;
+    height: auto;
 }
 
 .buttonMiddle_3s {
