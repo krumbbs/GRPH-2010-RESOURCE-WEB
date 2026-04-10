@@ -326,13 +326,15 @@ function f_typeColor_dark () {
     root.style.setProperty ('--typeBodyColor', typeColor_dark);
     root.style.setProperty ('--typeTitleColor', typeColor_dark);
     localStorage.setItem("typeColor", typeColor_dark);
-//    f_websiteBackgroundColor_light();
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
+    localStorage.setItem("bgColor", websiteBackgroundColor_light); 
 }
 function f_typeColor_light () {
     root.style.setProperty ('--typeBodyColor', typeColor_light);
     root.style.setProperty ('--typeTitleColor', typeColor_light);
     localStorage.setItem("typeColor", typeColor_light);
-//    f_websiteBackgroundColor_dark();
+    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
+    localStorage.setItem("bgColor", websiteBackgroundColor_dark); 
 //    a_3 = true; 
     function ach_3 () {
         root.style.setProperty('--achievementType3', achievementComplete);
@@ -497,7 +499,7 @@ function f_achievementClose() {
 if ((achievementItem1)==="true") {
     function ach_1_check () {
         root.style.setProperty('--achievementType1', achievementComplete);
-        achievement1_id.textContent = 'Completed!';
+        achievement1_id.textContent = '!Completed';
     }
     ach_1_check();
 }
@@ -505,7 +507,7 @@ if ((achievementItem1)==="true") {
 if ((achievementItem2)==="true") {
     function ach_2_check () {
         root.style.setProperty('--achievementType2', achievementComplete);
-        achievement2_id.textContent = 'Completed!';
+        achievement2_id.textContent = '!Completed';
     }
     ach_2_check();
 }
@@ -513,7 +515,7 @@ if ((achievementItem2)==="true") {
 if ((achievementItem3)==="true") {
     function ach_3_check () {
         root.style.setProperty('--achievementType3', achievementComplete);
-        achievement3_id.textContent = 'Completed!';
+        achievement3_id.textContent = '!Completed';
     }
     ach_3_check();
 }
