@@ -187,19 +187,60 @@ function f_navMenu_close () {
                                 // BODY CODE
 
 /* CONST—getting css variable values; operating JS SEPERATELY from CSS definitions. */ 
+
+
 const typeBodySize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular');
 const typeBodySize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig');
+
 const typeSubHeadSize_small = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeSmall'); //title = not working
 const typeSubHeadSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeRegular');
 const typeSubHeadSize_big = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeBig');
+
+const typeBodySizeColumn_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall-column'); //document.documentElement refers to root of HTML (for some reason)
+const typeBodySizeColumn_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular-column');
+const typeBodySizeColumn_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig-column');
+//leading and indents; 
+const typeBodyIndent_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentSmall'); 
+const typeBodyIndent_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentRegular');
+const typeBodyIndent_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentBig');
+
+const typeBodyLeading_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingSmall'); 
+const typeBodyLeading_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular');
+const typeBodyLeading_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig');
+
+const typeBodyLeadingColumn_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingSmall-column'); 
+const typeBodyLeadingColumn_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular-column');
+const typeBodyLeadingColumn_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig-column');
+
+
 // mobile:
+
+
 const typeBodySize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall_min'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular_min');
 const typeBodySize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig_min');
+
 const typeSubHeadSize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeSmall_min'); //title = not working
 const typeSubHeadSize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeRegular_min');
 const typeSubHeadSize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--type_bodySubHeadSizeBig_min');
+
+const typeBodySizeColumn_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall-column_min'); 
+const typeBodySizeColumn_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular-column_min');
+const typeBodySizeColumn_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig-column_min');
+    //leading and indents; 
+const typeBodyIndent_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentSmall_min'); 
+const typeBodyIndent_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentRegular_min');
+const typeBodyIndent_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentBig_min');
+
+const typeBodyLeading_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingSmall_min'); 
+const typeBodyLeading_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular_min');
+const typeBodyLeading_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig_min');
+
+const typeBodyLeadingColumn_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingSmall-column_min'); 
+const typeBodyLeadingColumn_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular-column_min');
+const typeBodyLeadingColumn_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig-column_min');
+
 
 
 function f_typeSizeBody_small () {
@@ -212,6 +253,26 @@ function f_typeSizeBody_small () {
     localStorage.setItem("bodySubHead", typeSubHeadSize_small);
     root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_small_min);
     localStorage.setItem("bodySubHead_min", typeSubHeadSize_small_min);
+
+    root.style.setProperty('--typeBodySize-column', typeBodySizeColumn_small);
+    localStorage.setItem("bodyColumn", typeBodySizeColumn_small);
+    root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_small_min);
+    localStorage.setItem("bodyColumn_min", typeBodySizeColumn_small_min);
+        //leading and indents: 
+    root.style.setProperty('--typeBodyIndent', typeBodyIndent_small);
+    localStorage.setItem("bodyIndent", typeBodyIndent_small);
+    root.style.setProperty('--typeBodyIndent_min', typeBodyIndent_small_min);
+    localStorage.setItem("bodyIndent_min", typeBodyIndent_small_min);
+
+    root.style.setProperty('--typeBodyLeading', typeBodyLeading_small);
+    localStorage.setItem("bodyLeading", typeBodyLeading_small);
+    root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_small);
+    localStorage.setItem("bodyLeading", typeBodyLeading_small);
+
+    root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_small);
+    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_small);
+    root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_small);
+    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_small);
 }
 
 function f_typeSizeBody_regular () {
@@ -224,6 +285,26 @@ function f_typeSizeBody_regular () {
     localStorage.setItem("bodySubHead", typeSubHeadSize_small);
     root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_regular_min);
     localStorage.setItem("bodySubHead_min", typeSubHeadSize_regular_min);
+
+    root.style.setProperty('--typeBodySize-column', typeBodySizeColumn_regular);
+    localStorage.setItem("bodyColumn", typeBodySizeColumn_regular);
+    root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_regular_min);
+    localStorage.setItem("bodyColumn_min", typeBodySizeColumn_regular_min);
+        //leading and indents: 
+    root.style.setProperty('--typeBodyIndent', typeBodyIndent_regular);
+    localStorage.setItem("bodyIndent", typeBodyIndent_regular);
+    root.style.setProperty('--typeBodyIndent_min', typeBodyIndent_regular_min);
+    localStorage.setItem("bodyIndent_min", typeBodyIndent_regular_min);
+
+    root.style.setProperty('--typeBodyLeading', typeBodyLeading_regular);
+    localStorage.setItem("bodyLeading", typeBodyLeading_regular);
+    root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_regular_min);
+    localStorage.setItem("bodyLeading", typeBodyLeading_regular_min);
+
+    root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_regular);
+    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular);
+    root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_regular_min);
+    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular_min);
 }
 
 function f_typeSizeBody_big () {
@@ -236,16 +317,57 @@ function f_typeSizeBody_big () {
     localStorage.setItem("bodySubHead", typeSubHeadSize_big);
     root.style.setProperty('--typeSubHeadSize_min', typeSubHeadSize_big_min);
     localStorage.setItem("bodySubHead_min", typeSubHeadSize_big_min);
+
+    root.style.setProperty('--typeBodySize-column', typeBodySizeColumn_big);
+    localStorage.setItem("bodyColumn", typeBodySizeColumn_big);
+    root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_big_min);
+    localStorage.setItem("bodyColumn_min", typeBodySizeColumn_big_min);
+        //leading and indents: 
+    root.style.setProperty('--typeBodyIndent', typeBodyIndent_big);
+    localStorage.setItem("bodyIndent", typeBodyIndent_big);
+    root.style.setProperty('--typeBodyIndent_min', typeBodyIndent_big_min);
+    localStorage.setItem("bodyIndent_min", typeBodyIndent_big_min);
+
+    root.style.setProperty('--typeBodyLeading', typeBodyLeading_big);
+    localStorage.setItem("bodyLeading", typeBodyLeading_big);
+    root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_big_min);
+    localStorage.setItem("bodyLeading_min", typeBodyLeading_big_min);
+
+    root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_big);
+    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_big);
+    root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_big_min);
+    localStorage.setItem("bodyLeadingColumn_min", typeBodyLeadingColumn_big_min);
 }
 
-let bodyItem = localStorage.getItem("body"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
-root.style.setProperty('--typeBodySize', bodyItem); //GLOBAL NAV: CHANGING TO PARAMETER
-let bodyItem_min = localStorage.getItem("body_min"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
-root.style.setProperty('--typeBodySize_min', bodyItem_min); //GLOBAL NAV: CHANGING TO PARAMETER
-let subHeadItem = localStorage.getItem("bodySubHead"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
-root.style.setProperty('--typeSubHeadSize', subHeadItem); //GLOBAL NAV: CHANGING TO PARAMETER
-let subHeadItem_min = localStorage.getItem("bodySubHead_min"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
-root.style.setProperty('--typeSubHeadSize_min', bodyItem_min); //GLOBAL NAV: CHANGING TO PARAMETER
+let bodyItem = localStorage.getItem("body"); 
+root.style.setProperty('--typeBodySize', bodyItem); 
+let bodyItem_min = localStorage.getItem("body_min"); 
+root.style.setProperty('--typeBodySize_min', bodyItem_min); 
+
+let subHeadItem = localStorage.getItem("bodySubHead"); 
+root.style.setProperty('--typeSubHeadSize', subHeadItem);
+let subHeadItem_min = localStorage.getItem("bodySubHead_min");
+root.style.setProperty('--typeSubHeadSize_min', bodyItem_min);
+
+let bodyColumnItem = localStorage.getItem("bodyColumn"); 
+root.style.setProperty('--typeBodySize-column', bodyColumnItem); 
+let bodyColumnItem_min = localStorage.getItem("bodyColumn_min"); 
+root.style.setProperty('--typeBodySize-column_min', bodyColumnItem_min); 
+    //leading and indents: 
+let bodyIndentItem = localStorage.getItem("bodyIndent"); 
+root.style.setProperty('--typeBodyIndent', bodyIndentItem); 
+let bodyIndentItem_min = localStorage.getItem("bodyIndent_min"); 
+root.style.setProperty('--typeBodyIndent_min', bodyIndentItem_min); 
+
+let bodyLeadingItem = localStorage.getItem("bodyLeading"); 
+root.style.setProperty('--typeBodyLeading', bodyLeadingItem); 
+let bodyLeadingItem_min = localStorage.getItem("bodyLeading_min"); 
+root.style.setProperty('--typeBodyLeading_min', bodyLeadingItem_min); 
+
+let bodyLeadingColumnItem = localStorage.getItem("bodyLeadingColumn"); 
+root.style.setProperty('--typeBodyLeading-column', bodyLeadingColumnItem); 
+let bodyLeadingColumnItem_min = localStorage.getItem("bodyLeading_min"); 
+root.style.setProperty('--typeBodyLeading-column_min', bodyLeadingColumnItem_min); 
 
 
 const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');

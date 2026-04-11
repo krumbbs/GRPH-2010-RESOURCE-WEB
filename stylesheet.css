@@ -6,16 +6,30 @@
     --typeBodySizeSmall: 13.312pt;
     --typeBodySizeRegular: 16.64pt;
     --typeBodySizeBig: 20.8pt;
+    
     --typeBodySizeSmall_min: 6.8096pt;   /* min sizes operate on slightly different calculations */
     --typeBodySizeRegular_min: 8.512pt;
     --typeBodySizeBig_min: 10.64pt;
+
+    
+    --typeBodySizeSmall-column: 10.64pt;
+    --typeBodySizeRegular-column: 13.312pt;
+    --typeBodySizeBig-column: 16.64pt;
+
+    --typeBodySizeSmall-column_min: 13.312pt;
+    --typeBodySizeRegular-column_min: 13.312pt;
+    --typeBodySizeBig-column_min: 13.312pt; 
+
+    
     --type_bodySubHeadSizeSmall: 16.64pt;
     --type_bodySubHeadSizeSmall_min: 8.512pt;
+    
     --type_bodySubHeadSizeRegular: 20.8pt;
     --type_bodySubHeadSizeRegular_min: 10.64pt;
+
     --type_bodySubHeadSizeBig: 26pt;
-    --type_bodySubHeadSizeBig_min: 13.3pt
-    
+    --type_bodySubHeadSizeBig_min: 13.3pt;
+
     
     --typeBodyContrastLight: lighter; /* may have to get rid of this; not widely applicable  */
     --typeBodyContrastRegular: normal;
@@ -29,23 +43,6 @@
     --achievementMenu_display: none;
     --achievementMenu_display_open: grid;
 
-
-
-/* COLORS */
-    --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */
-    --color_dark: oklch(0.2276 0.1 78.19);
-    --color_dark_hover: oklch(0.4 0.1 78.19);
-    --color_light: oklch(0.9691 0.0107 76.6);
-    --color_light_hover: oklch(0.95 0.1 90);
-    --color_temp: oklch(1 0 0); 
-        /* COLORS... PER TYPE HIERARCHY */
-    --colorType_title: var(--color_dark); /* ??????????*/
-    --colorType_body: var(--color_dark);
-    --achievementType1: var(--color_light);
-    --achievementType2: var(--color_light);
-    --achievementType3: var(--color_light);
-    --achievement_complete_typeColor: #AAFFAA; 
-
 /* HIGHLIGHTS */ 
     --highlight_on: oklch(0.8941 0.2023 102.71);
     --highlight_off: oklch(0.9691 0.0107 76.6);
@@ -54,27 +51,28 @@
 /*FACES*/
     --typefaceSerif: "Times New Roman", "Baskerville", serif;
     --typefaceSansSerif: "Arial", "Helvetica", sans-serif;
-    --typefaceFriendly: "Comic Sans MS", "Comic Sans", cursive; 
-    
-/* USE A WEB-HOSTED(?) FONT—WILL PULL FROM THE WEB; probably comes closer to what you wanted;
-Google Fonts' "Get Embed Code" */ 
-/* may need to change later on to account for global, user-driven changes */ 
 
 /*typeset DEFAULT*/
     --typeBodyFace: var(--typefaceSansSerif);
     --typeBodySize: var(--typeBodySizeRegular);
     --typeBodySize_min: var(--typeBodySizeRegular_min);
+    
     --typeSubHeadSize: var(--type_bodySubHeadSizeRegular);
     --typeSubHeadSize_min: var(--type_bodySubHeadSizeRegular_min);
+    
     --typeBodyColor: var(--color_dark);
     --typeBodyContrast: var(--typeBodyContrastRegular);
     --typeTitleFace: var(--typefaceSansSerif);
-    --typeTitleSize: 40.625pt;
+    
+    --typeTitleSize: 32.5pt;
     --typeTitleSize_min: 20.78125pt;
     --typeSubTitleSize: 32.5pt;
     --typeSubTitleSize_min: 16.625pt;
-    --typeSize_tagline: 13.312pt;
+    --typeSize_tagline: 10.6496pt;
     --typeSize_tagline_min: 6.8096pt;
+    --typeBodySize-column: var(--typeBodySizeRegular-column);
+    --typeBodySize-column_min: var(--typeBodySize-column_min);
+    
     --typeTitleColor: var(--color_dark);
     --typeFooterColor: var(--color_light);
     --typeButton: 13pt;
@@ -83,9 +81,41 @@ Google Fonts' "Get Embed Code" */
     --typeButton_global: 13.312pt;
     --typeButton_hover_global: 14.312pt;
     --typeButton_global_min: var(--typeBodySize_min);
-    --typeBodyIndent: 50pt;
-    --typeBodyLeading: 150%; 
+    
+    
+    --typeBodyIndentSmall: 40.5pt;
+    --typeBodyIndentRegular: 32.5pt;
+    --typeBodyIndentBig: 28.5pt; 
+    --typeBodyIndentSmall_min: 500pt;
+    --typeBodyIndentRegular_min: 500pt;
+    --typeBodyIndentBig_min: 500pt; 
+    
+    --typeBodyLeadingSmall: 23pt; 
+    --typeBodyLeadingRegular: 28pt; 
+    --typeBodyLeadingBig: 34pt; 
+    --typeBodyLeadingSmall_min: 500pt; 
+    --typeBodyLeadingRegular_min: 500pt; 
+    --typeBodyLeadingBig_min: 500pt; 
 
+    --typeBodyLeadingSmall-column: 17pt;
+    --typeBodyLeadingRegular-column: 21pt; 
+    --typeBodyLeadingBig-column: 25pt;
+    --typeBodyLeadingSmall-column_min: 500pt;
+    --typeBodyLeadingRegular-column_min: 500pt; 
+    --typeBodyLeadingBig-column_min: 500pt;
+
+    
+    --typeBodyIndent: var(--typeBodyIndentRegular);
+    --typeBodyLeading: var(--typeBodyLeadingRegular);
+    --typeBodyLeading-column: var(--typeBodyLeadingRegular-column);
+    --typeBodyIndent_min: var(--typeBodyIndentRegular_min);
+    --typeBodyLeading_min: var(--typeBodyLeadingRegular_min);
+    --typeBodyLeading-column_min: var(--typeBodyLeadingRegular-column_min);
+    
+
+    /* --typeSubHeadLeading: 29pt;  */
+    
+    
 /*webiste bg*/
     --websiteBackgroundColor: var(--color_light);
     --footerBackgroundColor: var(--color_dark);
@@ -116,12 +146,23 @@ Google Fonts' "Get Embed Code" */
     --bgColorB: #1e1c19;
     --bgColorW: #f9f4ed; 
 
+    /* COLORS */
+    --temp_contrastMed: oklch(0.9691 0.0107 76.6); /*oklch to have hue slider seperate */
+    --color_dark: oklch(0.2276 0.1 78.19);
+    --color_dark_hover: oklch(0.4 0.1 78.19);
+    --color_light: oklch(0.9691 0.0107 76.6);
+    --color_light_hover: oklch(0.5 0.1 90);
+    --color_temp: oklch(1 0 0); 
+
 /* Button sizes */
     --buttonHover_sizeUp: scale(1.05);
     
 /*test*/
     --primary-bg-color: #1e90ff;
-    --primary-color: #ffffff;}
+    --primary-color: #ffffff;
+
+}
+
 
 /* SVGs */
 .cls-1 {
@@ -262,7 +303,7 @@ Google Fonts' "Get Embed Code" */
     display: var(--menuDisplay_waffle);
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center; 
+    align-items: center;
     /* height: 25%; */
     position: sticky;
     background-color: var(--color_dark);
@@ -356,7 +397,7 @@ Google Fonts' "Get Embed Code" */
     font-size: 10pt;
     background-color: var(--color_light);
     border-radius: 7.5px;
-    font-family: var(--typeBodyFace)
+    font-family: var(--typeBodyFace);
 }
 
 .a_button:hover {
@@ -445,7 +486,7 @@ Google Fonts' "Get Embed Code" */
     padding-right: 60px;
     padding-bottom: 60px;
     /* padding-bottom: 45px; */
-    height: atuo;
+    height: auto;
     border-radius: var(--borderRadius_menu);
     z-index: 1;
 }
@@ -611,9 +652,9 @@ Google Fonts' "Get Embed Code" */
     
 .head {
     font-family: var(--typeTitleFace);
-    font-size: var(--typeTitleSize); 
+    font-size: var(--typeTitleSize);
     color: var(--typeTitleColor);
-    transition: 0.2s; 
+    transition: 0.2s;
     background-color: var(--backdrop);
 }
 
@@ -632,9 +673,10 @@ Google Fonts' "Get Embed Code" */
 
 .bodyIndex {
     font-family: var(--typeBodyFace);
-    font-size: var(--typeBodySize);
+    font-size: var(--typeSubHeadSize);
+    font-weight: var(--typeBodyContrast);
     color: var(--typeBodyColor);
-    line-height: var(--typeBodyLeading);
+    line-height: var(--typeSubHeadLeading);
     transition: 0.2s; 
     margin-bottom: 5%;
 }
@@ -670,10 +712,10 @@ Google Fonts' "Get Embed Code" */
 }
 
 .body_subHead {
-    display: absolute; 
     font-size: var(--typeSubHeadSize);
     font-family: var(--typeBodyFace);
-    margin-bottom: 3%; 
+    font-weight: var(--typeBodyContrast);
+    margin-bottom: 3%;
     transtiion: 0.2s;
     color: var(--typeBodyColor);
 }
@@ -686,7 +728,7 @@ Google Fonts' "Get Embed Code" */
     font-weight: var(--typeBodyContrast);
     transition: 0.2s; 
     text-indent: 0;
-    line-height: var(--typeBodyLeading);
+    line-height: var(--typeBodyLeadingRegular);
     margin-top: 1.5%;
     margin-bottom: 1.5%;
     background-image: var(--websiteBackgroundImage);
@@ -704,18 +746,20 @@ Google Fonts' "Get Embed Code" */
 }
 
 .twoImages {
-    display: flex; 
-    gap: 1%;
-    justify-content: space-evenly;
-    margin-left: -5%;
-    margin-right: -5%; 
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+    /* gap: 1%; */
+    justify-items: center; 
+    /* margin-left: -5%;
+    margin-right: -5%;  */
     font-family: var(--typeBodyFace);
-    font-size: var(--typeBodySize);
-    line-height: var(--typeBodyLeading);
+    font-size: var(--typeBodySize-column);
+    line-height: var(--typeBodyLeading-column);
     color: var(--typeBodyColor);
     background-color: var(--backdrop);
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: -7.5%;
+    transition: 0.2s; 
 }
 
 .threeImages {
@@ -723,46 +767,59 @@ Google Fonts' "Get Embed Code" */
     gap: 5%;
     justify-content: space-evenly;
     font-family: var(--typeBodyFace);
-    line-height: var(--typeBodyLeading);
-    font-size: var(--typeBodySize);
+    line-height: var(--typeBodyLeading-column);
+    font-size: var(--typeBodySize-column);
     color: var(--typeBodyColor);
     margin-top: 10%;
     margin-bottom: 20%;
+    transition: 0.2s; 
 }
 
 .imageLeft {  
-    width: 40%;
+    width: 75%;
     height: 350px; 
     margin-top: 5%;
+    font-weight: var(--typeBodyContrast);
 }
 
 .imageRight {
-    width: 40%;
+    width: 75%;
     height: 350px; 
     margin-top: 5%;
+    font-weight: var(--typeBodyContrast);
 }
 
 .imageThreeLeft {
     width: 30%;
     height: 350px;
+    font-weight: var(--typeBodyContrast);
 }
 
 .imageThreeMiddle {
     width: 30%;
     height: 350px; 
+    font-weight: var(--typeBodyContrast);
 }
 
 .imageThreeRight {
     width: 30%;
     height: 350px; 
+    font-weight: var(--typeBodyContrast);
 }
 
 .twoButtons {
-    display: flex;
-    gap: 50px;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    /* gap: 50px; */
+    justify-items: center; 
     margin-top: 5%; 
 }
+
+/* .twoButtonsTest {
+    display: grid;
+    grid-template-columns: 75% 25%; 
+    justify-items: center; 
+} */
 
 .threeButtons {
     display: flex;
@@ -781,13 +838,14 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor);
+    font-weight: var(--typeBodyContrast);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
     color: var(--typeBodyColor);
     border-style: solid; 
     padding: 30px; 
-    position: absolute;
-    margin-left: -30%;
+    position: relative;
+    /* margin-left: -30%; */
 }
 
 .buttonLeft:hover {
@@ -802,13 +860,14 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor); 
+    font-weight: var(--typeBodyContrast);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
     color: var(--typeBodyColor);
     border-style: solid; 
     padding: 30px; 
-    position: absolute;
-    margin-left: 30%;
+    position: relative;
+    /* margin-left: 30%; */
 }
 
 .buttonRight:hover {
@@ -823,6 +882,7 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor);
+    font-weight: var(--typeBodyContrast);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
     color: var(--typeBodyColor);
@@ -844,6 +904,7 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor);
+    font-weight: var(--typeBodyContrast);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
     color: var(--typeBodyColor);
@@ -865,6 +926,7 @@ Google Fonts' "Get Embed Code" */
     font-family: var(--typeBodyFace);
     font-size: var(--typeButton_global);
     background-color: var(--websiteBackgroundColor);
+    font-weight: var(--typeBodyContrast);
     border-radius: var(--borderRadius);
     border-color: var(--typeBodyColor);
     color: var(--typeBodyColor);
@@ -897,7 +959,8 @@ Google Fonts' "Get Embed Code" */
     grid-template-columns: 20% 50% 30%; 
     padding: 20px;
     margin-top: 3%;
-    font-family: var(--typeBodyFace)
+    font-size: 10.6496pt;
+    font-family: var(--typefaceSansSerif);
 }
 
 
@@ -1096,14 +1159,14 @@ Google Fonts' "Get Embed Code" */
     color: var(--typeBodyColor);
     font-weight: var(--typeBodyContrast);
     transition: 0.2s; 
-    text-indent: var(--typeBodyIndent); 
+    text-indent: var(--typeBodyIndentRegular); 
     line-height: var(--typeBodyLeading);
     margin:0px; 
     background-image: var(--websiteBackgroundImage);
     }
 
 .body_subHead {
-    font-size: var(--type_bodySubHeadSizeRegular_min);
+    font-size: var(--type_bodySubHeadSizeRegular);
 }
     
 .twoImages {
