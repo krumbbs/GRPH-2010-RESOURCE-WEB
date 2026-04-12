@@ -532,7 +532,80 @@ const websiteBackgroundContrast_regular = getComputedStyle(document.documentElem
 // const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage');
 const websiteBackgroundColor_low = "grey"
 const colorWhite = "white";
-const colorBlack = "black"
+const colorBlack = "black";
+
+
+
+
+
+
+                //imgs
+const rootImgs = getComputedStyle(root);
+
+//attack IDs to each img element then change them directly through JS
+const landing1 = document.getElementById("landing1"); 
+const landing1_1 = "assets/landing1_1.png";
+const landing1_2 = "assets/landing1_2.png";
+const landing1_3 = "assets/landing1_3.png";
+
+const apps1 = document.getElementById("apps1"); 
+const apps1_1 = "../../assets/apps1_1.png";
+const apps1_2 = "../../assets/apps1_2.png";
+const apps1_3 = "../../assets/apps1_3.png";
+const apps2 = document.getElementById("apps2"); 
+const apps2_1 = "../../assets/apps2_1.png";
+const apps2_2 = "../../assets/apps2_2.png";
+const apps2_3 = "../../assets/apps2_3.png";
+const apps3 = document.getElementById("apps3"); 
+const apps3_1 = "../../assets/apps3_1.png";
+const apps3_2 = "../../assets/apps3_2.png";
+const apps3_3 = "../../assets/apps3_3.png";
+
+const mediaPref1 = document.getElementById("mediaPref1"); 
+const mediaPref1_1 = "../../assets/mediaPref1_1.png";
+const mediaPref1_2 = "../../assets/mediaPref1_2.png";
+const mediaPref1_3 = "../../assets/mediaPref1_3.png";
+
+const primeTime1 = document.getElementById("primeTime1"); 
+const primeTime1_1 = "../../assets/primeTime1_1.png";
+const primeTime1_2 = "../../assets/primeTime1_2.png";
+const primeTime1_3 = "../../assets/primeTime1_3.png";
+const primeTime2 = document.getElementById("primeTime2"); 
+const primeTime2_1 = "../../assets/primeTime2_1.png";
+const primeTime2_2 = "../../assets/primeTime2_2.png";
+const primeTime2_3 = "../../assets/primeTime2_3.png";
+
+const storefront1 = document.getElementById("storefront1"); 
+const storefront1_1 = "../../assets/storefront1_1.png";
+const storefront1_2 = "../../assets/storefront1_2.png";
+const storefront1_3 = "../../assets/storefront1_3.png";
+const storefront2 = document.getElementById("storefront2"); 
+const storefront2_1 = "../../assets/storefront2_1.png";
+const storefront2_2 = "../../assets/storefront2_2.png";
+const storefront2_3 = "../../assets/storefront3_3.png";
+const storefront3 = document.getElementById("storefront3"); 
+const storefront3_1 = "../../assets/storefront3_1.png";
+const storefront3_2 = "../../assets/storefront3_2.png";
+const storefront3_3 = "../../assets/storefront3_3.png";
+
+const timeManagement1 = document.getElementById("timeManagement1"); 
+const timeManagement1_1 = "../../assets/timeManagement1_1.png";
+const timeManagement1_2 = "../../assets/timeManagement1_2.png";
+const timeManagement1_3 = "../../assets/timeManagement1_3.png";
+const timeManagement2 = document.getElementById("timeManagement2"); 
+const timeManagement2_1 = "../../assets/timeManagement2_1.png";
+const timeManagement2_2 = "../../assets/timeManagement2_2.png";
+const timeManagement2_3 = "../../assets/timeManagement2_3.png";
+const timeManagement3 = document.getElementById("timeManagement3"); 
+const timeManagement3_1 = "../../assets/timeManagement3_1.png";
+const timeManagement3_2 = "../../assets/timeManagement3_2.png";
+const timeManagement3_3 = "../../assets/timeManagement3_3.png";
+const timeManagement4 = document.getElementById("timeManagement4"); 
+const timeManagement4_1 = "../../assets/timeManagement4_1.png";
+const timeManagement4_2 = "../../assets/timeManagement4_2.png";
+const timeManagement4_3 = "../../assets/timeManagement4_3.png";
+
+
 
 function f_websiteContrast_high () {
     root.style.setProperty ('--websiteBackgroundColor', colorWhite)
@@ -545,6 +618,45 @@ function f_websiteContrast_high () {
     localStorage.setItem("bgContrast3", colorBlack);
     localStorage.setItem("bgContrast4", colorBlack);
     localStorage.setItem("bgContrast5", 0);
+
+    
+    //images
+    if (window.location.href.includes("index.html")) {
+    landing1.src = landing1_3;
+    localStorage.setItem("landing1_s", landing1_3);
+        
+    }
+    
+    apps1.src = apps1_3;
+    localStorage.setItem("apps1_s", apps1_3);
+    apps2.src = apps2_3;
+    localStorage.setItem("apps2_s", apps2_3);
+    apps3.src = apps3_3;
+    localStorage.setItem("apps3_s", apps3_3);
+
+    mediaPref1.src = mediaPref1_3;
+    localStorage.setItem("mediaPref1_s", mediaPref1_3);
+
+    primeTime1.src = primeTime1_3;
+    localStorage.setItem("primeTime1_s", primeTime1_3);
+    primeTime2.src = primeTime2_3;
+    localStorage.setItem("primeTime2_s", primeTime2_3);
+
+    storefront1.src = storefront1_3;
+    localStorage.setItem("storefront1_s", storefront1_3);
+    storefront2.src = storefront2_3;
+    localStorage.setItem("storefront2_s", storefront2_3);
+    storefront3.src = storefront3_3;
+    localStorage.setItem("storefront3_s", storefront3_3);
+
+    timeManagement1.src = timeManagement1_3;
+    localStorage.setItem("timeManagement1_s", timeManagement1_3);
+    timeManagement2.src = timeManagement2_3;
+    localStorage.setItem("timeManagement2_s", timeManagement2_3);
+    timeManagement3.src = timeManagement3_3;
+    localStorage.setItem("timeManagement3_s", timeManagement3_3);
+    timeManagement4.src = timeManagement4_3;
+    localStorage.setItem("timeManagement4_s", timeManagement4_3);
 }
 
 function f_websiteContrast_regular () {
@@ -558,6 +670,42 @@ function f_websiteContrast_regular () {
     localStorage.setItem("bgContrast3", typeColor_dark);
     localStorage.setItem("bgContrast4", typeColor_dark);
     localStorage.setItem("bgContrast5", 0);
+
+
+    //images
+    landing1.src = landing1_1;
+    localStorage.setItem("landing1_s", landing1_1);
+    
+    apps1.src = apps1_1;
+    localStorage.setItem("apps1_s", apps1_1);
+    apps2.src = apps2_1;
+    localStorage.setItem("apps2_s", apps2_1);
+    apps3.src = apps3_1;
+    localStorage.setItem("apps3_s", apps3_1);
+
+    mediaPref1.src = mediaPref1_1;
+    localStorage.setItem("mediaPref1_s", mediaPref1_1);
+
+    primeTime1.src = primeTime1_1;
+    localStorage.setItem("primeTime1_s", primeTime1_1);
+    primeTime2.src = primeTime2_1;
+    localStorage.setItem("primeTime2_s", primeTime2_1);
+
+    storefront1.src = storefront1_1;
+    localStorage.setItem("storefront1_s", storefront1_1);
+    storefront2.src = storefront2_1;
+    localStorage.setItem("storefront2_s", storefront2_1);
+    storefront3.src = storefront3_1;
+    localStorage.setItem("storefront3_s", storefront3_1);
+
+    timeManagement1.src = timeManagement1_1;
+    localStorage.setItem("timeManagement1_s", timeManagement1_1);
+    timeManagement2.src = timeManagement2_1;
+    localStorage.setItem("timeManagement2_s", timeManagement2_1);
+    timeManagement3.src = timeManagement3_1;
+    localStorage.setItem("timeManagement3_s", timeManagement3_1);
+    timeManagement4.src = timeManagement4_1;
+    localStorage.setItem("timeManagement4_s", timeManagement4_1);
 }
 
 function f_websiteContrast_low () {
@@ -571,6 +719,46 @@ function f_websiteContrast_low () {
     localStorage.setItem("bgContrast3", typeColor_light);
     localStorage.setItem("bgContrast4", typeColor_light);
     localStorage.setItem("bgContrast5", 0);
+
+
+    //images
+    landing1.src = landing1_2;
+    localStorage.setItem("landing1_s", landing1_2);
+    
+    apps1.src = apps1_2;
+    localStorage.setItem("apps1_s", apps1_2);
+    apps2.src = apps2_2;
+    localStorage.setItem("apps2_s", apps2_2);
+    apps3.src = apps3_2;
+    localStorage.setItem("apps3_s", apps3_2);
+
+    mediaPref1.src = mediaPref1_2;
+    localStorage.setItem("mediaPref1_s", mediaPref1_2);
+
+    primeTime1.src = primeTime1_2;
+    localStorage.setItem("primeTime1_s", primeTime1_2);
+    primeTime2.src = primeTime2_2;
+    localStorage.setItem("primeTime2_s", primeTime2_2);
+
+    storefront1.src = storefront1_2;
+    localStorage.setItem("storefront1_s", storefront1_2);
+    storefront2.src = storefront2_2;
+    localStorage.setItem("storefront2_s", storefront2_2);
+    storefront3.src = storefront3_2;
+    localStorage.setItem("storefront3_s", storefront3_2);
+
+    timeManagement1.src = timeManagement1_2;
+    localStorage.setItem("timeManagement1_s", timeManagement1_2);
+    timeManagement2.src = timeManagement2_2;
+    localStorage.setItem("timeManagement2_s", timeManagement2_2);
+    timeManagement3.src = timeManagement3_2;
+    localStorage.setItem("timeManagement3_s", timeManagement3_2);
+    timeManagement4.src = timeManagement4_2;
+    localStorage.setItem("timeManagement4_s", timeManagement4_2);
+
+
+    
+    
 // a_2 = true; 
     function ach_2 () {
         root.style.setProperty('--achievementType2', achievementComplete);
@@ -603,6 +791,48 @@ root.style.setProperty('--typeTitleColor', bgContrast3Item); //GLOBAL NAV: CHANG
 root.style.setProperty('--typeBodyColor', bgContrast4Item); //GLOBAL NAV: CHANGING TO PARAMETER
 root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO PARAMETER
 
+
+//imgs
+let landing1Item = localStorage.getItem("landing1_s");
+landing1.src = landing1Item;
+
+let apps1Item = localStorage.getItem("apps1_s");
+apps1.src = apps1Item;
+let apps2Item = localStorage.getItem("apps2_s");
+apps2.src = apps21Item;
+let apps3Item = localStorage.getItem("apps3_s");
+apps3.src = apps3Item;
+
+let mediaPref1Item = localStorage.getItem("mediaPref1_s");
+mediaPref1.src = mediaPref1Item;
+
+let primeTime1Item = localStorage.getItem("primeTime1_s");
+primeTime1.src = primeTime1Item;
+let primeTime2Item = localStorage.getItem("primeTime2_s");
+primeTime2.src = primeTime2Item;
+
+let storefront1Item = localStorage.getItem("storefront1_s");
+storefront1.src = storefront1Item;
+let storefront2Item = localStorage.getItem("storefront2_s");
+storefront2.src = storefront2Item;
+let storefront3Item = localStorage.getItem("storefront3_s");
+storefront3.src = storefront3Item;
+
+let timeManagement1Item = localStorage.getItem("timeManagement1_s");
+timeManagement1.src = timeManagement1Item;
+let timeManagement2Item = localStorage.getItem("timeManagement2_s");
+timeManagement2.src = timeManagement2Item;
+let timeManagement3Item = localStorage.getItem("timeManagement3_s");
+timeManagement3.src = timeManagement3Item;
+let timeManagement4Item = localStorage.getItem("timeManagement4_s");
+timeManagement4.src = timeManagement4Item;
+
+
+
+
+
+
+                    //ACHIEVEMENT SETTING...
 
 
 const achievementOpen = getComputedStyle(document.documentElement).getPropertyValue('--achievementMenu_display_open');
