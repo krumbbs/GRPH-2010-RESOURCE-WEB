@@ -266,13 +266,13 @@ function f_typeSizeBody_small () {
 
     root.style.setProperty('--typeBodyLeading', typeBodyLeading_small);
     localStorage.setItem("bodyLeading", typeBodyLeading_small);
-    root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_small);
-    localStorage.setItem("bodyLeading", typeBodyLeading_small);
+    root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_small_min);
+    localStorage.setItem("bodyLeading_min", typeBodyLeading_small_min);
 
     root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_small);
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_small);
-    root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_small);
-    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_small);
+    root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_small_min);
+    localStorage.setItem("bodyLeadingColumn_min", typeBodyLeadingColumn_small_min);
 }
 
 function f_typeSizeBody_regular () {
@@ -621,33 +621,50 @@ function f_websiteContrast_high () {
 
     
     //images
-    if (window.location.href.includes("index.html")) {
-    landing1.src = landing1_3;
-    localStorage.setItem("landing1_s", landing1_3);
-        
+    if (landing1) {
+        landing1.src = landing1_3;
+        localStorage.setItem("landing1_s", landing1_3);        
     }
     
-    apps1.src = apps1_3;
-    localStorage.setItem("apps1_s", apps1_3);
-    apps2.src = apps2_3;
-    localStorage.setItem("apps2_s", apps2_3);
-    apps3.src = apps3_3;
-    localStorage.setItem("apps3_s", apps3_3);
+    if (apps1) {
+        apps1.src = apps1_3;
+        localStorage.setItem("apps1_s", apps1_3);
+    }
+    if (apps2) {
+        apps2.src = apps2_3;
+        localStorage.setItem("apps2_s", apps2_3);
+    }
+    if (apps3) {
+        apps3.src = apps3_3;
+        localStorage.setItem("apps3_s", apps3_3);
+    }
 
-    mediaPref1.src = mediaPref1_3;
-    localStorage.setItem("mediaPref1_s", mediaPref1_3);
+    if (mediaPref1) {
+        mediaPref1.src = mediaPref1_3;
+        localStorage.setItem("mediaPref1_s", mediaPref1_3);
+    }
 
-    primeTime1.src = primeTime1_3;
-    localStorage.setItem("primeTime1_s", primeTime1_3);
-    primeTime2.src = primeTime2_3;
-    localStorage.setItem("primeTime2_s", primeTime2_3);
+    if (primeTime1) {
+        primeTime1.src = primeTime1_3;
+        localStorage.setItem("primeTime1_s", primeTime1_3);
+    }
+    if (primeTime2) {
+        primeTime2.src = primeTime2_3;
+        localStorage.setItem("primeTime2_s", primeTime2_3);
+    }
 
-    storefront1.src = storefront1_3;
-    localStorage.setItem("storefront1_s", storefront1_3);
-    storefront2.src = storefront2_3;
-    localStorage.setItem("storefront2_s", storefront2_3);
-    storefront3.src = storefront3_3;
-    localStorage.setItem("storefront3_s", storefront3_3);
+    if (storefront1) {
+        storefront1.src = storefront1_3;
+        localStorage.setItem("storefront1_s", storefront1_3);
+    }
+    if (storefront2) {
+        storefront2.src = storefront2_3;
+        localStorage.setItem("storefront2_s", storefront2_3);
+    }
+    if (storefront3) {
+        storefront3.src = storefront3_3;
+        localStorage.setItem("storefront3_s", storefront3_3);
+    }
 
     timeManagement1.src = timeManagement1_3;
     localStorage.setItem("timeManagement1_s", timeManagement1_3);
@@ -793,40 +810,69 @@ root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO
 
 
 //imgs
-let landing1Item = localStorage.getItem("landing1_s");
-landing1.src = landing1Item;
+const nullImage = null;
 
-let apps1Item = localStorage.getItem("apps1_s");
-apps1.src = apps1Item;
-let apps2Item = localStorage.getItem("apps2_s");
-apps2.src = apps21Item;
-let apps3Item = localStorage.getItem("apps3_s");
-apps3.src = apps3Item;
+if (landing1) { //'if' only triggers when condition is true... so if element does not exist, then statement gets skipped over.
+    let landing1Item = localStorage.getItem("landing1_s");
+    landing1.src = landing1Item;
+}
 
-let mediaPref1Item = localStorage.getItem("mediaPref1_s");
-mediaPref1.src = mediaPref1Item;
+if (apps1) {
+    let apps1Item = localStorage.getItem("apps1_s");
+    apps1.src = apps1Item;
+}
+if (apps2) {
+    let apps2Item = localStorage.getItem("apps2_s");
+    apps2.src = apps2Item;
+}
+if (apps3) {
+    let apps3Item = localStorage.getItem("apps3_s");
+    apps3.src = apps3Item;    
+}
 
-let primeTime1Item = localStorage.getItem("primeTime1_s");
-primeTime1.src = primeTime1Item;
-let primeTime2Item = localStorage.getItem("primeTime2_s");
-primeTime2.src = primeTime2Item;
+if (mediaPref1) {
+    let mediaPref1Item = localStorage.getItem("mediaPref1_s");
+    mediaPref1.src = mediaPref1Item;
+}
 
-let storefront1Item = localStorage.getItem("storefront1_s");
-storefront1.src = storefront1Item;
-let storefront2Item = localStorage.getItem("storefront2_s");
-storefront2.src = storefront2Item;
-let storefront3Item = localStorage.getItem("storefront3_s");
-storefront3.src = storefront3Item;
+if (primeTime1) {
+    let primeTime1Item = localStorage.getItem("primeTime1_s");
+    primeTime1.src = primeTime1Item;
+}
+if (primeTime2) {
+    let primeTime2Item = localStorage.getItem("primeTime2_s");
+    primeTime2.src = primeTime2Item;
+}
 
-let timeManagement1Item = localStorage.getItem("timeManagement1_s");
-timeManagement1.src = timeManagement1Item;
-let timeManagement2Item = localStorage.getItem("timeManagement2_s");
-timeManagement2.src = timeManagement2Item;
-let timeManagement3Item = localStorage.getItem("timeManagement3_s");
-timeManagement3.src = timeManagement3Item;
-let timeManagement4Item = localStorage.getItem("timeManagement4_s");
-timeManagement4.src = timeManagement4Item;
+if (storefront1) {
+    let storefront1Item = localStorage.getItem("storefront1_s");
+    storefront1.src = storefront1Item;
+}
+if (storefront2) {
+    let storefront2Item = localStorage.getItem("storefront2_s");
+    storefront2.src = storefront2Item;
+}
+if (storefront3){
+    let storefront3Item = localStorage.getItem("storefront3_s");
+    storefront3.src = storefront3Item;
+}
 
+if (timeManagement1) {
+    let timeManagement1Item = localStorage.getItem("timeManagement1_s");
+    timeManagement1.src = timeManagement1Item;    
+}
+if (timeManagement2) {
+    let timeManagement2Item = localStorage.getItem("timeManagement2_s");
+    timeManagement2.src = timeManagement2Item;    
+}
+if (timeManagement3) {
+    let timeManagement3Item = localStorage.getItem("timeManagement3_s");
+    timeManagement3.src = timeManagement3Item;
+}
+if (timeManagement4) {
+    let timeManagement4Item = localStorage.getItem("timeManagement4_s");
+    timeManagement4.src = timeManagement4Item;   
+}
 
 
 
