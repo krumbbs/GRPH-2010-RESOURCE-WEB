@@ -38,12 +38,7 @@ let achievementItem2 = achievementItem2_initial;
 let achievementItem3 = achievementItem3_initial;
 
 const achievementComplete = getComputedStyle(document.documentElement).getPropertyValue('--achievement_complete_typeColor');
-/*
-function a() {
-        root.style.setProperty('--achievementType2', achievementComplete);
-}
-a();
-*/
+
 
 function home() {
     window.location.href = 'index.html';
@@ -213,6 +208,10 @@ const typeBodyLeadingColumn_small = getComputedStyle(document.documentElement).g
 const typeBodyLeadingColumn_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular-column');
 const typeBodyLeadingColumn_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig-column');
 
+const typeSubHeadLeading_small = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingSmall'); 
+const typeSubHeadLeading_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingRegular'); 
+const typeSubHeadLeading_big = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingBig'); 
+
 
 // mobile:
 
@@ -228,7 +227,7 @@ const typeSubHeadSize_big_min = getComputedStyle(document.documentElement).getPr
 const typeBodySizeColumn_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall-column_min'); 
 const typeBodySizeColumn_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular-column_min');
 const typeBodySizeColumn_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig-column_min');
-    //leading and indents; 
+//leading and indents; 
 const typeBodyIndent_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentSmall_min'); 
 const typeBodyIndent_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentRegular_min');
 const typeBodyIndent_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentBig_min');
@@ -240,6 +239,10 @@ const typeBodyLeading_big_min = getComputedStyle(document.documentElement).getPr
 const typeBodyLeadingColumn_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingSmall-column_min'); 
 const typeBodyLeadingColumn_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingRegular-column_min');
 const typeBodyLeadingColumn_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyLeadingBig-column_min');
+
+const typeSubHeadLeading_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingSmall_min'); 
+const typeSubHeadLeading_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingRegular_min'); 
+const typeSubHeadLeading_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingBig_min'); 
 
 
 
@@ -273,6 +276,12 @@ function f_typeSizeBody_small () {
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_small);
     root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_small_min);
     localStorage.setItem("bodyLeadingColumn_min", typeBodyLeadingColumn_small_min);
+
+    root.style.setProperty('--typeSubHeadLeading', typeSubHeadLeading_small);
+    localStorage.setItem("subHeadLeading", typeSubHeadLeading_small);
+    root.style.setProperty('--typeSubHeadLeading_min', typeSubHeadLeading_small_min);
+    localStorage.setItem("subHeadLeading_min", typeSubHeadLeading_small_min);
+    
 }
 
 function f_typeSizeBody_regular () {
@@ -305,6 +314,12 @@ function f_typeSizeBody_regular () {
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular);
     root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_regular_min);
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular_min);
+
+    root.style.setProperty('--typeSubHeadLeading', typeSubHeadLeading_regular);
+    localStorage.setItem("subHeadLeading", typeSubHeadLeading_regular);
+    root.style.setProperty('--typeSubHeadLeading_min', typeSubHeadLeading_regular_min);
+    localStorage.setItem("subHeadLeading_min", typeSubHeadLeading_regular_min);
+
 }
 
 function f_typeSizeBody_big () {
@@ -337,6 +352,12 @@ function f_typeSizeBody_big () {
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_big);
     root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_big_min);
     localStorage.setItem("bodyLeadingColumn_min", typeBodyLeadingColumn_big_min);
+
+    root.style.setProperty('--typeSubHeadLeading', typeSubHeadLeading_big);
+    localStorage.setItem("subHeadLeading", typeSubHeadLeading_big);
+    root.style.setProperty('--typeSubHeadLeading_min', typeSubHeadLeading_big_min);
+    localStorage.setItem("subHeadLeading_min", typeSubHeadLeading_big_min);
+    
 }
 
 let bodyItem = localStorage.getItem("body"); 
@@ -369,11 +390,18 @@ root.style.setProperty('--typeBodyLeading-column', bodyLeadingColumnItem);
 let bodyLeadingColumnItem_min = localStorage.getItem("bodyLeading_min"); 
 root.style.setProperty('--typeBodyLeading-column_min', bodyLeadingColumnItem_min); 
 
+let subHeadLeadingItem = localStorage.getItem("subHeadLeading"); 
+root.style.setProperty('--typeSubHeadLeading', subHeadLeadingItem); 
+let subHeadLeadingItem_min = localStorage.getItem("subHeadLeading_min"); 
+root.style.setProperty('--typeSubHeadLeading_min', subHeadLeadingItem_min); 
+
+
+
+//TEXT CONTRAST
 
 const typeBodyContrast_light = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastLight');
 const typeBodyContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastRegular');
 const typeBodyContrast_bold = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyContrastBold');
-
 //ACHIEVEMENT TEXT CHANGES...
 const textChange1 = document.getElementById('achievement1_id');
 
@@ -666,14 +694,22 @@ function f_websiteContrast_high () {
         localStorage.setItem("storefront3_s", storefront3_3);
     }
 
-    timeManagement1.src = timeManagement1_3;
-    localStorage.setItem("timeManagement1_s", timeManagement1_3);
-    timeManagement2.src = timeManagement2_3;
-    localStorage.setItem("timeManagement2_s", timeManagement2_3);
-    timeManagement3.src = timeManagement3_3;
-    localStorage.setItem("timeManagement3_s", timeManagement3_3);
-    timeManagement4.src = timeManagement4_3;
-    localStorage.setItem("timeManagement4_s", timeManagement4_3);
+    if (timeManagement1) {
+        timeManagement1.src = timeManagement1_3;
+        localStorage.setItem("timeManagement1_s", timeManagement1_3);
+    }
+    if (timeManagement2) {
+        timeManagement2.src = timeManagement2_3;
+        localStorage.setItem("timeManagement2_s", timeManagement2_3);
+    }
+    if (timeManagement3) {
+        timeManagement3.src = timeManagement3_3;
+        localStorage.setItem("timeManagement3_s", timeManagement3_3);
+    }
+    if (timeManagement4) {
+        timeManagement4.src = timeManagement4_3;
+        localStorage.setItem("timeManagement4_s", timeManagement4_3);
+    }
 }
 
 function f_websiteContrast_regular () {
@@ -690,39 +726,67 @@ function f_websiteContrast_regular () {
 
 
     //images
-    landing1.src = landing1_1;
-    localStorage.setItem("landing1_s", landing1_1);
+    if (landing1) {
+        landing1.src = landing1_1;
+        localStorage.setItem("landing1_s", landing1_1);
+    }
     
-    apps1.src = apps1_1;
-    localStorage.setItem("apps1_s", apps1_1);
-    apps2.src = apps2_1;
-    localStorage.setItem("apps2_s", apps2_1);
-    apps3.src = apps3_1;
-    localStorage.setItem("apps3_s", apps3_1);
+    if (apps1) {
+        apps1.src = apps1_1;
+        localStorage.setItem("apps1_s", apps1_1);
+    }
+    if (apps2) {
+        apps2.src = apps2_1;
+        localStorage.setItem("apps2_s", apps2_1);
+    }
+    if (apps3) {
+        apps3.src = apps3_1;
+        localStorage.setItem("apps3_s", apps3_1);
+    }
 
-    mediaPref1.src = mediaPref1_1;
-    localStorage.setItem("mediaPref1_s", mediaPref1_1);
+    if (mediaPref1) {
+        mediaPref1.src = mediaPref1_1;
+        localStorage.setItem("mediaPref1_s", mediaPref1_1);
+    }
 
-    primeTime1.src = primeTime1_1;
-    localStorage.setItem("primeTime1_s", primeTime1_1);
-    primeTime2.src = primeTime2_1;
-    localStorage.setItem("primeTime2_s", primeTime2_1);
+    if (primeTime1) {
+        primeTime1.src = primeTime1_1;
+        localStorage.setItem("primeTime1_s", primeTime1_1);
+    }
+    if (primeTime2) {
+        primeTime2.src = primeTime2_1;
+        localStorage.setItem("primeTime2_s", primeTime2_1);
+    }
 
-    storefront1.src = storefront1_1;
-    localStorage.setItem("storefront1_s", storefront1_1);
-    storefront2.src = storefront2_1;
-    localStorage.setItem("storefront2_s", storefront2_1);
-    storefront3.src = storefront3_1;
-    localStorage.setItem("storefront3_s", storefront3_1);
+    if (storefront1) {
+        storefront1.src = storefront1_1;
+        localStorage.setItem("storefront1_s", storefront1_1);
+    }
+    if (storefront2) {
+        storefront2.src = storefront2_1;
+        localStorage.setItem("storefront2_s", storefront2_1);
+    }
+    if (storefront3) {
+        storefront3.src = storefront3_1;
+        localStorage.setItem("storefront3_s", storefront3_1);
+    }
 
-    timeManagement1.src = timeManagement1_1;
-    localStorage.setItem("timeManagement1_s", timeManagement1_1);
-    timeManagement2.src = timeManagement2_1;
-    localStorage.setItem("timeManagement2_s", timeManagement2_1);
-    timeManagement3.src = timeManagement3_1;
-    localStorage.setItem("timeManagement3_s", timeManagement3_1);
-    timeManagement4.src = timeManagement4_1;
-    localStorage.setItem("timeManagement4_s", timeManagement4_1);
+    if (timeManagement1) {
+        timeManagement1.src = timeManagement1_1;
+        localStorage.setItem("timeManagement1_s", timeManagement1_1);
+    }
+    if (timeManagement2) {
+        timeManagement2.src = timeManagement2_1;
+        localStorage.setItem("timeManagement2_s", timeManagement2_1);
+    }
+    if (timeManagement3) {
+        timeManagement3.src = timeManagement3_1;
+        localStorage.setItem("timeManagement3_s", timeManagement3_1);
+    }
+    if (timeManagement4) {
+        timeManagement4.src = timeManagement4_1;
+        localStorage.setItem("timeManagement4_s", timeManagement4_1);
+    }
 }
 
 function f_websiteContrast_low () {
@@ -739,39 +803,67 @@ function f_websiteContrast_low () {
 
 
     //images
-    landing1.src = landing1_2;
-    localStorage.setItem("landing1_s", landing1_2);
+    if (landing1) {
+        landing1.src = landing1_2;
+        localStorage.setItem("landing1_s", landing1_2);
+    }
     
-    apps1.src = apps1_2;
-    localStorage.setItem("apps1_s", apps1_2);
-    apps2.src = apps2_2;
-    localStorage.setItem("apps2_s", apps2_2);
-    apps3.src = apps3_2;
-    localStorage.setItem("apps3_s", apps3_2);
+    if (apps1) {
+        apps1.src = apps1_2;
+        localStorage.setItem("apps1_s", apps1_2);
+    }
+    if (apps2) {
+        apps2.src = apps2_2;
+        localStorage.setItem("apps2_s", apps2_2);
+    }
+    if (apps3) {
+        apps3.src = apps3_2;
+        localStorage.setItem("apps3_s", apps3_2);
+    }
 
-    mediaPref1.src = mediaPref1_2;
-    localStorage.setItem("mediaPref1_s", mediaPref1_2);
+    if (mediaPref1) {
+        mediaPref1.src = mediaPref1_2;
+        localStorage.setItem("mediaPref1_s", mediaPref1_2);
+    }
 
-    primeTime1.src = primeTime1_2;
-    localStorage.setItem("primeTime1_s", primeTime1_2);
-    primeTime2.src = primeTime2_2;
-    localStorage.setItem("primeTime2_s", primeTime2_2);
+    if (primeTime1) {
+        primeTime1.src = primeTime1_2;
+        localStorage.setItem("primeTime1_s", primeTime1_2);
+    }
+    if (primeTime2) {
+        primeTime2.src = primeTime2_2;
+        localStorage.setItem("primeTime2_s", primeTime2_2);
+    }
 
-    storefront1.src = storefront1_2;
-    localStorage.setItem("storefront1_s", storefront1_2);
-    storefront2.src = storefront2_2;
-    localStorage.setItem("storefront2_s", storefront2_2);
-    storefront3.src = storefront3_2;
-    localStorage.setItem("storefront3_s", storefront3_2);
+    if (storefront1) {
+        storefront1.src = storefront1_2;
+        localStorage.setItem("storefront1_s", storefront1_2);
+    }
+    if (storefront2) {
+        storefront2.src = storefront2_2;
+        localStorage.setItem("storefront2_s", storefront2_2);
+    }
+    if (storefront3) {
+        storefront3.src = storefront3_2;
+        localStorage.setItem("storefront3_s", storefront3_2);
+    }
 
-    timeManagement1.src = timeManagement1_2;
-    localStorage.setItem("timeManagement1_s", timeManagement1_2);
-    timeManagement2.src = timeManagement2_2;
-    localStorage.setItem("timeManagement2_s", timeManagement2_2);
-    timeManagement3.src = timeManagement3_2;
-    localStorage.setItem("timeManagement3_s", timeManagement3_2);
-    timeManagement4.src = timeManagement4_2;
-    localStorage.setItem("timeManagement4_s", timeManagement4_2);
+    if (timeManagement1) {
+        timeManagement1.src = timeManagement1_2;
+        localStorage.setItem("timeManagement1_s", timeManagement1_2);
+    }
+    if (timeManagement2) {
+        timeManagement2.src = timeManagement2_2;
+        localStorage.setItem("timeManagement2_s", timeManagement2_2);
+    }
+    if (timeManagement3) {
+        timeManagement3.src = timeManagement3_2;
+        localStorage.setItem("timeManagement3_s", timeManagement3_2);
+    }
+    if (timeManagement4) {
+        timeManagement4.src = timeManagement4_2;
+        localStorage.setItem("timeManagement4_s", timeManagement4_2);
+    }
 
 
     
@@ -793,8 +885,6 @@ function f_websiteContrast_low () {
     else {
 //        alert ("achievement already claimed");
     }
-
-    
 }
 
 let bgContrast1Item = localStorage.getItem("bgContrast1"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -852,7 +942,7 @@ if (storefront2) {
     let storefront2Item = localStorage.getItem("storefront2_s");
     storefront2.src = storefront2Item;
 }
-if (storefront3){
+if (storefront3) {
     let storefront3Item = localStorage.getItem("storefront3_s");
     storefront3.src = storefront3Item;
 }
