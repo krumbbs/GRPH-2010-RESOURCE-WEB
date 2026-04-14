@@ -5,90 +5,76 @@
         <title>Michael's Management</title>
         <link rel="stylesheet" href="../../stylesheet.css">
     </head>
-    
     <body class="bodyGlobal">
-        
         <!--GLOBAL NAV BUTTONS-->
-           <div class="globalSticky">
-               <div>&nbsp</div>
+        <div class="globalSticky">
+            <div>&nbsp</div>
             <div class="global">
                 <!-- <div class="headBG">&nbsp</div>
                 <div class="headerBlock"> </div> -->
                 <div class="global_baseNav">
-                    <div class ="waffleGlobal"> <!-- move above home --> 
+                    <div class="waffleGlobal">
+                        <!-- move above home -->
                         <div class="waffleDiv" id="waffleDiv_ID">
                             <nav>
-                                <button class ="waffleButton" onclick="f_waffleSide_open()">
+                                <button class="waffleButton" onclick="f_waffleSide_open()">
                                     <div>Options</div>
-                                    <svg class ="svgWaffle">
+                                    <svg class="svgWaffle">
                                         <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" sry="10.95"/>
                                         <line class="cls-1" x1="21.81" y1="28.91" x2="61.11" y2="28.91"/>
                                         <line class="cls-1" x1="21.81" y1="41.46" x2="61.11" y2="41.46"/>
                                         <line class="cls-1" x1="21.81" y1="54.02" x2="61.11" y2="54.02"/>
                                     </svg>
-                                    
                                 </button>
                             </nav>
-                    </div>
-                        
-                    <div class="homeGlobal">
-                        <div class="homeDiv">   
-                            <nav>
-                                <button class ="homeButton" onclick="homemin2()">
-                                    <div>Home</div>
-                                    <svg class ="svgHome">
-                                      <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
-                                      <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
-                                      <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
-                                      <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
-                                    </svg> 
-                                </button>
-                            </a></nav>
                         </div>
-                    </div>
-                    </div>
-                </div>
+                        <div class="homeGlobal">
+                            <div class="homeDiv">
+                                <nav>
+                                    <button class="homeButton" onclick="homemin2()">
+                                        <div>Home</div>
+                                        <svg class="svgHome">
+                                            <rect class="cls-2" x="0" y="0" width="82.93" height="82.93" rx="10.95" ry="10.95"/>
+                                            <polygon points="41.44 41.49 41.48 41.43 41.48 41.49 41.44 41.49"/>
+                                            <polygon points="41.48 41.49 41.44 41.49 41.44 41.43 41.48 41.49"/>
+                                            <path class="cls-1" d="M73.44,38.24l-8.93-8.76v-12.74c0-2.03-1.64-3.67-3.67-3.67h-1.6c-2.03,0-3.67,1.64-3.67,3.67v3.97l-8.6-8.43c-3.05-2.99-7.93-2.99-10.98,0l-26.48,25.96c-1.71,1.68-.52,4.58,1.87,4.58h7.07v22.84c0,7.21.42,7.22,7.71,7.22h1.1v-16.73c0-2.2,1.78-3.99,3.99-3.99h4.38c2.2,0,3.99,1.79,3.99,3.99v16.73h17.19c7.06,0,7.71.11,7.71-7.22v-22.84h7.06c2.4,0,3.58-2.91,1.87-4.58Z"/>
+                                        </svg>
+                                    </button>
+</a></nav></div></div></div></div></div></div>
+<div class="globalCascade">
+    <!-- ALL DIVIDED WTIHIN THEIR OWN DIV; RELATIONAL SIZING... -->
+    <!-- OPTIONS MENU -->
+    <div class="waffle_subMenu" id="waffle_subMenu_ID">
+        <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button>
+        <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
+        <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
+        <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
+    </div>
+    <!-- ACCESSIBILITY MENU -->
+    <div class="accessibilityMenu">
+        <div class="menuMain_top">&nbsp</div>
+        <b class="menuMain_top">Body</b>
+        <b class="menuMain_top">Website</b>
+        <div class="menuMain">
+            <div class="scale">
+                <p>Scale</p>
+                <button class="a_button" id="a_bodyScale_small" onclick="f_typeSizeBody_small()" onclick="f_typeSizeTtile_small()">Small</button>
+                <button class="a_button" id="a_bodyScale_regular" onclick="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
+                <button class="a_button" id="a_bodyScale_large" onclick="f_typeSizeBody_big()">Large</button>
             </div>
-       </div>
-
-        <div class="globalCascade"> <!-- ALL DIVIDED WTIHIN THEIR OWN DIV; RELATIONAL SIZING... -->
-
-                        <!-- OPTIONS MENU -->
-            
-            <div class="waffle_subMenu" id="waffle_subMenu_ID">
-                <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button> <!-- make this close other button --> 
-                <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
-                <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-                <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
+            <div class="contrast">
+                <p>Contrast</p>
+                <button class="a_button" id="a_bodyContrast_regular" onclick="f_typeBodyContrast_regular()">Regular</button>
+                <button class=" a_button " id=" a_bodyContrast_large " onclick =" f_typeBodyContrast_bold()">Bold</button>
             </div>
-
-            
-                                <!-- ACCESSIBILITY MENU -->
-            
-            <div class="accessibilityMenu">
-                <div class="menuMain_top">&nbsp</div>
-                <b class="menuMain_top">Body</b>
-                <b class="menuMain_top">Website</b>
-                <div class="menuMain">
-                    <div class="scale">
-                        <p>Scale</p>
-                        <button class="a_button" id="a_bodyScale_small" onclick ="f_typeSizeBody_small()" onclick= "f_typeSizeTtile_small()">Small</button>
-                        <button class="a_button" id="a_bodyScale_regular" onclick ="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
-                        <button class="a_button" id="a_bodyScale_large" onclick ="f_typeSizeBody_big()">Large</button>
-                    </div>
-                    <div class="contrast">
-                        <p>Contrast</p>
-                        <button class="a_button" id="a_bodyContrast_regular" onclick ="f_typeBodyContrast_regular()"">Regular</button>
-                        <button class="a_button" id="a_bodyContrast_large" onclick ="f_typeBodyContrast_bold()">Bold</button>
-                    </div>
+        </div>
+            <div class="menuMain">
+                <div class="face">
+                    <p>Face</p>
+                    <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
+                    <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>            
                 </div>
-                <div class="menuMain">
-                    <div class="face">
-                        <p>Face</p>
-                        <button class="a_button" id="a_bodyFace_serif" onclick = "f_typeBodyFace_serif()">Serif</button>
-                        <button class="a_button" id="a_bodyFace_sansSerif" onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>            
-                    </div>
-                    <div class="color">
+                <div class="color">
                         <p>Face Color</p>
                         <button class="a_button" id="a_bodyColor_dark" onclick ="f_typeColor_dark()">Dark</button>
                         <button class="a_button" id="a_bodyColor_light" onclick ="f_typeColor_light()">Light</button>
@@ -108,8 +94,8 @@
                     </div>
                     <div class="backgroundColor">
                         <p>Background Color</p>
-                        <button class="a_button" id="a_websiteBackgroundColor_dark" onclick="f_websiteBackgroundColor_dark ()">Dark</button>
-                        <button class="a_button" id="a_websiteBackgroundColor_light" onclick="f_websiteBackgroundColor_light ()">Light</button>
+                        <button class="a_button" id=" a_websiteBackgroundColor_dark" onclick="f_websiteBackgroundColor_dark ()">Dark</button>
+                        <button class="a_button " id=" a_websiteBackgroundColor_light" onclick="f_websiteBackgroundColor_light ()">Light</button>
                         <div class="a_slider_container">
                             <div class ="bg_slider" id="a_websiteColor_slider">
                                 <input type="range" class="ranges" id="myRange_web" value ="0" min ="0" max="360"></input> 
@@ -118,8 +104,8 @@
                     </div>
                 </div>
                 <div class="menuMain"></div>
-                <div class="menuMain" style="margin-bottom: 25%;"><button class="optn" id ="optn_close_ID" style="width: auto;" onclick="f_accessibilityFull_close()">Close</button></div>
-                <div class="msenuMain"></div>
+                <div class="menuMain" style="margin-bottom: 25%;"><button class="optn" id ="optn_close_ID" style="width: auto;"onclick="f_accessibilityFull_close()">Close</button></div>
+                <div class="menuMain"></div>
             </div>
 
 
@@ -127,12 +113,12 @@
             
             <div class="navMenu">
                 <div class="navHead">
-                     <nav> <!-- <a href="sub_informational/index-sub_informational.html"> --> <h6 class="menuHead">Informational</h6></nav>
+                     <nav> <h6 class="menuHead">Informational</h6></nav>
                     <div class="navSubMenu">
                         <div class="navSub" id="info_genMindset">
                             <nav><a href="../../sub_informational/subsub_genMindset/index-subsub_genMindset.html"><h6 class="menuSubHead">General Mindset</h6></a></nav>
                             <nav class="navSubSub">
-                                <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a> <br>
+                                <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1">Digital Book</a> <br>
                                 <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a><br>
                                 <a href="https://www.youtube.com/watch?v=WXBA4eWskrc">TED Talk</a>
                             </nav>
@@ -153,7 +139,7 @@
                     </div>
                 </div>
                 <div class="navHead">
-                    <nav><h6 class="menuHead"> <!-- <a href="sub_practical/index-sub_practical.html"> --> Practical</h6></nav>
+                    <nav><h6 class="menuHead"> <!-- <a href=" sub_practical/index-sub_practical.html "> --> Practical</h6></nav>
                     <div class="navSubMenu">
                         <div class="navSub" id="practical_apps">
                             <nav><h6 class="menuSubHead"><a href="../../sub_practical/subsub_apps/index-subsub_apps.html">Applications</a></h6></nav>
@@ -209,8 +195,8 @@
                     <!-- BODY CONTENT... -->
 
         
-    <div class =" static ">
-        <div class =" subHead ">
+    <div class ="static">
+        <div class ="subHead">
             <h3 style=" margin-bottom:-8px;">Time Management</h3>
         </div>
         <div class="titleNav">
@@ -223,25 +209,25 @@
                 </i>
             </p>
         </div>
-        <div class=" bodyContent">
-            <h6 class=" body_subHead">My Own Time Management</h6>        
-                <p class=" bodyFirstLine">You’d think that, in a website about time management, the page titled “Time Management” would be the only one necessary, right? I’d personally disagree—this webpage is specifically about techniques that I and other people make use of, with the arbitrary label of being for “time management” being more so for simplification’s sake (at least for my case). Either way,  my writings here will focus on things to keep in mind when you reflect on how to manage your time—things to try, things to use, and things that are used by the many. </p>
-                <p class=" body">I like to manage my own time in both the written word and through simple spontaneity. In the written word, I like to plan out bigger, non-negotiable, or premeditated plans such that I won’t forget them about them when going through my day-to-day, which is, some days, more mentally taxing than others; my written word almost acts as insurance to carry my plans through times where I may not be able to fully carry them myself. I like to Google Calendar to write my tasks down—I like having an application that acts as a sort-of archive of my plans that I can open at any time with free reign over its content—all I need is my phone and a network connection. I like to color code my calendar—I feel like having different visual qualities to the different tasks/blocks of time I establish for myself help me in properly differentiating between the different tasks as I go on with my day. </p>
-                <img class="img_inLine" id ="timeManagement1" src="../../assets/timeManagement1_1.png " alt=" Google Calendar screenshot "/>
+        <div class="bodyContent">
+            <h6 class="body_subHead">My Own Time Management</h6>        
+                <p class="bodyFirstLine">You’d think that, in a website about time management, the page titled “Time Management” would be the only one necessary, right? I’d personally disagree—this webpage is specifically about techniques that I and other people make use of, with the arbitrary label of being for “time management” being more so for simplification’s sake (at least for my case). Either way,  my writings here will focus on things to keep in mind when you reflect on how to manage your time—things to try, things to use, and things that are used by the many. </p>
+                <p class="body">I like to manage my own time in both the written word and through simple spontaneity. In the written word, I like to plan out bigger, non-negotiable, or premeditated plans such that I won’t forget them about them when going through my day-to-day, which is, some days, more mentally taxing than others; my written word almost acts as insurance to carry my plans through times where I may not be able to fully carry them myself. I like to Google Calendar to write my tasks down—I like having an application that acts as a sort-of archive of my plans that I can open at any time with free reign over its content—all I need is my phone and a network connection. I like to color code my calendar—I feel like having different visual qualities to the different tasks/blocks of time I establish for myself help me in properly differentiating between the different tasks as I go on with my day. </p>
+                <img class="img_inLine" id ="timeManagement1" src="../../assets/timeManagement1_1.png" alt=" Google Calendar screenshot"/>
                 <p class="bodyFirstLine">Continuing on, I also like to use media that let me have visual/linguist control over my content to help myself plan—notetaking applications, giant sketchbooks, visual assembly applications, et cetera. For instance, I like to use Adobe Illustrator or Obsidian to compile notes into visual form, as it helps me get a better sense of how much work I need to do—or how much I have done—which helps me pace myself for the rest of what I am tasked with doing. I always have some sort-of visual logic to my plans—whether that be using indentation to denote things that are part of the same list, or using different colors to dictate different ways-of-thinking. </p>
-                <img class="img_inLine" id="timeManagement2" src=" ../../assets/timeManagement2_1.png" alt=" Visualized notes "/>
+                <img class="img_inLine" id="timeManagement2" src="../../assets/timeManagement2_1.png" alt=" Visualized notes"/>
                 <p class="bodyFirstLine">To account for the bursts of spontaneity that I have on the daily, I like to use quick note-taking methods—sticky notes or digital writing applications—to quickly write down my thoughts as reminders for my future self. I enjoy the physicality of my sticky notes—being able to stick them to many objects ensures that I’ll be able to place them in a place that I can see them in, which is extra comforting if I cannot notate dates or times that the task I intend for them to remind me of would take up. Digital note taking applications are good alternatives, though I much prefer sticky notes as, again, I can place them in places where I am sure to physically see them. </p>
-                <img class="img_inLine" id="timeManagement3" src=" ../../assets/timeManagement3_1.png " alt=" Sticky notes next to my laptop 's keyboard"/>
+                <img class="img_inLine" id="timeManagement3" src="../../assets/timeManagement3_1.png" alt=" Sticky notes next to my laptop 's keyboard"/>
             <h6 class="body_subHead">Techniques: "Time Blocking"</h6>            
                 <p class="bodyFirstLine">Moving on, one of the more well-known methods of time management is time blocking, something covered in user "AiotexOfficial"’s Reddit post, “How I made time blocking finally work for my brain” where they figure out how to successfully incorporate the technique into their life. I could imagine that, for those who have attempted to block their time before, they would run into some issue or another, whether that would be skipping tasks, delaying other tasks, or simply getting more stressed than if they were to simply proceed without the technique. That’s the thing about strict, societally popular techniques—you simply never know resistant they may be towards your brain until you try them, something that the Reddit user understood in themselves through altering the core of what the technique involved to better-incorporate it in their own lifestyle. </p>
                 <p class="body">Time blocking, as the name suggests, involves blocking out chunks of one’s time to usually be dedicated to whatever its user commits to doing to proportionately manage one’s time in relation to that which they need to get done. AiotexOfficial, in their post, says that it helped them get a rough picture of their day in linear sequence, though they had to make a version of the strategy that better accounts for the spontaneity of real life—one where they write down their tasks linearly and move them according to what life demanded from them. </p>
                 <p class="body">Much like AiotexOfficial, I, too, don’t follow the “standard vision” of what time blocking looks like, with my methods differing depending on my location. At home and on the transits, I block out bigger, more generalized “chunks” of time—time where I understand that I may not have full focus on my task due to external factors (being unable to work while travelling, tending to important home matters, et cetera), so I compromise by filling this time with lighter tasks, like emails, finances, or studying. All things considered, I think time blocking is a good tool to follow so long as you are able to adapt it to your own needs. </p>
                 <img class="img_inLine" id="timeManagement4" src="../../assets/timeManagement4_1.png" alt="Example of color coded Calendar block"/>
-                <a class="links" href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/" class="bodyFirstLine ">Productivity-based Reddit Post</a>
+                <a class="links" href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Productivity-based Reddit Post</a>
             <h6 class="body_subHead">Techniques: "Lesser Mental Resistance"</h6>                
                 <p class="bodyFirstLine">Something else that I consider important is the idea of “lesser mental resistance” as, even if it isn’t explicitly a technique, I’d still lump it in with other techniques by virtue of being helpful with how you go about living your life. “Savvy Solutions”, in their podcast episode, touch on various techniques that I would lump under providing oneself with “lesser mental resistance”, like stealth de-cluttering, macro/micro actions, and “home organization tools”, which I consider to be valid and effective techniques depending on your context. Though I’ve heavily generalized that which I’ve combined under “home organization tools”, I think the topic as a whole is quite important to think about; by “home organization tools”, I mean the things that you do to set yourself up for “physical success”—which would, in turn, make it easier to start doing things.</p>
                 <p class="body">For instance, say you intended to vacuum your living space after a day-long outing. If you’re anything like me and forget to do things if they aren’t directly in your view, then it might be wise to make sure to leave your vacuum next to the entrance to your home before you leave so you don’t forget to vacuum when you come home. Setting yourself up for “physical success” might not be something you need, but I feel as if that which it revolves around can be widely applicable to many things—simply, making sure what you need to do remains easy for you to do. </p>
-                <a class="links" href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ " class="bodyFirstLine" >Time Management Podcast</a>
+                <a class="links" href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ" >Time Management Podcast</a>
         </div>
     </div>
 
@@ -250,11 +236,7 @@
         <div class="item "></div>
         <div class="item ">Done for school course GRPH–2010 with the goal of, "Design[ing]and develop[ing]an ' online resource.'" All external sources belong to their respective owners. Textual content and website development was made by website' s designer. This website is a product of its content.</div>
         <div class="item ">
+            </div>
         </div>
-    </div>
-</footer>
-        
-<script src="../../javaGlobal.js "></script>
-
-</body>
-</html>
+</footer><script src="../../javaGlobal.js "></script>
+</body></html>

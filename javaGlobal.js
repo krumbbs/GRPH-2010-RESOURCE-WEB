@@ -195,6 +195,10 @@ const typeSubHeadSize_big = getComputedStyle(document.documentElement).getProper
 const typeBodySizeColumn_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeSmall-column'); //document.documentElement refers to root of HTML (for some reason)
 const typeBodySizeColumn_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeRegular-column');
 const typeBodySizeColumn_big = getComputedStyle(document.documentElement).getPropertyValue('--typeBodySizeBig-column');
+
+const typeBodyLinkSize_small = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeSmall'); 
+const typeBodyLinkSize_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeRegular');
+const typeBodyLinkSize_big = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeBig');
 //leading and indents; 
 const typeBodyIndent_small = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentSmall'); 
 const typeBodyIndent_regular = getComputedStyle(document.documentElement).getPropertyValue('--typeBodyIndentRegular');
@@ -244,6 +248,9 @@ const typeSubHeadLeading_small_min = getComputedStyle(document.documentElement).
 const typeSubHeadLeading_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingRegular_min'); 
 const typeSubHeadLeading_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeSubHeadLeadingBig_min'); 
 
+const typeBodyLinkSize_small_min = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeSmall_min'); 
+const typeBodyLinkSize_regular_min = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeRegular_min');
+const typeBodyLinkSize_big_min = getComputedStyle(document.documentElement).getPropertyValue('--typeLinkSizeBig_min');
 
 
 function f_typeSizeBody_small () {
@@ -261,6 +268,11 @@ function f_typeSizeBody_small () {
     localStorage.setItem("bodyColumn", typeBodySizeColumn_small);
     root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_small_min);
     localStorage.setItem("bodyColumn_min", typeBodySizeColumn_small_min);
+
+    root.style.setProperty('--typeLinkSize', typeBodyLinkSize_small);
+    localStorage.setItem("typeLink", typeBodyLinkSize_small);
+    root.style.setProperty('--typeLinkSize_min', typeBodyLinkSize_small_min);
+    localStorage.setItem("typeLink_min", typeBodyLinkSize_small_min);
         //leading and indents: 
     root.style.setProperty('--typeBodyIndent', typeBodyIndent_small);
     localStorage.setItem("bodyIndent", typeBodyIndent_small);
@@ -299,6 +311,11 @@ function f_typeSizeBody_regular () {
     localStorage.setItem("bodyColumn", typeBodySizeColumn_regular);
     root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_regular_min);
     localStorage.setItem("bodyColumn_min", typeBodySizeColumn_regular_min);
+
+    root.style.setProperty('--typeLinkSize', typeBodyLinkSize_regular);
+    localStorage.setItem("typeLink", typeBodyLinkSize_regular);
+    root.style.setProperty('--typeLinkSize_min', typeBodyLinkSize_regular_min);
+    localStorage.setItem("typeLink_min", typeBodyLinkSize_regular_min)
         //leading and indents: 
     root.style.setProperty('--typeBodyIndent', typeBodyIndent_regular);
     localStorage.setItem("bodyIndent", typeBodyIndent_regular);
@@ -337,6 +354,11 @@ function f_typeSizeBody_big () {
     localStorage.setItem("bodyColumn", typeBodySizeColumn_big);
     root.style.setProperty('--typeBodySize-column_min', typeBodySizeColumn_big_min);
     localStorage.setItem("bodyColumn_min", typeBodySizeColumn_big_min);
+
+    root.style.setProperty('--typeLinkSize', typeBodyLinkSize_big);
+    localStorage.setItem("typeLink", typeBodyLinkSize_big);
+    root.style.setProperty('--typeLinkSize_min', typeBodyLinkSize_big_min);
+    localStorage.setItem("typeLink_min", typeBodyLinkSize_big_min)
         //leading and indents: 
     root.style.setProperty('--typeBodyIndent', typeBodyIndent_big);
     localStorage.setItem("bodyIndent", typeBodyIndent_big);
@@ -374,6 +396,11 @@ let bodyColumnItem = localStorage.getItem("bodyColumn");
 root.style.setProperty('--typeBodySize-column', bodyColumnItem); 
 let bodyColumnItem_min = localStorage.getItem("bodyColumn_min"); 
 root.style.setProperty('--typeBodySize-column_min', bodyColumnItem_min); 
+
+let linkItem = localStorage.getItem("typeLink"); 
+root.style.setProperty('--typeLinkSize', linkItem); 
+let linkItem_min = localStorage.getItem("typeLink_min"); 
+root.style.setProperty('--typeLinkSize_min', linkItem_min); 
     //leading and indents: 
 let bodyIndentItem = localStorage.getItem("bodyIndent"); 
 root.style.setProperty('--typeBodyIndent', bodyIndentItem); 
@@ -468,24 +495,41 @@ root.style.setProperty('--typeTitleFace', faceItem); //GLOBAL NAV: CHANGING TO P
 const typeColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
 const typeColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
 
-//ACHIVEMENT...
-// const textChange3 = document.getElementById('achievement3_id');
-
+//check for grey bg: 
 
 function f_typeColor_dark () {
-    root.style.setProperty ('--typeBodyColor', typeColor_dark);
-    root.style.setProperty ('--typeTitleColor', typeColor_dark);
-    localStorage.setItem("typeColor", typeColor_dark);
-    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
-    localStorage.setItem("bgColor", websiteBackgroundColor_light); 
-}
+    const websiteBG = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundColor');
+    
+    if (websiteBG == 'grey') {
+        root.style.setProperty ('--typeBodyColor', typeColor_dark);
+        root.style.setProperty ('--typeTitleColor', typeColor_dark);
+        localStorage.setItem("typeColor", typeColor_dark);
+        }
+    else {
+        root.style.setProperty ('--typeBodyColor', typeColor_dark);
+        root.style.setProperty ('--typeTitleColor', typeColor_dark);
+        localStorage.setItem("typeColor", typeColor_dark);
+        root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_light);
+        localStorage.setItem("bgColor", websiteBackgroundColor_light); 
+        }
+    }
 function f_typeColor_light () {
-    root.style.setProperty ('--typeBodyColor', typeColor_light);
-    root.style.setProperty ('--typeTitleColor', typeColor_light);
-    localStorage.setItem("typeColor", typeColor_light);
-    root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
-    localStorage.setItem("bgColor", websiteBackgroundColor_dark); 
-//    a_3 = true; 
+    const websiteBG = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundColor');
+    
+    if (websiteBG == 'grey') {
+        root.style.setProperty ('--typeBodyColor', typeColor_light);
+        root.style.setProperty ('--typeTitleColor', typeColor_light);
+        localStorage.setItem("typeColor", typeColor_light);
+    }
+    else {
+        root.style.setProperty ('--typeBodyColor', typeColor_light);
+        root.style.setProperty ('--typeTitleColor', typeColor_light);
+        localStorage.setItem("typeColor", typeColor_light);
+        root.style.setProperty ('--websiteBackgroundColor', websiteBackgroundColor_dark);
+        localStorage.setItem("bgColor", websiteBackgroundColor_dark);    
+    }
+
+//      a_3 = true; 
     function ach_3 () {
         root.style.setProperty('--achievementType3', achievementComplete);
         alert("Achievement: Changed type color to light!"); 
@@ -505,11 +549,11 @@ function f_typeColor_light () {
 }
 
 const slider = document.querySelector('.a_slider input');
-slider.addEventListener ('input', () => { //cannot get this to work with a normal function declaration
+slider.addEventListener ('input', () => { //cannot get this to work with a normal function declaration... for some reason?
     const hue = slider.value;
-    root.style.setProperty ('--typeBodyColor', `oklch(0.4 0.4 ${hue})`); //IT (doesnt) WORK?? 
-    root.style.setProperty ('--typeTitleColor', `oklch(0.4 0.4 ${hue})`);
-    localStorage.setItem("typeColor", typeColor_dark); // can look into specifically-changed values later 
+    root.style.setProperty ('--typeBodyColor', `oklch(0.6 0.6 ${hue})`); 
+    root.style.setProperty ('--typeTitleColor', `oklch(0.6 0.6 ${hue})`);
+    localStorage.setItem("typeColor", typeColor_dark); 
 })  
 
 let colorItem = localStorage.getItem("typeColor"); //GLOBAL NAV: RETRIEVING PREV PARAMETER
@@ -527,10 +571,6 @@ root.style.setProperty('--typeTitleColor', colorItem); //GLOBAL NAV: CHANGING TO
 // function f_highlight_off () {
 //     root.style.setProperty ('--highlight', highlight_off);
 // }
-
-                        //WEBSITE CODE
-
-        // LEAVE CONTRAST UNTIL YOU'RE DONE PRINT ASSETS. 
 
 const websiteBackgroundColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
 const websiteBackgroundColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
@@ -557,8 +597,7 @@ let bgColorItem = localStorage.getItem("bgColor"); //GLOBAL NAV: RETRIEVING PREV
 root.style.setProperty('--websiteBackgroundColor', bgColorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
 const websiteBackgroundContrast_regular = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
-// const websiteBackgroundColor_low = getComputedStyle(document.documentElement).getPropertyValue('--websiteBackgroundImage');
-const websiteBackgroundColor_low = "grey"
+const websiteBackgroundColor_low = "grey";
 const colorWhite = "white";
 const colorBlack = "black";
 
@@ -610,7 +649,7 @@ const storefront1_3 = "../../assets/storefront1_3.png";
 const storefront2 = document.getElementById("storefront2"); 
 const storefront2_1 = "../../assets/storefront2_1.png";
 const storefront2_2 = "../../assets/storefront2_2.png";
-const storefront2_3 = "../../assets/storefront3_3.png";
+const storefront2_3 = "../../assets/storefront2_3.png";
 const storefront3 = document.getElementById("storefront3"); 
 const storefront3_1 = "../../assets/storefront3_1.png";
 const storefront3_2 = "../../assets/storefront3_2.png";

@@ -2,17 +2,19 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Michael's Management</title>
         <link rel="stylesheet" href="../../stylesheet.css">
     </head>
+
+    
+    
     <body class="bodyGlobal">
-        <!--GLOBAL NAV BUTTONS-->
         <!--GLOBAL NAV BUTTONS-->
         <div class="globalSticky">
             <div>&nbsp</div>
             <div class="global">
                 <!-- <div class="headBG">&nbsp</div>
-            <div class="headerBlock"> </div> -->
+                <div class="headerBlock"> </div> -->
                 <div class="global_baseNav">
                     <div class="waffleGlobal">
                         <!-- move above home -->
@@ -42,182 +44,226 @@
                                         </svg>
                                     </button>
 </a></nav></div></div></div></div></div></div>
-<div class="waffle_subMenu" id="waffle_subMenu_ID">
-    <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button>
-    <!-- make this close other button -->
-    <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
-    <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
-    <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
-</div>
-<!-- ACCESSIBILITY MENU -->
-<div class="accessibilityMenu">
-    <p class="menuMain_top">Body</p>
-    <div class="menuMain_top">&nbsp</div>
-    <p class="menuMain_top">Website</p>
-    <div class="menuMain_top">
-        <button class="optn" id="optn_close_ID" onclick="f_accessibilityFull_close()">Close</button>
+<div class="globalCascade">
+    <!-- ALL DIVIDED WTIHIN THEIR OWN DIV; RELATIONAL SIZING... -->
+    <!-- OPTIONS MENU -->
+    <div class="waffle_subMenu" id="waffle_subMenu_ID">
+        <button class="optn" id="optn_accessibility_ID" onclick="f_accessibilityFull_open()">Accessibility</button>
+        <button class="optn" id="optn_sourceList_ID" onclick="f_navMenu_open()">Navigation</button>
+        <button class="optn" id="optn_achievements_ID" onclick="f_achievementOpen()">Achievements</button>
+        <button class="optn" id="optn_close_ID" onclick="f_waffleSide_close()" onclick="f_achievementClose()" onclick="f_accessibilityFull_close()" onclick="f_navMenu_close()">Close</button>
     </div>
-    <!-- blank space (is &nbsp) -->
-    <div class="menuMain">
-        <div class="scale">
-            <p>Scale</p>
-            <button class="a_button" id="a_bodyScale_small" onclick="f_typeSizeBody_small()" onclick="f_typeSizeTtile_small()">Small</button>
-            <button class="a_button" id="a_bodyScale_regular" onclick="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
-            <button class="a_button" id="a_bodyScale_large" onclick="f_typeSizeBody_big()">Large</button>
+    <!-- ACCESSIBILITY MENU -->
+    <div class="accessibilityMenu">
+        <div class="menuMain_top">&nbsp</div>
+        <b class="menuMain_top">Body</b>
+        <b class="menuMain_top">Website</b>
+        <div class="menuMain">
+            <div class="scale">
+                <p>Scale</p>
+                <button class="a_button" id="a_bodyScale_small" onclick="f_typeSizeBody_small()" onclick="f_typeSizeTtile_small()">Small</button>
+                <button class="a_button" id="a_bodyScale_regular" onclick="f_typeSizeBody_regular()" onclick="f_typeSizeTitle_regular()">Regular</button>
+                <button class="a_button" id="a_bodyScale_large" onclick="f_typeSizeBody_big()">Large</button>
+            </div>
+            <div class="contrast">
+                <p>Contrast</p>
+                <button class="a_button" id="a_bodyContrast_regular" onclick="f_typeBodyContrast_regular()">Regular</button>
+                <button class=" a_button " id=" a_bodyContrast_large " onclick=" f_typeBodyContrast_bold()">Bold</button>
+            </div>
         </div>
-        <div class="contrast">
-            <p>Contrast</p>
-            <button class="a_button"id="a_bodyContrast_regular"onclick="f_typeBodyContrast_regular()"">Regular</button>
-                    <button class="a_button " id="a_bodyContrast_large " onclick ="f_typeBodyContrast_bold()">Bold</button>
-                </div>
+        <div class="menuMain">
+            <div class="face">
+                <p>Face</p>
+                <button class="a_button" id="a_bodyFace_serif" onclick="f_typeBodyFace_serif()">Serif</button>
+                <button class="a_button" id="a_bodyFace_sansSerif" onclick="f_typeBodyFace_sansSerif()">Sans-serif</button>
             </div>
-            <div class="menuMain ">
-                <div class="face ">
-                    <p>Face</p>
-                    <button class="a_button " id="a_bodyFace_serif " onclick = "f_typeBodyFace_serif()">Serif</button>
-                    <button class="a_button " id="a_bodyFace_sansSerif " onclick ="f_typeBodyFace_sansSerif()">Sans-serif</button>            
-                </div>
-                <div class="color ">
-                    <p>Color</p>
-                    <button class="a_button " id="a_bodyColor_dark " onclick ="f_typeColor_dark()">Dark</button>
-                    <button class="a_button " id="a_bodyColor_light " onclick ="f_typeColor_light()">Light</button>
-                    <div class ="a_slider " id="a_bodyColor_slider ">
-                        <input type="range " class="ranges " id="myRange " value ="0 " min ="0 " max="360 "></input> 
-                    </div>
-                </div>
-            </div>
-            <div class="menuMain ">
-                <div class="contrast ">
-                    <p>Contrast</p>
-                    <button class="a_button " id="a_websiteContrast_high " onclick="f_websiteContrast_high()">High</button>
-                    <button class="a_button " id="a_websiteContrast_regular " onclick="f_websiteContrast_regular()">Regular</button>
-                    <button class="a_button " id="a_websiteContrast_low " onclick="f_websiteContrast_low()">Low</button>
-                </div>
-                <div class="backgroundColor ">
-                    <p>Background Color</p>
-                    <button class="a_button " id="a_websiteBackgroundColor_dark " onclick="f_websiteBackgroundColor_dark()">Dark</button>
-                    <button class="a_button " id="a_websiteBackgroundColor_light " onclick="f_websiteBackgroundColor_light()">Light</button>
-                    <div class ="bg_slider " id="a_websiteColor_slider ">
-                        <input type="range " id="myRange_web " value ="0 " min ="0 " max="360 "></input> 
+            <div class="color">
+                <p>Face Color</p>
+                <button class="a_button" id="a_bodyColor_dark" onclick="f_typeColor_dark()">Dark</button>
+                <button class="a_button" id="a_bodyColor_light" onclick="f_typeColor_light()">Light</button>
+                <div class="a_slider_container">
+                    <div class="a_slider" id="a_bodyColor_slider">
+                        <input type="range" class="ranges" id="myRange" value="0" min="0" max="360"></input>
                     </div>
                 </div>
             </div>
         </div>
-        
-                        <!-- NAV MENU --> 
-        
-        <div class="navMenu ">
-            <div class="navHead ">
-                 <nav><a href="../../sub_informational/index-sub_informational.html "><h6 class="menuHead ">Informational</h6></a></nav>
-                <div class="navSubMenu ">
-                    <div class="navSub " id="info_genMindset ">
-                        <nav><a href="../../sub_informational/subsub_genMindset/index-subsub_genMindset.html "><h6 class="menuSubHead ">General Mindset</h6></a></nav>
-                        <nav class="navSubSub ">
-                            <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1 ">Digital Book</a>
-                            <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
-                            <a href="https://www.youtube.com/watch?v=WXBA4eWskrc ">TED Talk</a>
-                        </nav>
-                    </div>
-                    <div class="navSub " id="info_primeTime ">
-                        <h6 class="menuSubHead "><nav><a href="../../sub_informational/subsub_primeTime/index-subsub_primeTime.html ">Prime Time</a></nav></h6>
-                        <nav class="navSubSub ">
-                            <a href="https://www.youtube.com/watch?v=PPITG-6fR5s ">Video</a>
-                        </nav>
-                    </div>
-                    <div class="navSub " id="info_timeManagement ">
-                        <nav><h6 class="menuSubHead "><a href="../../sub_informational/subsub_timeManagement/index-subsub_timeManagement.html ">Time Management</a></h6></nav>
-                        <nav class="navSubSub ">
-                            <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
-                            <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ ">Podcast—better work environments</a>
-                        </nav>
-                    </div>
-                </div>
+        <div class="menuMain">
+            <div class="contrast">
+                <p>Contrast</p>
+                <button class="a_button" id="a_websiteContrast_high" onclick="f_websiteContrast_high ()">High</button>
+                <button class="a_button" id="a_websiteContrast_regular" onclick="f_websiteContrast_regular ()">Regular</button>
+                <button class="a_button" id="a_websiteContrast_low" onclick="f_websiteContrast_low ()">Low</button>
             </div>
-            <div class="navHead ">
-                <nav><h6 class="menuHead "><a href="../../sub_practical/index-sub_practical.html ">Practical</a></h6></nav>
-                <div class="navSubMenu ">
-                    <div class="navSub " id="practical_apps ">
-                        <nav><h6 class="menuSubHead "><a href="../../sub_practical/subsub_apps/index-subsub_apps.html ">Applications</a></h6></nav>
-                        <nav class="navSubSub ">
-                            <a href="https://calendar.google.com/calendar/u/0/r ">Google Calendar</a>
-                            <a href="https://obsidian.md/">Obsidian</a>
-                            <a href="https://www.when2meet.com/">When2Meet</a>
-                        </nav>
+            <div class="backgroundColor">
+                <p>Background Color</p>
+                <button class="a_button" id=" a_websiteBackgroundColor_dark" onclick="f_websiteBackgroundColor_dark ()">Dark</button>
+                <button class="a_button " id=" a_websiteBackgroundColor_light" onclick="f_websiteBackgroundColor_light ()">Light</button>
+                <div class="a_slider_container">
+                    <div class="bg_slider" id="a_websiteColor_slider">
+                        <input type="range" class="ranges" id="myRange_web" value="0" min="0" max="360"></input>
                     </div>
-                    <div class="navSub " id="practical_mediaPref ">
-                        <nav><h6 class="menuSubHead "><a href="../../sub_practical/subsub_mediaPref/index-subsub_mediaPref.html ">Media Preferences</a></h6></nav>
-                        <nav class="navSubSub ">
-                            <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334 ">Pen-picking</a>
-                        </nav>
-                    </div>
-                    <div class="navSub " id="practical_storefront ">
-                        <nav><h6 class="menuSubHead "><a href="../../sub_practical/subsub_storefront/index-subsub_storefront.html ">Storefront</a></h6></nav>
-                        <nav class="navSubSub ">
-                            <a href="https://www.walmart.ca/en/search?q=sticky+notes ">Walmart Sticky notes</a>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div class="navHead ">
-                <button class="optn " id ="optn_close_ID " onclick="f_navMenu_close()">Close</button>
-            </div>
-        </div>
-                    <!-- ACHIEVEMENT MENU -->
-
-        <div class="achievementMenu ">
-            <div class="achievements ">
-                <button class="optn " id="optn_close_achivement " onclick="f_achievementClose()">Close</button>
-                <div class="achievement " id="achievement1_id_parent ">
-                    <p class="achievementComplete_class " class="achievementComplete1 " id="achievement1_id "> Incomplete </p>
-                    <p id="achievement1_id_p ">Achievement 1: Set body type contrast to bold</p>
-                </div>
-                 <div class="achievement " id="achievement2_id_parent ">
-                    <p class="achievementComplete_class " class="achievementComplete2 " id="achievement2_id "> Incomplete </p>
-                    <p id="achievement2_id_p ">Achievement 2: Set website contrast to low</p>
-                </div>
-                <div class="achievement " id="achievement3_id_parent ">
-                    <p class="achievementComplete_class " id="achievement3_id "> Incomplete </p>
-                    <p id="achievement3_id_p ">Achievement 3: Set body type color to light</p>
                 </div>
             </div>
         </div>
+        <div class="menuMain"></div>
+        <div class="menuMain" style="margin-bottom: 25%;">
+            <button class="optn" id="optn_close_ID" style="width: auto;" onclick="f_accessibilityFull_close()">Close</button>
+        </div>
+        <div class="menuMain"></div>
+    </div>
+    <!-- NAV MENU -->
+    <div class="navMenu">
+        <div class="navHead">
+            <nav>
+                <h6 class="menuHead">Informational</h6>
+            </nav>
+            <div class="navSubMenu">
+                <div class="navSub" id="info_genMindset">
+                    <nav>
+                        <a href="../../sub_informational/subsub_genMindset/index-subsub_genMindset.html">
+                            <h6 class="menuSubHead">General Mindset</h6>
+                        </a>
+                    </nav>
+                    <nav class="navSubSub">
+                        <a href="https://www.bookey.app/freebook/how-to-live-on-24-hours-a-day/chapter-1">Digital Book</a>
+                        <br>
+                        <a href="https://www.instagram.com/reels/C6MIumiODex/">Instagram Video</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=WXBA4eWskrc">TED Talk</a>
+                    </nav>
+                </div>
+                <div class="navSub" id="info_primeTime">
+                    <h6 class="menuSubHead">
+                        <nav>
+                            <a href="../../sub_informational/subsub_primeTime/index-subsub_primeTime.html">Prime Time</a>
+                        </nav>
+                    </h6>
+                    <nav class="navSubSub">
+                        <a href="https://www.youtube.com/watch?v=PPITG-6fR5s">Video</a>
+                    </nav>
+                </div>
+                <div class="navSub" id="info_timeManagement">
+                    <nav>
+                        <h6 class="menuSubHead">
+                            <a href="../../sub_informational/subsub_timeManagement/index-subsub_timeManagement.html">Time Management</a>
+                        </h6>
+                    </nav>
+                    <nav class="navSubSub">
+                        <a href="https://www.reddit.com/r/productivity/comments/1qaz04t/how_i_made_time_blocking_finally_work_for_my_brain/">Time Blocking</a>
+                        <br>
+                        <a href="https://open.spotify.com/episode/6Lg9LRME6G1tFiZbC13IpJ">Podcast—better work environments</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="navHead">
+            <nav>
+                <h6 class="menuHead">
+                <!-- <a href=" sub_practical/index-sub_practical.html "> -->
+                Practical</h6>
+            </nav>
+            <div class="navSubMenu">
+                <div class="navSub" id="practical_apps">
+                    <nav>
+                        <h6 class="menuSubHead">
+                            <a href="../../sub_practical/subsub_apps/index-subsub_apps.html">Applications</a>
+                        </h6>
+                    </nav>
+                    <nav class="navSubSub">
+                        <a href="https://calendar.google.com/calendar/u/0/r">Google Calendar</a>
+                        <br>
+                        <a href="https://obsidian.md/">Obsidian</a>
+                        <br>
+                        <a href="https://www.when2meet.com/">When2Meet</a>
+                    </nav>
+                </div>
+                <div class="navSub" id="practical_mediaPref">
+                    <nav>
+                        <h6 class="menuSubHead">
+                            <a href="../../sub_practical/subsub_mediaPref/index-subsub_mediaPref.html">Media Preferences</a>
+                        </h6>
+                    </nav>
+                    <nav class="navSubSub">
+                        <a href="https://www.jetpens.com/blog/Types-of-Pens-How-to-Pick-a-Pen-with-the-Right-Ink/pt/334">Pen-picking</a>
+                    </nav>
+                </div>
+                <div class="navSub" id="practical_storefront">
+                    <nav>
+                        <h6 class="menuSubHead">
+                            <a href="../../sub_practical/subsub_storefront/index-subsub_storefront.html">Storefront</a>
+                        </h6>
+                    </nav>
+                    <nav class="navSubSub">
+                        <a href="https://www.walmart.ca/en/search?q=sticky+notes">Walmart Sticky notes</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="navHead">
+            <button class="optn" id="nav_close_ID" onclick="f_navMenu_close()">Close</button>
+        </div>
+    </div>
+    <!-- ACHIEVEMENT MENU -->
+    <div class="achievementMenu">
+        <div class="achievements">
+            <div class="achievement" id="achievement1_id_parent">
+                <p class="achievementComplete_class" class="achievementComplete1" id="achievement1_id">Incomplete </p>
+                <p id="achievement1_id_p">Achievement 1: Set body type contrast to bold</p>
+            </div>
+            <div class="achievement" id="achievement2_id_parent">
+                <p class="achievementComplete_class" class="achievementComplete2" id="achievement2_id">Incomplete </p>
+                <p id="achievement2_id_p">Achievement 2: Set website contrast to low</p>
+            </div>
+            <div> &nbsp </div>
+            <div class="achievement" id="achievement3_id_parent">
+                <p class="achievementComplete_class" id="achievement3_id">Incomplete </p>
+                <p id="achievement3_id_p">Achievement 3: Set body type color to light</p>
+            </div>
+            <button class="optn" id="optn_close_achievement" onclick="f_achievementClose()">Close</button>
+        </div>
+    </div>
+</div>
+<!-- END OF 'globalCascade' -->
 
 
         <!-- STATIC ON PAGE -->
                     <!-- BODY CONTENT... -->
 
         
-        <div class ="static ">
-            <div class ="subHead ">
+        <div class ="static">
+            <div class ="subHead">
                 <h3 style="margin-bottom:-8px;">Storefront</h3>
             </div>
-            <div class="titleNav ">
-                <p class="bodyIndex ">
+            <div class="titleNav">
+                <p class="bodyIndex">
+                    <i>
                     Sections:
                     <br>General
                     <br>Purchasing Needs
                     <br>Bulk Purchasing
                     <br>Corporate Versus Community
+                    </i>
                 </p>
             </div>
-            <div class="bodyContent ">
-                <h6 class="body_subHead ">General</h6>
-                    <p class="bodyFirstLine ">Two of the biggest things to consider when making purchases for your means of time management are cost and access—what can you afford to buy and what you can make do with. </p>
-                	<p class="body ">In general, it’s important to budget yourself in your everyday so you can get by with what you have already—remember, there are many free or widely-produced resources on the internet; if you are able to read this article, then, chances are, you still access to free software on the internet (some being listed in this website’s writing, too). Still, too, you don’t necessarily have to use anything to its intended “purpose”—for instance, you could use a google document as a calendar—and that extends to physical media, like even a simple piece of paper being used as a place to write down tasks, or sticky notes to act as physical reminders. I know what I just wrote seems painfully obvious, but in intentionally improving your time management, it’s easy to aestheticize what you’re doing, which, sometimes, ends with you missing the whole point of trying to improve your time management—the actual, well, management of your time. </p>
-                	<p class="body ">No matter the amount of re-purposing you can do with pre-existing material or resources, sometimes you will find yourself in situations where you feel like you should make a purchase. It’s really important to understand whether or not a purchase like this would actually be important to you, assessing something’s “want”-ness and “need”-ness—it’s easy to mistake a “need” for a “want”, especially if you frame it to yourself as something that would help in your time management skills. A really good indicator of when you should consider something’s want-ness versus need-ness is when you experience some sort-of tactile friction—something about the object/application/resource, no matter how indescribable is it, simply bothers you to such a great extent that it resides in your mind every time you try to make use of it. This could be anything from a quirk with a thing’s interface, a thing’s color or materiality, or even how a thing sounds like when you interact with it. When you have a clear idea on why something might bother you—a very clear idea—is when you should consider whether a monetary purchase. </p>
-                <h6 class="body_subHead ">Purchasing Needs</h6>
-                    <p class="body ">The rest of this page is for those who do decide that making a purchase is important for them. I’ll talk about one of my primarily time management-related things to buy—sticky notes! Not only are sticky notes small enough to fit in a pocket, but they can be placed and taken off many different objects without great consequence. I have one on my laptop right now, matter of fact!</p>
-                    <img id="storefront1" src="../../assets/storefront1_1.JPG " alt="Sticky note on the back of my laptop "/>
-                    <p class="body ">These little pieces of paper serve many purposes in my life—to remind me of things I need to get done and/or write down, to remind me of things I need to schedule later (if I cannot do so in the moment for whatever reason), or to allow me to physically assemble my thoughts together in a quick, un-filtered way. I especially prefer the white sticky notes as it gives the best legibility to the colors of pens and highlighters I like to use—black, red, and blue for the former, and bright yellow and bright pink for the latter; upon having any of these tools lose their effectiveness on the paper, I would either buy new sticky notes or new tools themselves, but I’m getting ahead of myself. In-summary, sticky notes are a great thing to go out of your way to purchase if you like having physical tactility behind your thoughts—to my Canadian I’d recommend buying from Walmart as they tend to sell a good handful of decent-in-quality notes at a relatively lower-end price range. </p>
-                    <a href="https://www.walmart.ca/en/search?q=sticky+notes " class="bodyFirstLine ">Walmart Storefront</a>    
+            <div class="bodyContent">
+                <h6 class="body_subHead">General</h6>
+                    <p class="bodyFirstLine">Two of the biggest things to consider when making purchases for your means of time management are cost and access—what can you afford to buy and what you can make do with. </p>
+                	<p class="body">In general, it’s important to budget yourself in your everyday so you can get by with what you have already—remember, there are many free or widely-produced resources on the internet; if you are able to read this article, then, chances are, you still access to free software on the internet (some being listed in this website’s writing, too). Still, too, you don’t necessarily have to use anything to its intended “purpose”—for instance, you could use a google document as a calendar—and that extends to physical media, like even a simple piece of paper being used as a place to write down tasks, or sticky notes to act as physical reminders. I know what I just wrote seems painfully obvious, but in intentionally improving your time management, it’s easy to aestheticize what you’re doing, which, sometimes, ends with you missing the whole point of trying to improve your time management—the actual, well, management of your time. </p>
+                	<p class="body">No matter the amount of re-purposing you can do with pre-existing material or resources, sometimes you will find yourself in situations where you feel like you should make a purchase. It’s really important to understand whether or not a purchase like this would actually be important to you, assessing something’s “want”-ness and “need”-ness—it’s easy to mistake a “need” for a “want”, especially if you frame it to yourself as something that would help in your time management skills. A really good indicator of when you should consider something’s want-ness versus need-ness is when you experience some sort-of tactile friction—something about the object/application/resource, no matter how indescribable is it, simply bothers you to such a great extent that it resides in your mind every time you try to make use of it. This could be anything from a quirk with a thing’s interface, a thing’s color or materiality, or even how a thing sounds like when you interact with it. When you have a clear idea on why something might bother you—a very clear idea—is when you should consider whether a monetary purchase. </p>
+                <h6 class="body_subHead">Purchasing Needs</h6>
+                    <p class="bodyFirstLine">The rest of this page is for those who do decide that making a purchase is important for them. I’ll talk about one of my primarily time management-related things to buy—sticky notes! Not only are sticky notes small enough to fit in a pocket, but they can be placed and taken off many different objects without great consequence. I have one on my laptop right now, matter of fact!</p>
+                    <img class="img_inLine" id="storefront1" src="../../assets/storefront1_1.png" alt="Sticky note on the back of my laptop"/>
+                    <p class="bodyFirstLine">These little pieces of paper serve many purposes in my life—to remind me of things I need to get done and/or write down, to remind me of things I need to schedule later (if I cannot do so in the moment for whatever reason), or to allow me to physically assemble my thoughts together in a quick, un-filtered way. I especially prefer the white sticky notes as it gives the best legibility to the colors of pens and highlighters I like to use—black, red, and blue for the former, and bright yellow and bright pink for the latter; upon having any of these tools lose their effectiveness on the paper, I would either buy new sticky notes or new tools themselves, but I’m getting ahead of myself. In-summary, sticky notes are a great thing to go out of your way to purchase if you like having physical tactility behind your thoughts—to my Canadian I’d recommend buying from Walmart as they tend to sell a good handful of decent-in-quality notes at a relatively lower-end price range. </p>
+                    <a class ="links" href="https://www.walmart.ca/en/search?q=sticky+notes" class="bodyFirstLine">Walmart Storefront</a>    
                 <h6 class="body_subHead ">Bulk Purchasing</h6>    
-                    <p class="body ">Something also noteworthy about Walmart’s sticky notes (and, technically, even objects beyond that) is that they are offered in bulk, usually giving you more bang for your buck. My rule of thumb with bulk-buying, especially for objects that are meant to help you with your time management, is to try to selectively buy objects that have multiple practical ways to be used. For instance, going back to my sticky note example, not only can they function in the ways I listed above, be stuck on many different objects, and provide contrast with the stationary I choose to use, they can also be used as scrap pieces of paper, places to doodle, or even resources to use to give written content to my peers. Even though I bought the sticky notes for the express purpose of helping me keep up with my own time management, they still end up having more use cases in my life, making it more justifiable that I had bought them in bulk! I do quite the same thing with many other objects—mainly pieces of paper (to primarily help with my design studies, though I feel like this “re-use culture” applies to many things beyond time management). </p>
-                    <img id="storefront2" src="../../assets/storefront2_1.JPG " alt="Homebound paper storage "/>
-                    <img id="storefront3" src="../../assets/storefront3_1.JPG " alt="Portable paper storage "/>
-                    <p class="body ">I’m also sure that, given that you’re reading this, you would know about how digital marketplaces have differences to physical ones—the way that you might have to interact differently with these two methods-of-trade, especially considering how they take your money. Something I feel that’s really important to keep in mind of when browsing the market is the differences between what I consider to be the “corporate-made” and “community-made”. </p>
-                <h6 class="body_subHead ">Corporate Versus Community</h6>    
-                    <p class="body ">Generally, corporate-made marketplaces try to take control of something, that being either your wallet or your handle on the programs you use through forced limitation, intentionally flawed design, or greedy business practices. On the flipside, community-made marketplaces tend to lean into quite the opposite, offering more transparency, flexibility, and personalization with what you consume.  A mildly related in media (and, ironically, NOT paid-for) yet relevant in topic example is comparing Apple’s official notetaking app with something like Obsidian. </p>
-                    <p class="body ">Apple’s notetaking app is robust, offering cloud storage support (if you are willing to pay for it) as well as giving you the tools you need to manage your textual content. However, Obsidian prides itself on being more community-driven, encouraging users to download plugins made by the wider Obsidian community to customize their experience—so even if it, arguably, beings less robust than Apple’s notetaking app at base, you have so much wiggle room to customize it to how you’d like it to be. I say all of this to make sure that, if you spend money, you are able to tell the differences between media that allows you to take control of it versus media that strips control away from you, as the former can not only have longer staying power (as you may have more control over how its content is handled and stored), but it can also adapt to your changing time management needs. Flexibility is key, especially if your resources—like your time—are limited. </p>
+                    <p class="bodyFirstLine">Something also noteworthy about Walmart’s sticky notes (and, technically, even objects beyond that) is that they are offered in bulk, usually giving you more bang for your buck. My rule of thumb with bulk-buying, especially for objects that are meant to help you with your time management, is to try to selectively buy objects that have multiple practical ways to be used. For instance, going back to my sticky note example, not only can they function in the ways I listed above, be stuck on many different objects, and provide contrast with the stationary I choose to use, they can also be used as scrap pieces of paper, places to doodle, or even resources to use to give written content to my peers. Even though I bought the sticky notes for the express purpose of helping me keep up with my own time management, they still end up having more use cases in my life, making it more justifiable that I had bought them in bulk! I do quite the same thing with many other objects—mainly pieces of paper (to primarily help with my design studies, though I feel like this “re-use culture” applies to many things beyond time management). </p>
+                    <img class="img_inLine" id="storefront2" src="../../assets/storefront2_1.png" alt="Homebound paper storage"/>
+                    <img class="img_inLine" id="storefront3" src="../../assets/storefront3_1.png" alt="Portable paper storage"/>
+                    <p class="bodyFirstLine">I’m also sure that, given that you’re reading this, you would know about how digital marketplaces have differences to physical ones—the way that you might have to interact differently with these two methods-of-trade, especially considering how they take your money. Something I feel that’s really important to keep in mind of when browsing the market is the differences between what I consider to be the “corporate-made” and “community-made”. </p>
+                <h6 class="body_subHead">Corporate Versus Community</h6>    
+                    <p class="bodyFirstLine">Generally, corporate-made marketplaces try to take control of something, that being either your wallet or your handle on the programs you use through forced limitation, intentionally flawed design, or greedy business practices. On the flipside, community-made marketplaces tend to lean into quite the opposite, offering more transparency, flexibility, and personalization with what you consume.  A mildly related in media (and, ironically, NOT paid-for) yet relevant in topic example is comparing Apple’s official notetaking app with something like Obsidian. </p>
+                    <p class="body">Apple’s notetaking app is robust, offering cloud storage support (if you are willing to pay for it) as well as giving you the tools you need to manage your textual content. However, Obsidian prides itself on being more community-driven, encouraging users to download plugins made by the wider Obsidian community to customize their experience—so even if it, arguably, beings less robust than Apple’s notetaking app at base, you have so much wiggle room to customize it to how you’d like it to be. I say all of this to make sure that, if you spend money, you are able to tell the differences between media that allows you to take control of it versus media that strips control away from you, as the former can not only have longer staying power (as you may have more control over how its content is handled and stored), but it can also adapt to your changing time management needs. Flexibility is key, especially if your resources—like your time—are limited. </p>
             </div>
             <!-- <hr style ="height:40px;display:block;background-color:white;">(horizontal space)</hr> -->
         </div>
@@ -234,6 +280,7 @@
     
 </body>
 </html>
+
 
 
 
