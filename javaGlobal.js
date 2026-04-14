@@ -330,7 +330,7 @@ function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_regular);
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular);
     root.style.setProperty('--typeBodyLeading-column_min', typeBodyLeadingColumn_regular_min);
-    localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular_min);
+    localStorage.setItem("bodyLeadingColumn_min", typeBodyLeadingColumn_regular_min);
 
     root.style.setProperty('--typeSubHeadLeading', typeSubHeadLeading_regular);
     localStorage.setItem("subHeadLeading", typeSubHeadLeading_regular);
