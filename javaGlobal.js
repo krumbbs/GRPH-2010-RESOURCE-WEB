@@ -1,24 +1,13 @@
 var root = document.querySelector(':root'); 
 
 
-/*
-let localcheck_a1 = true; 
-let localcheck_a2 = true; 
-let localcheck_a3 = true; 
-*/
 
 //achievements:
 let a_1 = false;
 let a_2 = false; 
 let a_3 = false; 
 
-//let a_1_check = "false";
 
-//localStorage.setItem("achievement1_complete") = achievementItem1; 
-
-//alert (a_1_check); 
-
-//let a_1_check_initial = localStorage.getItem("a_1_check_stored");
 let achievementItem1_initial = localStorage.getItem("achievement1_complete");
 let achievementItem2_initial = localStorage.getItem("achievement2_complete");
 let achievementItem3_initial = localStorage.getItem("achievement3_complete");
@@ -32,6 +21,9 @@ if (achievementItem2_initial === null) {
 if (achievementItem3_initial === null) {
     localStorage.setItem("achievement3_complete", "false");
 }
+
+
+
 
 let achievementItem1 = achievementItem1_initial;
 let achievementItem2 = achievementItem2_initial;
@@ -147,11 +139,6 @@ function f_waffleSide_close() {
     f_navMenu_close();
 } 
 
-/* RUN CHECKS TO CLOSE PARENT MENUS... code below = bugged 
-while (root.style('--waffleSide') = root.style('--waffleSide_open')) {
-    f_waffleSide_close()
-}
-*/
 
 function f_accessibilityFull_open () {
     const accMenuOpen = getComputedStyle(document.documentElement).getPropertyValue('--accessibilityFull_open'); //document.documentElement refers to root of HTML (for some reason)
@@ -560,18 +547,6 @@ let colorItem = localStorage.getItem("typeColor"); //GLOBAL NAV: RETRIEVING PREV
 root.style.setProperty('--typeBodyColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 root.style.setProperty('--typeTitleColor', colorItem); //GLOBAL NAV: CHANGING TO PARAMETER
 
-// //NOT FUNCTIONAL—highlight code
-
-// const highlight_on = getComputedStyle(document.documentElement).getPropertyValue('--highlight_on');
-// const highlight_off = getComputedStyle(document.documentElement).getPropertyValue('--highlight_off');
-
-// function f_highlight_on () {
-//     root.style.setProperty ('--highlight', highlight_on);
-// }
-// function f_highlight_off () {
-//     root.style.setProperty ('--highlight', highlight_off);
-// }
-
 const websiteBackgroundColor_dark = getComputedStyle(document.documentElement).getPropertyValue('--color_dark');
 const websiteBackgroundColor_light = getComputedStyle(document.documentElement).getPropertyValue('--color_light');
 
@@ -671,8 +646,6 @@ const timeManagement4 = document.getElementById("timeManagement4");
 const timeManagement4_1 = "../../assets/timeManagement4_1.png";
 const timeManagement4_2 = "../../assets/timeManagement4_2.png";
 const timeManagement4_3 = "../../assets/timeManagement4_3.png";
-
-
 
 function f_websiteContrast_high () {
     root.style.setProperty ('--websiteBackgroundColor', colorWhite)
@@ -938,8 +911,46 @@ root.style.setProperty('--typeBodyColor', bgContrast4Item); //GLOBAL NAV: CHANGI
 root.style.setProperty('--backdrop', bgContrast5Item); //GLOBAL NAV: CHANGING TO PARAMETER
 
 
-//imgs
-const nullImage = null;
+
+//imgs... defaults
+
+const landing1_default = localStorage.getItem("landing1_s") ?? landing1_1; // ?? is an operator that responds to null values; so this is running a null check
+localStorage.setItem ("landing1_s", landing1_default);
+
+const apps1_default = localStorage.getItem("apps1_s") ?? apps1_1; 
+localStorage.setItem ("apps1_s", apps1_default);
+const apps2_default = localStorage.getItem("apps2_s") ?? apps2_1; 
+localStorage.setItem ("apps2_s", apps2_default);
+const apps3_default = localStorage.getItem("apps3_s") ?? apps3_1; 
+localStorage.setItem ("apps3_s", apps3_default);
+
+const mediaPref1_default = localStorage.getItem("mediaPref1_s") ?? mediaPref1_1; 
+localStorage.setItem ("mediaPref1_s", mediaPref1_default);
+
+const primeTime1_default = localStorage.getItem("primeTime1_s") ?? primeTime1_1; 
+localStorage.setItem ("primeTime1_s", primeTime1_default);
+const primeTime2_default = localStorage.getItem("primeTime2_s") ?? primeTime2_1; 
+localStorage.setItem ("primeTime2_s", primeTime2_default);
+
+const storefront1_default = localStorage.getItem("storefront1_s") ?? storefront1_1; 
+localStorage.setItem ("storefront1_s", storefront1_default);
+const storefront2_default = localStorage.getItem("storefront2_s") ?? storefront2_1; 
+localStorage.setItem ("storefront2_s", storefront2_default);
+const storefront3_default = localStorage.getItem("storefront3_s") ?? storefront3_1; 
+localStorage.setItem ("storefront3_s", storefront3_default);
+
+const timeManagement1_default = localStorage.getItem("timeManagement1_s") ?? timeManagement1_1; 
+localStorage.setItem ("timeManagement1_s", timeManagement1_default);
+const timeManagement2_default = localStorage.getItem("timeManagement2_s") ?? timeManagement2_1; 
+localStorage.setItem ("timeManagement2_s", timeManagement2_default);
+const timeManagement3_default = localStorage.getItem("timeManagement3_s") ?? timeManagement3_1; 
+localStorage.setItem ("timeManagement3_s", timeManagement3_default);
+const timeManagement4_default = localStorage.getItem("timeManagement4_s") ?? timeManagement4_1; 
+localStorage.setItem ("timeManagement4_s", timeManagement4_default);
+
+
+
+//imgs... setting
 
 if (landing1) { //'if' only triggers when condition is true... so if element does not exist, then statement gets skipped over.
     let landing1Item = localStorage.getItem("landing1_s");
@@ -1002,8 +1013,6 @@ if (timeManagement4) {
     let timeManagement4Item = localStorage.getItem("timeManagement4_s");
     timeManagement4.src = timeManagement4Item;   
 }
-
-
 
 
 

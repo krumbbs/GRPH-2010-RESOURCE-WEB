@@ -475,10 +475,27 @@
     font-size: 14pt;
     /* margin-left: -0.5%;  */
     margin-bottom: 2.5%;
+    /* margin-top: 20%; */
 }
 
 #practical_apps {
     margin-top: -3%;
+}
+
+#practical_mediaPref {
+    margin-top: 10%;
+}
+
+#practical_storefront {
+    margin-top: 10%;
+}
+
+#info_primeTime {
+    margin-top: 10%;
+}
+
+#info_timeManagement {
+    margin-top: 10%;
 }
 
 .navSubMenu {
@@ -1041,8 +1058,8 @@
     column-gap: 1%; 
     justify-content: center; 
     position: fixed; 
-    margin-right: -26%;
-    top: -8.5%;
+    margin-right: -27.5%;
+    top: -10.5%;
     height: fit-content; 
     border-radius: var(--borderRadius_menu);
     z-index: 1;
