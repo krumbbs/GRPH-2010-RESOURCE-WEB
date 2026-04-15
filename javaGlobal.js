@@ -1,3 +1,6 @@
+
+
+
 var root = document.querySelector(':root'); 
 
 
@@ -312,7 +315,7 @@ function f_typeSizeBody_regular () {
     root.style.setProperty('--typeBodyLeading', typeBodyLeading_regular);
     localStorage.setItem("bodyLeading", typeBodyLeading_regular);
     root.style.setProperty('--typeBodyLeading_min', typeBodyLeading_regular_min);
-    localStorage.setItem("bodyLeading", typeBodyLeading_regular_min);
+    localStorage.setItem("bodyLeading_min", typeBodyLeading_regular_min);
 
     root.style.setProperty('--typeBodyLeading-column', typeBodyLeadingColumn_regular);
     localStorage.setItem("bodyLeadingColumn", typeBodyLeadingColumn_regular);
@@ -947,7 +950,6 @@ const timeManagement3_default = localStorage.getItem("timeManagement3_s") ?? tim
 localStorage.setItem ("timeManagement3_s", timeManagement3_default);
 const timeManagement4_default = localStorage.getItem("timeManagement4_s") ?? timeManagement4_1; 
 localStorage.setItem ("timeManagement4_s", timeManagement4_default);
-
 
 
 //imgs... setting
